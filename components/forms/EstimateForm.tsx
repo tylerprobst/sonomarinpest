@@ -6,10 +6,7 @@ const GORILLA_IFRAME_SRC =
 
 /**
  * Estimate block + GorillaDesk embed.
- *
- * Mobile: intro (padded card top) → full-width iframe → action bar
- * Desktop: single white card with padded iframe inside
- *
+ * Full-width on mobile (no colored side gutters). Card on sm+.
  * id="estimate" is the scroll target for the sticky Estimate button.
  */
 export function EstimateForm({
@@ -19,12 +16,15 @@ export function EstimateForm({
   title?: string;
   compact?: boolean;
 }) {
-  const pad = compact ? "p-5" : "px-5 py-6 sm:p-8";
+  const pad = compact ? "px-4 py-5 sm:p-5" : "px-4 py-6 sm:p-8";
 
   return (
-    <div id="estimate" className="scroll-mt-[7.25rem] sm:scroll-mt-28">
-      <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-md shadow-slate-900/5 max-sm:rounded-none max-sm:border-x-0 max-sm:shadow-none sm:rounded-2xl">
-        {/* Intro (always padded) */}
+    <div
+      id="estimate"
+      className="scroll-mt-[7.25rem] sm:scroll-mt-28 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2"
+    >
+      <div className="overflow-hidden border border-slate-200 bg-white sm:rounded-2xl sm:shadow-md sm:shadow-slate-900/5 max-sm:border-x-0 max-sm:border-y">
+        {/* Intro */}
         <div className={pad}>
           <p className="eyebrow text-brand-green">Online request</p>
           <h3 className="heading-card mt-2 text-xl text-slate-900 sm:text-2xl">
@@ -43,26 +43,21 @@ export function EstimateForm({
           </p>
         </div>
 
-        {/*
-          Iframe: full-bleed on mobile (edge of screen via 100vw breakout),
-          padded inset on sm+.
-        */}
-        <div className="sm:px-8 sm:pb-8">
-          <div className="relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 overflow-hidden border-y border-slate-200 bg-slate-50 sm:rounded-xl sm:border">
-            <iframe
-              id="gorilladesk-contact-iframe"
-              src={GORILLA_IFRAME_SRC}
-              title="Contact Sono-Marin Pest Solutions"
-              className="block w-full max-w-full border-0"
-              style={{ height: "min(720px, 85vh)", minHeight: 420 }}
-              loading="lazy"
-            />
-          </div>
+        {/* Form - full width of this container (viewport on mobile) */}
+        <div className="border-t border-slate-200 bg-white sm:mx-8 sm:mb-8 sm:overflow-hidden sm:rounded-xl sm:border">
+          <iframe
+            id="gorilladesk-contact-iframe"
+            src={GORILLA_IFRAME_SRC}
+            title="Contact Sono-Marin Pest Solutions"
+            className="block w-full max-w-full border-0"
+            style={{ height: "min(720px, 85vh)", minHeight: 420 }}
+            loading="lazy"
+          />
         </div>
 
         {/* Contact actions */}
-        <div className={`${pad} pt-4 sm:pt-0`}>
-          <div className="flex flex-wrap items-center gap-2 border-t border-slate-100 pt-4 sm:border-0 sm:pt-0">
+        <div className={`${pad} border-t border-slate-100 pt-4 sm:border-0 sm:pt-0`}>
+          <div className="flex flex-wrap items-center gap-2">
             <span className="mr-1 text-xs font-medium uppercase tracking-wide text-slate-400">
               Or reach us
             </span>

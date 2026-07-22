@@ -7,7 +7,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { RatingBadge } from "@/components/reviews/RatingBadge";
-import { EstimateForm } from "@/components/forms/EstimateForm";
+import { EstimateCtaSection } from "@/components/forms/EstimateCtaSection";
 
 export const metadata = createMetadata({
   title: "Pest Control Services | Rodents, Ants, IPM & More",
@@ -81,9 +81,9 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section tone="soft-green">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-          <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">
+      <EstimateCtaSection
+        aside={
+          <>
             <SectionHeading
               title="Not sure which service you need?"
               description="Describe what you’re seeing - we’ll recommend the right inspection and plan."
@@ -97,10 +97,9 @@ export default function ServicesPage() {
                 sizes="40vw"
               />
             </div>
-          </div>
-          <EstimateForm />
-        </div>
-      </Section>
+          </>
+        }
+      />
     </>
   );
 }

@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
-import { EstimateForm } from "@/components/forms/EstimateForm";
+import { EstimateCtaSection } from "@/components/forms/EstimateCtaSection";
 import { RatingBadge } from "@/components/reviews/RatingBadge";
 import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { AllLocationsLinks } from "@/components/pages/LocationPageView";
@@ -289,52 +289,51 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA */}
-      <Section tone="brand" className="relative">
-        <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-2xl" />
-        <div className="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-brand-green/30 blur-2xl" />
-        <div className="relative grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
-          <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">
+      {/* CTA - full-width form on mobile, no blue gutters */}
+      <EstimateCtaSection
+        aside={
+          <>
             <SectionHeading
               title="Contact us to schedule a service"
               description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we’ll get back to you as soon as possible."
-              light
             />
-            <RatingBadge light className="mb-6" />
-            <dl className="space-y-3 text-[0.975rem] text-blue-50">
+            <RatingBadge className="mb-6" />
+            <dl className="space-y-3 text-[0.975rem] text-slate-600">
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-white">Call</dt>
+                <dt className="font-semibold text-slate-900">Call</dt>
                 <dd>
-                  <a href={site.phoneTel} className="underline-offset-2 hover:underline">
+                  <a
+                    href={site.phoneTel}
+                    className="link-inline"
+                  >
                     {site.phone}
                   </a>
                 </dd>
               </div>
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-white">Text</dt>
+                <dt className="font-semibold text-slate-900">Text</dt>
                 <dd>
-                  <a href={site.textTel} className="underline-offset-2 hover:underline">
+                  <a href={site.textTel} className="link-inline">
                     {site.text}
                   </a>
                 </dd>
               </div>
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-white">Email</dt>
+                <dt className="font-semibold text-slate-900">Email</dt>
                 <dd>
-                  <a href={site.emailMailto} className="underline-offset-2 hover:underline">
+                  <a href={site.emailMailto} className="link-inline">
                     {site.email}
                   </a>
                 </dd>
               </div>
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-white">Hours</dt>
+                <dt className="font-semibold text-slate-900">Hours</dt>
                 <dd>{site.hours.display}</dd>
               </div>
             </dl>
-          </div>
-          <EstimateForm />
-        </div>
-      </Section>
+          </>
+        }
+      />
     </>
   );
 }

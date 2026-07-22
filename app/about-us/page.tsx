@@ -7,7 +7,7 @@ import { breadcrumbSchema, localBusinessSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { EstimateForm } from "@/components/forms/EstimateForm";
+import { EstimateCtaSection } from "@/components/forms/EstimateCtaSection";
 import { RatingBadge } from "@/components/reviews/RatingBadge";
 
 export const metadata = createMetadata({
@@ -166,17 +166,14 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="soft-blue">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-          <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">
-            <SectionHeading
-              title="Talk with our team"
-              description="Questions about your pest issue? A licensed technician will help you find the right plan."
-            />
-          </div>
-          <EstimateForm />
-        </div>
-      </Section>
+      <EstimateCtaSection
+        aside={
+          <SectionHeading
+            title="Talk with our team"
+            description="Questions about your pest issue? A licensed technician will help you find the right plan."
+          />
+        }
+      />
     </>
   );
 }
