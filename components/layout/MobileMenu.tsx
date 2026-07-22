@@ -9,6 +9,7 @@ import { site } from "@/content/site";
 import { services } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
+import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
 const serviceLinks = services.filter((s) =>
   [
@@ -233,7 +234,15 @@ export function MobileMenu({ open, onClose }: Props) {
         </Link>
 
         <div className="mt-6 space-y-2 border-t border-slate-200 pt-6">
-          <Button href={estimateHref} className="w-full" onClick={onClose}>
+          <Button
+            href="#estimate"
+            className="w-full"
+            onClick={() => {
+              onClose();
+              // Wait for menu to close before scrolling
+              window.setTimeout(() => scrollToEstimate(), 50);
+            }}
+          >
             Schedule service
           </Button>
           <Button href={site.phoneTel} variant="outline" className="w-full">

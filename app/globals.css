@@ -131,3 +131,11 @@ body {
   border: 0;
   display: block;
 }
+
+/* Full-bleed estimate form on small screens */
+@media (max-width: 639px) {
+  #estimate {
+    /* Sit clear of sticky header when scrolled into view */
+    scroll-margin-top: 7.25rem;
+  }
+}

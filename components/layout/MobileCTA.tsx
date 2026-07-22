@@ -1,9 +1,10 @@
-import { site } from "@/content/site";
+"use client";
 
-const estimateHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#estimate`;
+import { site } from "@/content/site";
+import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
 /**
- * Fixed mobile call bar - stays fully inside the viewport (no clipped buttons).
+ * Fixed mobile call bar - stays fully inside the viewport.
  */
 export function MobileCTA() {
   return (
@@ -33,7 +34,8 @@ export function MobileCTA() {
             Text
           </a>
           <a
-            href={estimateHref}
+            href="#estimate"
+            onClick={scrollToEstimate}
             className="flex items-center justify-center rounded-lg bg-brand-green py-2.5 text-center text-xs font-semibold text-white"
           >
             Estimate

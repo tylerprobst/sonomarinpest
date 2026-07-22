@@ -86,9 +86,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div id="estimate">
-            <EstimateForm title="Request an estimate" />
-          </div>
+          <EstimateForm title="Request an estimate" />
         </div>
       </Section>
     </>

@@ -3,10 +3,28 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
+function scrollToHashTarget() {
+  const hash = window.location.hash;
+  if (!hash || hash === "#") return false;
+
+  const id = decodeURIComponent(hash.slice(1));
+  const el = document.getElementById(id);
+  if (!el) return false;
+
+  const headerOffset = window.matchMedia("(min-width: 640px)").matches
+    ? 112
+    : 116;
+
+  const top =
+    el.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+  window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "auto" });
+  return true;
+}
+
 /**
- * On every client-side route change, jump to the absolute top.
- * Disables browser scroll restoration so back/forward doesn't fight us
- * on a marketing site (users almost always want the top of the new page).
+ * On route change: jump to top, or to #hash target (e.g. #estimate)
+ * under the sticky header.
  */
 export function ScrollToTop() {
   const pathname = usePathname();
@@ -23,23 +41,45 @@ export function ScrollToTop() {
   }, []);
 
   useEffect(() => {
-    // Hash links (e.g. /#estimate) should keep their target
     if (typeof window === "undefined") return;
-    if (window.location.hash) return;
 
-    // Instant jump - "smooth" often stops short with sticky headers
-    const forceTop = () => {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
+    const run = () => {
+      if (window.location.hash) {
+        // Retry once if the target mounts a frame late
+        if (!scrollToHashTarget()) {
+          requestAnimationFrame(() => {
+            if (!scrollToHashTarget()) {
+              window.setTimeout(scrollToHashTarget, 80);
+            }
+          });
+        }
+        return;
+      }
+
+      const forceTop = () => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      };
+      forceTop();
+      requestAnimationFrame(forceTop);
     };
 
-    forceTop();
-    // Next paint + short delay cover layout/images shifting scroll
-    requestAnimationFrame(forceTop);
-    const t = window.setTimeout(forceTop, 50);
+    run();
+    const t = window.setTimeout(run, 60);
     return () => window.clearTimeout(t);
   }, [pathname]);
+
+  // Handle in-page hash clicks / hashchange (Estimate when already on page)
+  useEffect(() => {
+    const onHash = () => {
+      if (window.location.hash === "#estimate") {
+        scrollToHashTarget();
+      }
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   return null;
 }

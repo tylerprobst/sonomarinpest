@@ -191,7 +191,7 @@ export function ServicePageView({ service }: { service: Service }) {
 
       <ReviewsSection showFeatured={false} limit={5} tone="soft-sky" />
 
-      <Section tone="brand" id="estimate" className="relative">
+      <Section tone="brand" className="relative">
         <div className="pointer-events-none absolute -right-16 top-0 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
         <div className="relative grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">

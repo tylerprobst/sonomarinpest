@@ -290,7 +290,7 @@ export default function HomePage() {
       </Section>
 
       {/* CTA */}
-      <Section id="estimate" tone="brand" className="relative">
+      <Section tone="brand" className="relative">
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-2xl" />
         <div className="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-brand-green/30 blur-2xl" />
         <div className="relative grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">

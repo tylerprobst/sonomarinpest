@@ -225,7 +225,7 @@ export function LocationPageView({ location }: { location: Location }) {
 
       <ReviewsSection showFeatured limit={4} tone="soft-sky" />
 
-      <Section tone="brand" id="estimate" className="relative">
+      <Section tone="brand" className="relative">
         <div className="pointer-events-none absolute -left-10 bottom-0 h-40 w-40 rounded-full bg-brand-green/30 blur-2xl" />
         <div className="relative grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">

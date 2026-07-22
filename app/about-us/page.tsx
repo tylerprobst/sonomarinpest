@@ -166,7 +166,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="soft-blue" id="estimate">
+      <Section tone="soft-blue">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">
             <SectionHeading
