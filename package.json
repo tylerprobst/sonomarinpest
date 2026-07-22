@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npx --yes tsx scripts/fetch-google-reviews.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch-reviews": "npx --yes tsx scripts/fetch-google-reviews.ts"
   },
   "dependencies": {
     "next": "16.2.11",

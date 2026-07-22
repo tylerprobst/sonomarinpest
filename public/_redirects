@@ -1,0 +1,5 @@
+# Netlify / Cloudflare-style redirects for WordPress URL cleanup
+/sono-marin-pest/               / 301
+/sono-marin-pest-solutions/     /about-us/ 301
+/pest-control-in-santa-rosa/    /pest-control-santa-rosa/ 301
+/pest-control-in-petaluma/      /pest-control-petaluma/ 301

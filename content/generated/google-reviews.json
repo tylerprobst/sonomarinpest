@@ -1,0 +1,46 @@
+{
+  "fetchedAt": "2026-07-21T00:00:00.000Z",
+  "source": "seed",
+  "placeId": "ChIJex_ZR6BJhIARRaPfcTxFdgg",
+  "displayName": "Sono-Marin Pest Solutions",
+  "rating": 4.9,
+  "userRatingCount": 127,
+  "googleMapsUri": "https://www.google.com/maps?cid=609750925466116933",
+  "reviews": [
+    {
+      "author": "Pat Pointer",
+      "rating": 5,
+      "text": "Very thorough inspection. Listened to my concerns in a professional, friendly manner. They responded the next day to my concerns for a request to assess and treat our pest (rat) situation. I highly recommend this service.",
+      "relativeTime": "10 months ago",
+      "publishTime": null
+    },
+    {
+      "author": "Candace Key",
+      "rating": 5,
+      "text": "We love Sono-Marin Pest! We switched over from Hitmen several years ago and couldn't be happier with the service we now receive. Morgan is so thoughtful and helpful. Everyone we deal with at Sono-Marin is kind and considerate of our time.",
+      "relativeTime": "11 months ago",
+      "publishTime": null
+    },
+    {
+      "author": "Jessica Nieto",
+      "rating": 5,
+      "text": "Sono-Marin Pest Solutions I would call back in a heartbeat. Their team was so easy to work with. Friendly informative and hard workers. Thank you for taking care of our rat situation!",
+      "relativeTime": "11 months ago",
+      "publishTime": null
+    },
+    {
+      "author": "Mia Simon",
+      "rating": 5,
+      "text": "Some of the best customer service I've ever encountered. Called and was able to get an appointment within 48 hours. Tyler came out and handled all subsequent visits. Super friendly and educational. Reasonable pricing. Did NOT try to upsell. Highly recommend!!",
+      "relativeTime": "12 months ago",
+      "publishTime": null
+    },
+    {
+      "author": "Christine Dunn",
+      "rating": 5,
+      "text": "I have been using Sono-Marin Pest services for 6+ years. They are great! Dylan the owner is very nice and Morgan the tech does a great job.",
+      "relativeTime": "12 months ago",
+      "publishTime": null
+    }
+  ]
+}

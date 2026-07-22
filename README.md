@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sono-Marin Pest Solutions — Website
 
-## Getting Started
+Static Next.js rebuild of [sonomarinpest.com](https://sonomarinpest.com): modern design, strong local SEO, Google reviews support, and GorillaDesk contact form.
 
-First, run the development server:
+**Repo:** [github.com/tylerprobst/sonomarinpest](https://github.com/tylerprobst/sonomarinpest)
+
+## Stack
+
+- **Next.js** (App Router) with `output: 'export'` → pure static `out/`
+- TypeScript + Tailwind CSS v4
+- Deployed via **GitHub Actions → GitHub Pages**
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Local dev does **not** use the `/sonomarinpest` base path.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build static site
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Output is in `out/`.
 
-To learn more about Next.js, take a look at the following resources:
+For a GitHub Pages–style build (with `basePath: /sonomarinpest`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+GITHUB_PAGES=true npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Live Google reviews
 
-## Deploy on Vercel
+On every build, `prebuild` runs `scripts/fetch-google-reviews.ts`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Copy `.env.example` → `.env.local`
+2. Enable **Places API (New)** in Google Cloud
+3. Set `GOOGLE_MAPS_API_KEY` (and optionally `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`)
+4. Rebuild
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Without a key, the site uses seed data in `content/generated/google-reviews.json` plus curated featured testimonials.
+
+## GorillaDesk form
+
+Inline iframe embed (`account_id=83906303`) on estimate sections, plus `embed.js` for auto-height.
+
+## Deploy (GitHub Pages)
+
+Workflow: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+
+On every push to `main`:
+
+1. `npm ci` + `GITHUB_PAGES=true npm run build`
+2. Uploads `out/` as a Pages artifact
+3. Deploys with `actions/deploy-pages`
+
+### One-time repo setup
+
+1. Open **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. After the first green workflow, site is at:  
+   **https://tylerprobst.github.io/sonomarinpest/**
+
+### Custom domain (e.g. sonomarinpest.com)
+
+1. In Pages settings, add custom domain and follow DNS instructions
+2. In `.github/workflows/deploy.yml`, set `GITHUB_PAGES: "false"` (removes `/sonomarinpest` base path)
+3. Optionally add `public/CNAME` with `sonomarinpest.com`
+
+### Other hosts
+
+| Host | Notes |
+|------|--------|
+| **Vercel / Netlify / Cloudflare** | Build `npm run build` (no `GITHUB_PAGES`); publish `out/` |
+| **Hostinger / cPanel** | Upload `out/` to `public_html` |
+
+## Project layout
+
+- `app/` — routes (WordPress-compatible paths where possible)
+- `components/` — UI, layout, reviews, forms
+- `content/` — services, locations, blog, reviews, site NAP
+- `lib/` — SEO, schema.org JSON-LD, Places API helper
+- `scripts/fetch-google-reviews.ts` — prebuild review sync
+- `.github/workflows/deploy.yml` — GitHub Pages deploy
+
+## License
+
+Private business website for Sono-Marin Pest Solutions.
