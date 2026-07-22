@@ -48,6 +48,7 @@ type ButtonAsLink = Common & {
   href: string;
   target?: string;
   rel?: string;
+  onClick?: () => void;
 };
 
 export function Button(props: ButtonAsButton | ButtonAsLink) {
@@ -57,7 +58,7 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
   const cls = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
 
   if ("href" in props && props.href) {
-    const { href, children, target, rel } = props;
+    const { href, children, target, rel, onClick } = props;
     const external =
       href.startsWith("http") ||
       href.startsWith("tel:") ||
@@ -65,13 +66,19 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
       href.startsWith("mailto:");
     if (external) {
       return (
-        <a href={href} className={cls} target={target} rel={rel}>
+        <a
+          href={href}
+          className={cls}
+          target={target}
+          rel={rel}
+          onClick={onClick}
+        >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} className={cls} onClick={onClick}>
         {children}
       </Link>
     );
