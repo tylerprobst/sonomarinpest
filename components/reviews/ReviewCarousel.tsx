@@ -68,7 +68,7 @@ export function ReviewCarousel({
 
   return (
     <div
-      className="relative"
+      className="relative max-w-full overflow-x-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}

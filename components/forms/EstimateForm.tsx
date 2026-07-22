@@ -41,14 +41,13 @@ export function EstimateForm({
         . Or use the form below.
       </p>
 
-      <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+      <div className="mt-6 max-w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
         <iframe
           id="gorilladesk-contact-iframe"
           src={GORILLA_IFRAME_SRC}
           title="Contact Sono-Marin Pest Solutions"
-          width="100%"
-          className="block w-full border-0"
-          style={{ height: "calc(100vh - 20px)", minHeight: 480 }}
+          className="block w-full max-w-full border-0"
+          style={{ height: "min(720px, 85vh)", minHeight: 420 }}
           loading="lazy"
         />
       </div>

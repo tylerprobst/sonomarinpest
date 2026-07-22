@@ -19,18 +19,23 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
 }
 
-/* Extra bottom padding on mobile for sticky CTA */
+/* Extra bottom padding on mobile for sticky CTA + home indicator */
 @media (max-width: 639px) {
   body {
-    padding-bottom: 4.5rem;
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -38,9 +43,10 @@ body {
   background: color-mix(in srgb, #0b5ed7 25%, white);
 }
 
-/* GorillaDesk may inject form UI — keep spacing sensible */
-#gorilladesk-form iframe,
-.gorilladesk-contact-root iframe {
-  max-width: 100%;
-  border-radius: 0.75rem;
+/* GorillaDesk iframe — never wider than viewport */
+#gorilladesk-contact-iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  border: 0;
+  display: block;
 }

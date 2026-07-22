@@ -39,10 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col font-sans antialiased">
+    <html lang="en" className={`${inter.variable} h-full overflow-x-hidden`}>
+      <body className="flex min-h-full max-w-full flex-col overflow-x-hidden font-sans antialiased">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="min-w-0 flex-1 overflow-x-hidden">{children}</main>
         <Footer />
         <MobileCTA />
         <GorillaDeskScript />

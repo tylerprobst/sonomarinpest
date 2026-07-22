@@ -32,13 +32,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="border-b border-slate-100 bg-slate-900 text-white">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-1.5 text-xs sm:px-6 sm:text-sm">
-          <p className="text-slate-300">{site.hours.display}</p>
-          <div className="flex flex-wrap items-center gap-3">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-3 gap-y-1 px-4 py-1.5 text-xs sm:px-6 sm:text-sm">
+          <p className="min-w-0 truncate text-slate-300">{site.hours.display}</p>
+          <div className="flex shrink-0 flex-wrap items-center gap-2 sm:gap-3">
             <a href={site.phoneTel} className="font-semibold hover:text-brand-green-light">
               Call {site.phone}
             </a>
-            <span className="text-slate-600">|</span>
+            <span className="hidden text-slate-600 xs:inline sm:inline" aria-hidden>
+              |
+            </span>
             <a href={site.textTel} className="hover:text-brand-green-light">
               Text {site.text}
             </a>
