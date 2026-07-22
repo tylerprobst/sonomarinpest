@@ -80,12 +80,16 @@ export default function HomePage() {
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <RatingBadge light className="mb-5" />
-            <h1 className="heading-display text-4xl sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-              Professional{" "}
-              <span className="text-brand-green-light">pest control</span> in
-              Sonoma &amp; Marin
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.15]">
+              <span className="block">Professional</span>
+              <span className="block">
+                <span className="text-brand-green-light">pest control</span>
+                {" "}
+                in
+              </span>
+              <span className="block">Sonoma &amp; Marin</span>
             </h1>
-            <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-relaxed">
+            <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
               Family-owned and operated. Licensed Branch&nbsp;2 technicians.
               Eco-friendly IPM and expert rodent exclusion—with the five-star
               service our neighbors rave about.
