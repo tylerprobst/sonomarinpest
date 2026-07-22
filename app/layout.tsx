@@ -4,6 +4,7 @@ import { site } from "@/content/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTA } from "@/components/layout/MobileCTA";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { GorillaDeskScript } from "@/components/forms/GorillaDeskScript";
 import "./globals.css";
 import { assetPath } from "@/lib/paths";
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
+        <ScrollToTop />
         {/* Header outside overflow clip so menus aren't constrained */}
         <Header />
         <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-x-clip">
