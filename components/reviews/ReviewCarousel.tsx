@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Stars } from "@/components/reviews/Stars";
 
 export type CarouselReview = {
@@ -13,20 +13,30 @@ export type CarouselReview = {
 };
 
 /**
- * Horizontal review carousel with slow continuous auto-scroll.
- * Pauses on hover / focus. Duplicates items for a seamless loop.
+ * Horizontal review carousel:
+ * - slow continuous auto-scroll
+ * - touch / mouse swipe (pointer events)
+ * - pauses while dragging / hovering; resumes shortly after
  */
 export function ReviewCarousel({
   reviews,
   speed = 28,
 }: {
   reviews: CarouselReview[];
-  /** Pixels per second */
+  /** Pixels per second for auto-scroll */
   speed?: number;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [paused, setPaused] = useState(false);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const offsetRef = useRef(0);
+  const pausedRef = useRef(false);
+  const draggingRef = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartOffset = useRef(0);
+  const lastPointerId = useRef<number | null>(null);
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const [hint, setHint] = useState("Swipe or hover · Auto-scrolls slowly");
 
   const items =
     reviews.length === 0
@@ -35,6 +45,39 @@ export function ReviewCarousel({
         ? [...reviews, ...reviews, ...reviews]
         : [...reviews, ...reviews];
 
+  const normalizeOffset = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const half = track.scrollWidth / 2;
+    if (half <= 0) return;
+    // Keep offset in [0, half)
+    while (offsetRef.current >= half) offsetRef.current -= half;
+    while (offsetRef.current < 0) offsetRef.current += half;
+  }, []);
+
+  const applyTransform = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    normalizeOffset();
+    track.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
+  }, [normalizeOffset]);
+
+  const pauseAuto = useCallback((ms = 0) => {
+    pausedRef.current = true;
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    if (ms > 0) {
+      resumeTimer.current = setTimeout(() => {
+        if (!draggingRef.current) pausedRef.current = false;
+      }, ms);
+    }
+  }, []);
+
+  const resumeAuto = useCallback(() => {
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    if (!draggingRef.current) pausedRef.current = false;
+  }, []);
+
+  // Auto-scroll loop
   useEffect(() => {
     const track = trackRef.current;
     if (!track || items.length === 0) return;
@@ -46,33 +89,88 @@ export function ReviewCarousel({
       const dt = (now - last) / 1000;
       last = now;
 
-      if (!paused) {
+      if (!pausedRef.current && !draggingRef.current) {
         offsetRef.current += speed * dt;
-        const half = track.scrollWidth / 2;
-        if (half > 0 && offsetRef.current >= half) {
-          offsetRef.current -= half;
-        }
-        track.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
+        applyTransform();
       }
 
       frame = requestAnimationFrame(tick);
     };
 
     frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [paused, speed, items.length]);
+    return () => {
+      cancelAnimationFrame(frame);
+      if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    };
+  }, [speed, items.length, applyTransform]);
+
+  // Pointer swipe (touch + mouse)
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    const track = trackRef.current;
+    if (!viewport || !track || items.length === 0) return;
+
+    const onPointerDown = (e: PointerEvent) => {
+      // Only primary button / touch
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+
+      draggingRef.current = true;
+      pausedRef.current = true;
+      dragStartX.current = e.clientX;
+      dragStartOffset.current = offsetRef.current;
+      lastPointerId.current = e.pointerId;
+      viewport.setPointerCapture(e.pointerId);
+      track.style.transition = "none";
+      setHint("Release to continue · Auto-scroll resumes shortly");
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!draggingRef.current || e.pointerId !== lastPointerId.current) return;
+      const dx = e.clientX - dragStartX.current;
+      // Drag left → show next (increase offset)
+      offsetRef.current = dragStartOffset.current - dx;
+      applyTransform();
+    };
+
+    const endDrag = (e: PointerEvent) => {
+      if (!draggingRef.current || e.pointerId !== lastPointerId.current) return;
+      draggingRef.current = false;
+      lastPointerId.current = null;
+      try {
+        viewport.releasePointerCapture(e.pointerId);
+      } catch {
+        /* already released */
+      }
+      applyTransform();
+      // Resume auto-scroll after a short pause so user can read
+      pauseAuto(2200);
+      setHint("Swipe or hover · Auto-scrolls slowly");
+    };
+
+    viewport.addEventListener("pointerdown", onPointerDown);
+    viewport.addEventListener("pointermove", onPointerMove);
+    viewport.addEventListener("pointerup", endDrag);
+    viewport.addEventListener("pointercancel", endDrag);
+
+    return () => {
+      viewport.removeEventListener("pointerdown", onPointerDown);
+      viewport.removeEventListener("pointermove", onPointerMove);
+      viewport.removeEventListener("pointerup", endDrag);
+      viewport.removeEventListener("pointercancel", endDrag);
+    };
+  }, [items.length, applyTransform, pauseAuto]);
 
   if (reviews.length === 0) return null;
 
   return (
     <div
       className="relative max-w-full overflow-x-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocusCapture={() => setPaused(true)}
+      onMouseEnter={() => pauseAuto(0)}
+      onMouseLeave={() => resumeAuto()}
+      onFocusCapture={() => pauseAuto(0)}
       onBlurCapture={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget as Node)) {
-          setPaused(false);
+          resumeAuto();
         }
       }}
     >
@@ -85,10 +183,16 @@ export function ReviewCarousel({
         aria-hidden
       />
 
-      <div className="overflow-hidden py-1">
+      <div
+        ref={viewportRef}
+        className="cursor-grab overflow-hidden py-1 active:cursor-grabbing touch-pan-y"
+        style={{ touchAction: "pan-y" }}
+        role="region"
+        aria-label="Customer reviews carousel. Swipe or drag to browse."
+      >
         <div
           ref={trackRef}
-          className="flex w-max gap-5 will-change-transform"
+          className="flex w-max gap-5 will-change-transform select-none"
           style={{ transform: "translate3d(0,0,0)" }}
         >
           {items.map((r, i) => (
@@ -123,7 +227,7 @@ export function ReviewCarousel({
       </div>
 
       <p className="mt-4 text-center text-xs tracking-wide text-slate-400">
-        Hover to pause · Scrolls automatically
+        {hint}
       </p>
     </div>
   );
