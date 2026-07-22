@@ -25,6 +25,14 @@ const highlightServices = services.filter((s) =>
   ),
 );
 
+const relatedServiceLinks = [
+  { href: "/rodents/", label: "Rodent exclusion" },
+  { href: "/ants/", label: "Ant control" },
+  { href: "/ipm-services/", label: "IPM maintenance" },
+  { href: "/maintenance/", label: "ETM rodent service" },
+  { href: "/services/", label: "All services" },
+];
+
 export function LocationPageView({ location }: { location: Location }) {
   const reviews = getBuiltReviews();
   const nearby = location.nearby
@@ -136,8 +144,23 @@ export function LocationPageView({ location }: { location: Location }) {
               href={s.path}
               className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition hover:border-brand-blue"
             >
-              <h3 className="font-bold text-slate-900">{s.shortTitle}</h3>
-              <p className="mt-2 text-sm text-slate-600">{s.summary}</p>
+              <h3 className="heading-card text-base text-slate-900">
+                {s.shortTitle}
+              </h3>
+              <p className="mt-2 text-pretty text-sm leading-relaxed text-slate-600">
+                {s.summary}
+              </p>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap gap-2">
+          {relatedServiceLinks.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="rounded-full border border-blue-200 bg-white px-3.5 py-1.5 text-sm font-medium text-brand-blue transition hover:border-brand-blue"
+            >
+              {l.label}
             </Link>
           ))}
         </div>

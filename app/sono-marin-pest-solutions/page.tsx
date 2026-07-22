@@ -3,8 +3,8 @@ import {
   redirectMetadata,
 } from "@/components/seo/RedirectPage";
 
-const TO = "/cockroaches/";
-const LABEL = "Cockroach Control Services";
+const TO = "/about-us/";
+const LABEL = "About Us";
 
 export function generateMetadata() {
   return redirectMetadata(TO, LABEL);

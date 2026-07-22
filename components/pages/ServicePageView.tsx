@@ -40,7 +40,7 @@ function serviceImage(slug: string): { src: string; alt: string } {
   };
   return (
     map[slug] ?? {
-      src: assetPath("/images/truck.png"),
+      src: assetPath("/images/truck-hero.jpg"),
       alt: "Sono-Marin Pest Solutions service vehicle",
     }
   );
@@ -81,6 +81,7 @@ export function ServicePageView({ service }: { service: Service }) {
             className="object-cover"
             sizes="100vw"
             priority
+            aria-hidden
           />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">

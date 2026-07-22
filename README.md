@@ -48,6 +48,13 @@ Without a key, the site uses seed data in `content/generated/google-reviews.json
 
 Inline iframe embed (`account_id=83906303`) on estimate sections, plus `embed.js` for auto-height.
 
+## SEO
+
+- Canonicals, schema, and sitemap use **`https://sonomarinpest.com`**
+- Alias URLs soft-redirect with **noindex** (see `content/redirects.ts`)
+- Host 301 maps: `public/_redirects`, `vercel.json`
+- Cutover steps: [`docs/SEO-CUTOVER.md`](docs/SEO-CUTOVER.md)
+
 ## Deploy (GitHub Pages)
 
 Workflow: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)

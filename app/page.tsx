@@ -68,7 +68,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0">
           <Image
-            src={assetPath("/images/truck.png")}
+            src={assetPath("/images/truck-hero.jpg")}
             alt="Sono-Marin Pest Solutions service truck"
             fill
             priority

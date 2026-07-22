@@ -58,6 +58,16 @@ export const services: Service[] = [
         answer:
           "Many homes need inspection, exclusion work, and a short trapping period. Severe or reoccurring issues often benefit from our ETM (Exclude–Trap–Manage) maintenance plan.",
       },
+      {
+        question: "What is ETM rodent service?",
+        answer:
+          "ETM means Exclude–Trap–Manage: we seal entry points, use mechanical traps, and monitor on a schedule—without rodenticides. Ideal for properties with recurring rodent pressure.",
+      },
+      {
+        question: "Will exclusion damage my home?",
+        answer:
+          "We use commercial-grade materials suited to the surface. We explain recommended repairs before work begins and keep the property clean when finished.",
+      },
     ],
     featured: true,
     icon: "rodent",
@@ -97,6 +107,16 @@ export const services: Service[] = [
         answer:
           "We prioritize methods that are appropriate for family homes and explain any precautions. Many plans use low-impact products as part of IPM.",
       },
+      {
+        question: "How long until ant trails stop?",
+        answer:
+          "Activity often drops quickly after treatment, but full control depends on species and colony size. We’ll advise if a follow-up is expected.",
+      },
+      {
+        question: "Should I spray store-bought ant killer first?",
+        answer:
+          "Over-the-counter sprays can scatter colonies and make professional tracking harder. If you can, avoid spraying before our inspection.",
+      },
     ],
     featured: true,
     icon: "ant",
@@ -127,6 +147,11 @@ export const services: Service[] = [
         question: "Will spiders go away permanently after one visit?",
         answer:
           "One treatment helps, but outdoor pressure returns seasonally. Quarterly IPM plans keep spider and insect activity lower year-round.",
+      },
+      {
+        question: "Do you treat the exterior for spiders?",
+        answer:
+          "Yes—eaves, window frames, and other harborage areas are common focus points, along with reducing the insects spiders feed on.",
       },
     ],
     icon: "spider",
@@ -159,6 +184,11 @@ export const services: Service[] = [
         answer:
           "Activity often drops within days, but complete control can take multiple visits depending on species and how established the infestation is.",
       },
+      {
+        question: "What attracts cockroaches to kitchens?",
+        answer:
+          "Food crumbs, grease, moisture, and cluttered storage create ideal conditions. We’ll treat harborage and share practical sanitation tips.",
+      },
     ],
     icon: "roach",
   },
@@ -190,6 +220,11 @@ export const services: Service[] = [
         answer:
           "Yes—effective flea control usually requires treating pets through your veterinarian while we treat the environment. We coordinate so both parts work together.",
       },
+      {
+        question: "How long does flea control take?",
+        answer:
+          "Because fleas have a multi-stage life cycle, full relief may take more than one visit. We’ll set expectations based on what we find.",
+      },
     ],
     icon: "flea",
   },
@@ -220,6 +255,11 @@ export const services: Service[] = [
         answer:
           "They look similar, but carpenter bees have shiny abdomens and nest in wood. Correct identification matters for the right treatment approach.",
       },
+      {
+        question: "Should I seal holes myself?",
+        answer:
+          "Sealing too early can trap activity inside. Let us treat active galleries first, then discuss sealing and prevention.",
+      },
     ],
     icon: "bee",
   },
@@ -249,6 +289,11 @@ export const services: Service[] = [
         question: "Can I remove a wasp nest myself?",
         answer:
           "We don’t recommend DIY on active nests—stings can be severe. Our technicians are equipped for safe treatment.",
+      },
+      {
+        question: "What if the nest is in a wall void?",
+        answer:
+          "Wall and eave nests need professional treatment. We’ll assess access and the safest approach for your structure.",
       },
     ],
     icon: "wasp",
@@ -281,6 +326,11 @@ export const services: Service[] = [
         answer:
           "Late summer and early fall, when colonies peak and food competition increases. Call early if you see heavy traffic near a hole or eave.",
       },
+      {
+        question: "Are ground nests more dangerous?",
+        answer:
+          "Ground nests are easy to disturb while mowing or walking. Keep people and pets away and call for professional treatment.",
+      },
     ],
     icon: "wasp",
     relatedSlugs: ["wasps-hornets"],
@@ -312,6 +362,11 @@ export const services: Service[] = [
         question: "Do you handle bats?",
         answer:
           "Contact us about your situation—wildlife needs vary. We’ll advise on the right approach for your property and local regulations.",
+      },
+      {
+        question: "Will animals return after removal?",
+        answer:
+          "They can if entry points stay open. Exclusion and repairs are essential for lasting results.",
       },
     ],
     icon: "wildlife",
@@ -349,6 +404,16 @@ export const services: Service[] = [
         question: "How often should I schedule service?",
         answer:
           "Many homes do well quarterly; high-pressure properties may need monthly or bi-monthly. We’ll recommend a schedule based on your history and environment.",
+      },
+      {
+        question: "What pests does IPM cover?",
+        answer:
+          "Plans are customized but commonly address ants, spiders, occasional invaders, and related perimeter pests. Rodent-heavy properties may combine IPM with ETM.",
+      },
+      {
+        question: "Is IPM safe for kids and pets?",
+        answer:
+          "IPM emphasizes inspection and targeted methods. We’ll explain any precautions and prefer lower-impact options when they work for your situation.",
       },
     ],
     featured: true,
@@ -389,6 +454,16 @@ export const services: Service[] = [
         answer:
           "Homes and businesses with current rodent pressure, history of re-entry, or properties that need proactive perimeter and structure monitoring year-round.",
       },
+      {
+        question: "How often are ETM visits?",
+        answer:
+          "Typically monthly or bi-monthly after the initial inspection and exclusion plan. We’ll recommend a cadence based on activity.",
+      },
+      {
+        question: "Is exclusion work guaranteed?",
+        answer:
+          "When exclusion repairs are completed by our company and you remain on the ETM plan, we provide a guarantee on that repair work as described in your service agreement.",
+      },
     ],
     featured: true,
     icon: "etm",
@@ -421,6 +496,11 @@ export const services: Service[] = [
         question: "Can you service multiple buildings?",
         answer:
           "Yes. We’ll design routes and schedules that fit your association or portfolio and keep reporting consistent for your team.",
+      },
+      {
+        question: "How do you report findings to boards?",
+        answer:
+          "We provide clear service notes managers can share with boards or owners, and we can adjust communication to your process.",
       },
     ],
     icon: "hoa",

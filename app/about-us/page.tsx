@@ -35,7 +35,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src={assetPath("/images/truck.png")}
+            src={assetPath("/images/truck-hero.jpg")}
             alt=""
             fill
             className="object-cover"

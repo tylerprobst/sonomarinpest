@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.name,
-    images: [{ url: assetPath("/images/truck.png"), width: 1200, height: 800 }],
+    images: [{ url: assetPath("/images/truck-hero.jpg"), width: 1200, height: 800 }],
   },
   icons: {
     icon: assetPath("/images/badge.png"),

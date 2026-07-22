@@ -1,22 +1,15 @@
-import { notFound } from "next/navigation";
-import { getLocationBySlug } from "@/content/locations";
-import { createMetadata } from "@/lib/seo";
-import { LocationPageView } from "@/components/pages/LocationPageView";
+import {
+  RedirectPage,
+  redirectMetadata,
+} from "@/components/seo/RedirectPage";
 
-const SLUG = "petaluma";
+const TO = "/pest-control-petaluma/";
+const LABEL = "Pest Control Petaluma";
 
 export function generateMetadata() {
-  const location = getLocationBySlug(SLUG);
-  if (!location) return {};
-  return createMetadata({
-    title: location.metaTitle,
-    description: location.metaDescription,
-    path: location.path,
-  });
+  return redirectMetadata(TO, LABEL);
 }
 
 export default function Page() {
-  const location = getLocationBySlug(SLUG);
-  if (!location) notFound();
-  return <LocationPageView location={location} />;
+  return <RedirectPage to={TO} label={LABEL} />;
 }

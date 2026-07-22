@@ -1,22 +1,15 @@
-import { notFound } from "next/navigation";
-import { getServiceBySlug } from "@/content/services";
-import { createMetadata } from "@/lib/seo";
-import { ServicePageView } from "@/components/pages/ServicePageView";
+import {
+  RedirectPage,
+  redirectMetadata,
+} from "@/components/seo/RedirectPage";
 
-const SLUG = "fleas";
+const TO = "/fleas/";
+const LABEL = "Flea Control Services";
 
 export function generateMetadata() {
-  const service = getServiceBySlug(SLUG);
-  if (!service) return {};
-  return createMetadata({
-    title: service.metaTitle,
-    description: service.metaDescription,
-    path: service.path,
-  });
+  return redirectMetadata(TO, LABEL);
 }
 
 export default function Page() {
-  const service = getServiceBySlug(SLUG);
-  if (!service) notFound();
-  return <ServicePageView service={service} />;
+  return <RedirectPage to={TO} label={LABEL} />;
 }

@@ -1,5 +1,19 @@
-# Netlify / Cloudflare-style redirects for WordPress URL cleanup
-/sono-marin-pest/               / 301
-/sono-marin-pest-solutions/     /about-us/ 301
-/pest-control-in-santa-rosa/    /pest-control-santa-rosa/ 301
-/pest-control-in-petaluma/      /pest-control-petaluma/ 301
+# Netlify / Cloudflare Pages — permanent redirects (aliases + legacy WP)
+/ant-control-services/              /ants/ 301
+/ant-control-services               /ants/ 301
+/spider-control-services/           /spiders/ 301
+/spider-control-services            /spiders/ 301
+/cockroach-control-services/        /cockroaches/ 301
+/cockroach-control-services         /cockroaches/ 301
+/flea-control-services/             /fleas/ 301
+/flea-control-services              /fleas/ 301
+/carpenter-bee-control-services/    /carpenter-bees/ 301
+/carpenter-bee-control-services     /carpenter-bees/ 301
+/pest-control-in-santa-rosa/        /pest-control-santa-rosa/ 301
+/pest-control-in-santa-rosa         /pest-control-santa-rosa/ 301
+/pest-control-in-petaluma/          /pest-control-petaluma/ 301
+/pest-control-in-petaluma           /pest-control-petaluma/ 301
+/sono-marin-pest/                   / 301
+/sono-marin-pest                    / 301
+/sono-marin-pest-solutions/         /about-us/ 301
+/sono-marin-pest-solutions          /about-us/ 301

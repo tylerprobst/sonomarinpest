@@ -90,7 +90,7 @@ export default function ServicesPage() {
             />
             <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl lg:block">
               <Image
-                src={assetPath("/images/truck.png")}
+                src={assetPath("/images/truck-hero.jpg")}
                 alt="Sono-Marin service truck"
                 fill
                 className="object-cover"

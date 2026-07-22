@@ -1,23 +1,53 @@
 {
   "redirects": [
     {
-      "source": "/sono-marin-pest",
-      "destination": "/",
+      "source": "/ant-control-services",
+      "destination": "/ants/",
       "permanent": true
     },
     {
-      "source": "/sono-marin-pest/",
-      "destination": "/",
+      "source": "/ant-control-services/",
+      "destination": "/ants/",
       "permanent": true
     },
     {
-      "source": "/sono-marin-pest-solutions",
-      "destination": "/about-us/",
+      "source": "/spider-control-services",
+      "destination": "/spiders/",
       "permanent": true
     },
     {
-      "source": "/sono-marin-pest-solutions/",
-      "destination": "/about-us/",
+      "source": "/spider-control-services/",
+      "destination": "/spiders/",
+      "permanent": true
+    },
+    {
+      "source": "/cockroach-control-services",
+      "destination": "/cockroaches/",
+      "permanent": true
+    },
+    {
+      "source": "/cockroach-control-services/",
+      "destination": "/cockroaches/",
+      "permanent": true
+    },
+    {
+      "source": "/flea-control-services",
+      "destination": "/fleas/",
+      "permanent": true
+    },
+    {
+      "source": "/flea-control-services/",
+      "destination": "/fleas/",
+      "permanent": true
+    },
+    {
+      "source": "/carpenter-bee-control-services",
+      "destination": "/carpenter-bees/",
+      "permanent": true
+    },
+    {
+      "source": "/carpenter-bee-control-services/",
+      "destination": "/carpenter-bees/",
       "permanent": true
     },
     {
@@ -38,6 +68,26 @@
     {
       "source": "/pest-control-in-petaluma/",
       "destination": "/pest-control-petaluma/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest-solutions",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest-solutions/",
+      "destination": "/about-us/",
       "permanent": true
     }
   ]

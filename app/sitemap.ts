@@ -28,12 +28,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: s.featured ? 0.9 : 0.7,
   }));
 
-  const locationPages = locations.map((l) => ({
-    url: `${site.url}${l.path}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: l.priority ? 0.85 : 0.65,
-  }));
+  const locationPages = locations.map((l) => {
+    const topTier = [
+      "santa-rosa",
+      "sonoma-county",
+      "marin-county",
+      "petaluma",
+      "rohnert-park",
+      "sebastopol",
+      "novato",
+      "san-rafael",
+    ].includes(l.slug);
+    return {
+      url: `${site.url}${l.path}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: topTier ? 0.9 : l.priority ? 0.8 : 0.6,
+    };
+  });
 
   const blog = blogPosts.map((p) => ({
     url: `${site.url}${p.path}`,

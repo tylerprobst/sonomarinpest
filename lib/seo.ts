@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
 
-const defaultOgImage = `${site.url}/images/truck.png`;
+const defaultOgImage = `${site.url}/images/truck-hero.jpg`;
 
 export function createMetadata({
   title,
