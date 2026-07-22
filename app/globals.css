@@ -19,17 +19,14 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  max-width: 100%;
+  /* Keep overflow on a content wrapper, not html/body —
+     overflow-x:hidden on body clips position:fixed bars on mobile Safari. */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  overflow-x: hidden;
-  max-width: 100%;
-  position: relative;
 }
 
 /* Extra bottom padding on mobile for sticky CTA + home indicator */

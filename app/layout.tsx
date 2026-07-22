@@ -39,11 +39,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full overflow-x-hidden`}>
-      <body className="flex min-h-full max-w-full flex-col overflow-x-hidden font-sans antialiased">
-        <Header />
-        <main className="min-w-0 flex-1 overflow-x-hidden">{children}</main>
-        <Footer />
+    <html lang="en" className={`${inter.variable} h-full`}>
+      <body className="flex min-h-full flex-col font-sans antialiased">
+        {/* overflow-x on this wrapper only — not body — so fixed MobileCTA isn't clipped */}
+        <div className="flex min-h-full min-w-0 flex-1 flex-col overflow-x-clip">
+          <Header />
+          <main className="min-w-0 flex-1">{children}</main>
+          <Footer />
+        </div>
         <MobileCTA />
         <GorillaDeskScript />
       </body>
