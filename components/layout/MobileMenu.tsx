@@ -26,7 +26,6 @@ const serviceLinks = services.filter((s) =>
   ].includes(s.slug),
 );
 
-const estimateHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#estimate`;
 const areasHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#service-areas`;
 
 type Props = {
