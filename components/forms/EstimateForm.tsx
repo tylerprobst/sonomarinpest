@@ -6,24 +6,30 @@ const GORILLA_IFRAME_SRC =
 
 /**
  * Estimate block + GorillaDesk embed.
- * Full-width on mobile (no colored side gutters). Card on sm+.
+ * fullBleedMobile: edge-to-edge white panel on small screens (even on blue section).
  * id="estimate" is the scroll target for the sticky Estimate button.
  */
 export function EstimateForm({
   title = "Request a free estimate",
   compact = false,
+  fullBleedMobile = false,
 }: {
   title?: string;
   compact?: boolean;
+  fullBleedMobile?: boolean;
 }) {
   const pad = compact ? "px-4 py-5 sm:p-5" : "px-4 py-6 sm:p-8";
 
   return (
     <div
       id="estimate"
-      className="scroll-mt-[7.25rem] sm:scroll-mt-28 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2"
+      className={`scroll-mt-[7.25rem] sm:scroll-mt-28 ${
+        fullBleedMobile
+          ? "max-lg:relative max-lg:left-1/2 max-lg:w-screen max-lg:max-w-[100vw] max-lg:-translate-x-1/2"
+          : "max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2"
+      }`}
     >
-      <div className="overflow-hidden border border-slate-200 bg-white sm:rounded-2xl sm:shadow-md sm:shadow-slate-900/5 max-sm:border-x-0 max-sm:border-y">
+      <div className="overflow-hidden border border-slate-200 bg-white shadow-md shadow-slate-900/10 max-lg:rounded-none max-lg:border-x-0 lg:rounded-2xl">
         {/* Intro */}
         <div className={pad}>
           <p className="eyebrow text-brand-green">Online request</p>
@@ -43,8 +49,8 @@ export function EstimateForm({
           </p>
         </div>
 
-        {/* Form - full width of this container (viewport on mobile) */}
-        <div className="border-t border-slate-200 bg-white sm:mx-8 sm:mb-8 sm:overflow-hidden sm:rounded-xl sm:border">
+        {/* Form iframe - full width of card */}
+        <div className="border-t border-slate-200 bg-white lg:mx-8 lg:mb-2 lg:overflow-hidden lg:rounded-xl lg:border">
           <iframe
             id="gorilladesk-contact-iframe"
             src={GORILLA_IFRAME_SRC}
@@ -55,16 +61,26 @@ export function EstimateForm({
           />
         </div>
 
-        {/* Contact actions */}
-        <div className={`${pad} border-t border-slate-100 pt-4 sm:border-0 sm:pt-0`}>
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="mr-1 text-xs font-medium uppercase tracking-wide text-slate-400">
-              Or reach us
-            </span>
-            <Button href={site.phoneTel} size="sm" variant="primary">
+        {/* Contact actions - stacked label + equal-width buttons */}
+        <div className={`${pad} border-t border-slate-100`}>
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+            Or reach us
+          </p>
+          <div className="mt-3 grid grid-cols-1 gap-2 min-[400px]:grid-cols-2">
+            <Button
+              href={site.phoneTel}
+              size="md"
+              variant="primary"
+              className="w-full justify-center"
+            >
               Call {site.phone}
             </Button>
-            <Button href={site.textTel} size="sm" variant="outline">
+            <Button
+              href={site.textTel}
+              size="md"
+              variant="outline"
+              className="w-full justify-center"
+            >
               Text {site.text}
             </Button>
           </div>

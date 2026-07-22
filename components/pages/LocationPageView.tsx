@@ -230,6 +230,7 @@ export function LocationPageView({ location }: { location: Location }) {
           <SectionHeading
             title={`Schedule pest control in ${location.name}`}
             description={`Call ${site.phone} or request an estimate. We serve residential and commercial properties across ${location.county === "Both" ? "the region" : `${location.county} County`}.`}
+            light
           />
         }
       />

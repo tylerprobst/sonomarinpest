@@ -171,6 +171,7 @@ export default function AboutPage() {
           <SectionHeading
             title="Talk with our team"
             description="Questions about your pest issue? A licensed technician will help you find the right plan."
+            light
           />
         }
       />

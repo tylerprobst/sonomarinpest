@@ -87,8 +87,9 @@ export default function ServicesPage() {
             <SectionHeading
               title="Not sure which service you need?"
               description="Describe what you’re seeing - we’ll recommend the right inspection and plan."
+              light
             />
-            <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl lg:block">
+            <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl ring-2 ring-white/20 lg:block">
               <Image
                 src={assetPath("/images/truck-hero.jpg")}
                 alt="Sono-Marin service truck"

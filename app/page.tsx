@@ -289,45 +289,37 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA - full-width form on mobile, no blue gutters */}
+      {/* CTA - blue section; form full-bleed white on mobile */}
       <EstimateCtaSection
         aside={
           <>
             <SectionHeading
               title="Contact us to schedule a service"
               description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we’ll get back to you as soon as possible."
+              light
             />
-            <RatingBadge className="mb-6" />
-            <dl className="space-y-3 text-[0.975rem] text-slate-600">
+            <RatingBadge light className="mb-6" />
+            <dl className="space-y-3 text-[0.975rem]">
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-slate-900">Call</dt>
+                <dt className="font-semibold">Call</dt>
                 <dd>
-                  <a
-                    href={site.phoneTel}
-                    className="link-inline"
-                  >
-                    {site.phone}
-                  </a>
+                  <a href={site.phoneTel}>{site.phone}</a>
                 </dd>
               </div>
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-slate-900">Text</dt>
+                <dt className="font-semibold">Text</dt>
                 <dd>
-                  <a href={site.textTel} className="link-inline">
-                    {site.text}
-                  </a>
+                  <a href={site.textTel}>{site.text}</a>
                 </dd>
               </div>
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-slate-900">Email</dt>
+                <dt className="font-semibold">Email</dt>
                 <dd>
-                  <a href={site.emailMailto} className="link-inline">
-                    {site.email}
-                  </a>
+                  <a href={site.emailMailto}>{site.email}</a>
                 </dd>
               </div>
               <div className="flex flex-wrap gap-x-2">
-                <dt className="font-semibold text-slate-900">Hours</dt>
+                <dt className="font-semibold">Hours</dt>
                 <dd>{site.hours.display}</dd>
               </div>
             </dl>
