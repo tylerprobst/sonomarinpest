@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.name,
-    images: [{ url: assetPath("/images/truck-hero.jpg"), width: 1200, height: 800 }],
+    images: [
+      { url: assetPath("/images/truck-hero.jpg"), width: 1200, height: 800 },
+    ],
   },
   icons: {
     icon: assetPath("/images/badge.png"),
@@ -42,9 +44,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
-        {/* overflow-x on this wrapper only - not body - so fixed MobileCTA isn't clipped */}
-        <div className="flex min-h-full min-w-0 flex-1 flex-col overflow-x-clip">
-          <Header />
+        {/* Header outside overflow clip so menus aren't constrained */}
+        <Header />
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-x-clip">
           <main className="min-w-0 flex-1">{children}</main>
           <Footer />
         </div>
