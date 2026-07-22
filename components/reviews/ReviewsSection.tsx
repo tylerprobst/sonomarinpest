@@ -59,14 +59,14 @@ export function ReviewsSection({
         align="center"
       />
 
-      <div className="mb-8 flex flex-col items-center gap-3">
+      <div className="mb-8 flex flex-col items-center gap-2">
         <RatingBadge />
         <LiveReviewsRefresh initial={built} />
       </div>
 
       <ReviewCarousel reviews={combined} speed={26} />
 
-      <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row">
         <Button
           href={built.googleMapsUri || site.googleMapsUrl}
           variant="outline"

@@ -31,8 +31,8 @@ export function Section({
   tone?: SectionTone;
 }) {
   return (
-    <section id={id} className={`py-14 sm:py-20 ${tones[tone]} ${className}`}>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">{children}</div>
+    <section id={id} className={`py-16 sm:py-20 ${tones[tone]} ${className}`}>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
 }
@@ -43,20 +43,22 @@ export function SectionHeading({
   description,
   align = "left",
   light = false,
+  className = "",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
   light?: boolean;
+  className?: string;
 }) {
   return (
     <div
-      className={`mb-10 max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}
+      className={`mb-10 max-w-3xl sm:mb-12 ${align === "center" ? "mx-auto text-center" : ""} ${className}`}
     >
       {eyebrow && (
         <p
-          className={`mb-2 text-sm font-semibold uppercase tracking-wider ${
+          className={`eyebrow mb-3 ${
             light ? "text-brand-green-light" : "text-brand-green"
           }`}
         >
@@ -64,7 +66,7 @@ export function SectionHeading({
         </p>
       )}
       <h2
-        className={`text-3xl font-bold tracking-tight sm:text-4xl ${
+        className={`heading-section text-3xl sm:text-4xl ${
           light ? "text-white" : "text-slate-900"
         }`}
       >
@@ -72,13 +74,30 @@ export function SectionHeading({
       </h2>
       {description && (
         <p
-          className={`mt-4 text-lg leading-relaxed ${
-            light ? "text-slate-200" : "text-slate-600"
+          className={`mt-4 text-pretty text-base leading-relaxed sm:text-lg sm:leading-relaxed ${
+            light ? "text-blue-50/90" : "text-slate-600"
           }`}
         >
           {description}
         </p>
       )}
     </div>
+  );
+}
+
+/** Small label above a content block (e.g. “The problem”) */
+export function ContentLabel({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <p
+      className={`eyebrow mb-2 text-brand-green ${className}`}
+    >
+      {children}
+    </p>
   );
 }

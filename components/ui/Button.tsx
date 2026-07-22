@@ -12,25 +12,25 @@ type Size = "sm" | "md" | "lg";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-blue text-white hover:bg-brand-blue-dark shadow-sm shadow-brand-blue/20",
+    "bg-brand-blue text-white hover:bg-brand-blue-dark shadow-sm shadow-brand-blue/15",
   secondary: "bg-slate-900 text-white hover:bg-slate-800",
   outline:
     "border-2 border-brand-blue bg-white text-brand-blue hover:bg-blue-50",
   outlineLight:
-    "border-2 border-white bg-transparent text-white hover:bg-white/15",
+    "border-2 border-white/90 bg-transparent text-white hover:bg-white/12",
   ghost: "bg-transparent text-brand-blue hover:bg-brand-blue/5",
   green:
-    "bg-brand-green text-white hover:bg-brand-green-dark shadow-sm shadow-brand-green/20",
+    "bg-brand-green text-white hover:bg-brand-green-dark shadow-sm shadow-brand-green/15",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "px-3 py-1.5 text-sm",
-  md: "px-5 py-2.5 text-sm sm:text-base",
+  sm: "px-3.5 py-2 text-sm",
+  md: "px-5 py-2.5 text-sm sm:text-[0.9375rem]",
   lg: "px-6 py-3 text-base sm:text-lg",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-xl font-semibold tracking-tight transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue disabled:opacity-50";
 
 type Common = {
   children: ReactNode;

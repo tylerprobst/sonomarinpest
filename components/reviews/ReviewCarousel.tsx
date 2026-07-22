@@ -28,7 +28,6 @@ export function ReviewCarousel({
   const [paused, setPaused] = useState(false);
   const offsetRef = useRef(0);
 
-  // Duplicate for seamless loop (need enough cards)
   const items =
     reviews.length === 0
       ? []
@@ -49,7 +48,6 @@ export function ReviewCarousel({
 
       if (!paused) {
         offsetRef.current += speed * dt;
-        // Loop when we've scrolled half the track (duplicated content)
         const half = track.scrollWidth / 2;
         if (half > 0 && offsetRef.current >= half) {
           offsetRef.current -= half;
@@ -78,7 +76,6 @@ export function ReviewCarousel({
         }
       }}
     >
-      {/* Edge fades (sky-50 matches default reviews section) */}
       <div
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-sky-50 to-transparent sm:w-16"
         aria-hidden
@@ -88,7 +85,7 @@ export function ReviewCarousel({
         aria-hidden
       />
 
-      <div className="overflow-hidden">
+      <div className="overflow-hidden py-1">
         <div
           ref={trackRef}
           className="flex w-max gap-5 will-change-transform"
@@ -97,25 +94,27 @@ export function ReviewCarousel({
           {items.map((r, i) => (
             <article
               key={`${r.id}-${i}`}
-              className="w-[min(85vw,22rem)] shrink-0 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm"
+              className="w-[min(85vw,22rem)] shrink-0 rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm shadow-slate-900/5"
               tabIndex={i < reviews.length ? 0 : -1}
               aria-hidden={i >= reviews.length}
             >
               <div className="flex items-center justify-between gap-2">
                 <Stars rating={r.rating ?? 5} size="sm" />
                 {r.source && (
-                  <span className="text-xs font-medium uppercase tracking-wide text-slate-400">
+                  <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-slate-400">
                     {r.source}
                   </span>
                 )}
               </div>
-              <blockquote className="mt-4 line-clamp-6 text-slate-700 leading-relaxed">
+              <blockquote className="mt-4 line-clamp-6 text-pretty text-[0.95rem] leading-relaxed text-slate-700">
                 “{r.text}”
               </blockquote>
               <footer className="mt-5 border-t border-slate-100 pt-4">
-                <p className="font-semibold text-slate-900">{r.author}</p>
+                <p className="font-semibold tracking-tight text-slate-900">
+                  {r.author}
+                </p>
                 {r.relativeTime && (
-                  <p className="text-sm text-slate-500">{r.relativeTime}</p>
+                  <p className="mt-0.5 text-sm text-slate-500">{r.relativeTime}</p>
                 )}
               </footer>
             </article>
@@ -123,8 +122,8 @@ export function ReviewCarousel({
         </div>
       </div>
 
-      <p className="mt-3 text-center text-xs text-slate-400">
-        Hover to pause · Auto-scrolls slowly
+      <p className="mt-4 text-center text-xs tracking-wide text-slate-400">
+        Hover to pause · Scrolls automatically
       </p>
     </div>
   );

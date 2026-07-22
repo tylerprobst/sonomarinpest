@@ -15,11 +15,11 @@ export function Footer() {
   );
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-slate-800 bg-slate-900 text-slate-300">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div>
-            <div className="mb-4 inline-flex items-center rounded-xl bg-white px-3 py-2 shadow-sm">
+            <div className="mb-5 inline-flex items-center rounded-xl bg-white px-3 py-2 shadow-sm">
               <Image
                 src={assetPath("/images/logo.png")}
                 alt={site.name}
@@ -28,17 +28,17 @@ export function Footer() {
                 className="h-9 w-auto sm:h-10"
               />
             </div>
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-slate-400 text-pretty">
               A family-owned and operated local business providing quality,
               honest pest control to Marin County and Sonoma County.
             </p>
-            <div className="mt-4">
+            <div className="mt-5">
               <RatingBadge light showLink />
             </div>
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="eyebrow mb-4 text-white">
               Contact
             </h3>
             <address className="not-italic text-sm leading-relaxed">
@@ -70,13 +70,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="eyebrow mb-4 text-white">
               Services
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm leading-snug">
               {footerServices.map((s) => (
                 <li key={s.slug}>
-                  <Link href={s.path} className="hover:text-white">
+                  <Link href={s.path} className="transition hover:text-white">
                     {s.navLabel}
                   </Link>
                 </li>
@@ -95,27 +95,27 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="eyebrow mb-4 text-white">
               Company
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm leading-snug">
               <li>
-                <Link href="/about-us/" className="hover:text-white">
+                <Link href="/about-us/" className="transition hover:text-white">
                   About us
                 </Link>
               </li>
               <li>
-                <Link href="/contact/" className="hover:text-white">
+                <Link href="/contact/" className="transition hover:text-white">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/careers/" className="hover:text-white">
+                <Link href="/careers/" className="transition hover:text-white">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog/" className="hover:text-white">
+                <Link href="/blog/" className="transition hover:text-white">
                   Blog
                 </Link>
               </li>
@@ -124,7 +124,7 @@ export function Footer() {
                   href={site.googleWriteReviewUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white"
+                  className="transition hover:text-white"
                 >
                   Leave a Google review
                 </a>
@@ -134,20 +134,22 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-slate-800 pt-8">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-500">
+          <p className="eyebrow mb-3 text-slate-500">
             Proudly serving
           </p>
           <p className="text-sm leading-relaxed text-slate-500">
             {locations.map((l, i) => (
               <span key={l.slug}>
-                <Link href={l.path} className="hover:text-slate-300">
+                <Link href={l.path} className="transition hover:text-slate-300">
                   {l.name}
                 </Link>
-                {i < locations.length - 1 ? " · " : ""}
+                {i < locations.length - 1 ? (
+                  <span className="mx-1 text-slate-700">·</span>
+                ) : null}
               </span>
             ))}
           </p>
-          <p className="mt-6 text-xs text-slate-600">
+          <p className="mt-6 text-xs leading-relaxed text-slate-600">
             {site.license.note} © {year} {site.name}. All rights reserved.
           </p>
         </div>

@@ -55,20 +55,21 @@ export function LocationPageView({ location }: { location: Location }) {
             priority
           />
         </div>
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
-          <p className="text-sm font-medium text-brand-green-light">
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <p className="eyebrow text-brand-green-light">
             {location.county === "Both"
               ? "Sonoma & Marin"
-              : `${location.county} County`}{" "}
-            · Local service
+              : `${location.county} County`}
+            <span className="mx-2 text-white/40">·</span>
+            Local service
           </p>
-          <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="heading-display mt-4 max-w-3xl text-3xl sm:text-4xl lg:text-5xl">
             Pest Control in {location.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-200">
-            Family-owned, licensed Branch 2 technicians serving {location.name}{" "}
-            with thorough inspections, eco-conscious IPM, and expert rodent
-            exclusion.
+          <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-relaxed">
+            Family-owned, licensed Branch&nbsp;2 technicians serving{" "}
+            {location.name} with thorough inspections, eco-conscious IPM, and
+            expert rodent exclusion.
           </p>
           <div className="mt-6">
             <RatingBadge light />
@@ -85,13 +86,13 @@ export function LocationPageView({ location }: { location: Location }) {
       </section>
 
       <Section tone="white">
-        <div className="grid items-start gap-10 lg:grid-cols-5">
-          <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-slate-600 lg:col-span-3">
+        <div className="grid items-start gap-10 lg:grid-cols-5 lg:gap-12">
+          <div className="prose-body max-w-3xl space-y-5 text-pretty lg:col-span-3">
             {location.intro.map((p) => (
               <p key={p.slice(0, 40)}>{p}</p>
             ))}
-            <p className="rounded-xl border border-brand-green/25 bg-emerald-50 p-5 text-base text-slate-700">
-              <strong className="text-slate-900">Local note:</strong>{" "}
+            <p className="rounded-xl border border-brand-green/25 bg-emerald-50 p-5 text-[0.975rem] leading-relaxed text-slate-700">
+              <strong className="font-semibold text-slate-900">Local note:</strong>{" "}
               {location.localNotes}
             </p>
           </div>
@@ -106,15 +107,15 @@ export function LocationPageView({ location }: { location: Location }) {
           </div>
         </div>
 
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold text-slate-900">
+        <div className="mt-14 border-t border-slate-100 pt-12">
+          <h2 className="heading-section text-2xl text-slate-900 sm:text-3xl">
             Common pests in {location.name}
           </h2>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-5 flex flex-wrap gap-2">
             {location.commonPests.map((pest) => (
               <span
                 key={pest}
-                className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-brand-blue ring-1 ring-blue-100"
+                className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium tracking-tight text-brand-blue ring-1 ring-blue-100"
               >
                 {pest}
               </span>
@@ -223,25 +224,31 @@ export function AllLocationsLinks() {
   const marin = locations.filter((l) => l.county === "Marin");
 
   return (
-    <div className="grid gap-8 md:grid-cols-2">
-      <div className="rounded-2xl border border-blue-100 bg-white/80 p-6 shadow-sm">
-        <h3 className="font-bold text-slate-900">Sonoma County</h3>
-        <ul className="mt-3 columns-2 gap-4 text-sm text-slate-600">
+    <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+      <div className="rounded-2xl border border-blue-100 bg-white/90 p-6 shadow-sm sm:p-7">
+        <h3 className="heading-card text-base text-slate-900">Sonoma County</h3>
+        <ul className="mt-4 columns-2 gap-x-6 text-sm leading-relaxed text-slate-600">
           {sonoma.map((l) => (
-            <li key={l.slug} className="mb-1">
-              <Link href={l.path} className="hover:text-brand-blue">
+            <li key={l.slug} className="mb-1.5 break-inside-avoid">
+              <Link
+                href={l.path}
+                className="underline-offset-2 transition hover:text-brand-blue hover:underline"
+              >
                 {l.name}
               </Link>
             </li>
           ))}
         </ul>
       </div>
-      <div className="rounded-2xl border border-emerald-100 bg-white/80 p-6 shadow-sm">
-        <h3 className="font-bold text-slate-900">Marin County</h3>
-        <ul className="mt-3 columns-2 gap-4 text-sm text-slate-600">
+      <div className="rounded-2xl border border-emerald-100 bg-white/90 p-6 shadow-sm sm:p-7">
+        <h3 className="heading-card text-base text-slate-900">Marin County</h3>
+        <ul className="mt-4 columns-2 gap-x-6 text-sm leading-relaxed text-slate-600">
           {marin.map((l) => (
-            <li key={l.slug} className="mb-1">
-              <Link href={l.path} className="hover:text-brand-blue">
+            <li key={l.slug} className="mb-1.5 break-inside-avoid">
+              <Link
+                href={l.path}
+                className="underline-offset-2 transition hover:text-brand-blue hover:underline"
+              >
                 {l.name}
               </Link>
             </li>
