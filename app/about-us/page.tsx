@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import { site } from "@/content/site";
 import { createMetadata } from "@/lib/seo";
 import { getBuiltReviews } from "@/lib/reviews-data";
@@ -34,7 +35,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src="/images/truck.png"
+            src={assetPath("/images/truck.png")}
             alt=""
             fill
             className="object-cover"
@@ -88,7 +89,7 @@ export default function AboutPage() {
           <div className="space-y-4">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md">
               <Image
-                src="/images/service-work.jpg"
+                src={assetPath("/images/service-work.jpg")}
                 alt="Sono-Marin Pest Solutions team at work"
                 fill
                 className="object-cover"
@@ -97,7 +98,7 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
               <Image
-                src="/images/shield.png"
+                src={assetPath("/images/shield.png")}
                 alt=""
                 width={64}
                 height={64}
@@ -155,7 +156,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-md">
             <Image
-              src="/images/home-sunset.jpg"
+              src={assetPath("/images/home-sunset.jpg")}
               alt="Protected North Bay home"
               fill
               className="object-cover"

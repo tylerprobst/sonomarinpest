@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import Link from "next/link";
 import { site } from "@/content/site";
 import { services } from "@/content/services";
@@ -67,7 +68,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/truck.png"
+            src={assetPath("/images/truck.png")}
             alt="Sono-Marin Pest Solutions service truck"
             fill
             priority
@@ -218,7 +219,7 @@ export default function HomePage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-100 shadow-lg ring-4 ring-white">
             <Image
-              src="/images/service-work.jpg"
+              src={assetPath("/images/service-work.jpg")}
               alt="Sono-Marin Pest technician on the job"
               fill
               className="object-cover"
@@ -240,7 +241,7 @@ export default function HomePage() {
           />
           <div className="relative hidden h-40 overflow-hidden rounded-2xl lg:block">
             <Image
-              src="/images/neighborhood.jpg"
+              src={assetPath("/images/neighborhood.jpg")}
               alt="North Bay neighborhoods we serve"
               fill
               className="object-cover"

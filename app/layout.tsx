@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTA } from "@/components/layout/MobileCTA";
 import { GorillaDeskScript } from "@/components/forms/GorillaDeskScript";
 import "./globals.css";
+import { assetPath } from "@/lib/paths";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,11 +25,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.name,
-    images: [{ url: "/images/truck.png", width: 1200, height: 800 }],
+    images: [{ url: assetPath("/images/truck.png"), width: 1200, height: 800 }],
   },
   icons: {
-    icon: "/images/badge.png",
-    apple: "/images/badge.png",
+    icon: assetPath("/images/badge.png"),
+    apple: assetPath("/images/badge.png"),
   },
 };
 

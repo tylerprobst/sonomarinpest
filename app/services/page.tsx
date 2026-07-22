@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import Link from "next/link";
 import { services } from "@/content/services";
 import { createMetadata } from "@/lib/seo";
@@ -28,7 +29,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/neighborhood.jpg"
+            src={assetPath("/images/neighborhood.jpg")}
             alt=""
             fill
             className="object-cover"
@@ -89,7 +90,7 @@ export default function ServicesPage() {
             />
             <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl lg:block">
               <Image
-                src="/images/truck.png"
+                src={assetPath("/images/truck.png")}
                 alt="Sono-Marin service truck"
                 fill
                 className="object-cover"

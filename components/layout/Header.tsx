@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import { useState } from "react";
 import { site } from "@/content/site";
 import { services } from "@/content/services";
@@ -48,7 +49,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
-            src="/images/logo.png"
+            src={assetPath("/images/logo.png")}
             alt={site.name}
             width={180}
             height={58}

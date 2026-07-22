@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import Link from "next/link";
 import type { Location } from "@/content/locations";
 import { getLocationBySlug, locations } from "@/content/locations";
@@ -46,7 +47,7 @@ export function LocationPageView({ location }: { location: Location }) {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 to-brand-blue-dark text-white">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src="/images/neighborhood.jpg"
+            src={assetPath("/images/neighborhood.jpg")}
             alt=""
             fill
             className="object-cover"
@@ -96,7 +97,7 @@ export function LocationPageView({ location }: { location: Location }) {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200 lg:col-span-2">
             <Image
-              src="/images/home-sunset.jpg"
+              src={assetPath("/images/home-sunset.jpg")}
               alt={`Homes we protect in ${location.name}`}
               fill
               className="object-cover"

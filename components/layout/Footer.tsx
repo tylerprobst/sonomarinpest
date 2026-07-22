@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import { site } from "@/content/site";
 import { services } from "@/content/services";
 import { locations } from "@/content/locations";
@@ -20,7 +21,7 @@ export function Footer() {
           <div>
             <div className="mb-4 inline-flex items-center rounded-xl bg-white px-3 py-2 shadow-sm">
               <Image
-                src="/images/logo.png"
+                src={assetPath("/images/logo.png")}
                 alt={site.name}
                 width={160}
                 height={52}

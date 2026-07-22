@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 import Link from "next/link";
 import type { Service } from "@/content/services";
 import { services } from "@/content/services";
@@ -21,25 +22,25 @@ import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 function serviceImage(slug: string): { src: string; alt: string } {
   const map: Record<string, { src: string; alt: string }> = {
     rodents: {
-      src: "/images/service-work.jpg",
+      src: assetPath("/images/service-work.jpg"),
       alt: "Professional rodent inspection and exclusion work",
     },
     maintenance: {
-      src: "/images/service-work.jpg",
+      src: assetPath("/images/service-work.jpg"),
       alt: "Ongoing rodent ETM maintenance service",
     },
     "ipm-services": {
-      src: "/images/home-sunset.jpg",
+      src: assetPath("/images/home-sunset.jpg"),
       alt: "Protected residential property with IPM care",
     },
     hoa: {
-      src: "/images/neighborhood.jpg",
+      src: assetPath("/images/neighborhood.jpg"),
       alt: "Neighborhood and multi-property pest management",
     },
   };
   return (
     map[slug] ?? {
-      src: "/images/truck.png",
+      src: assetPath("/images/truck.png"),
       alt: "Sono-Marin Pest Solutions service vehicle",
     }
   );

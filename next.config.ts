@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Available at build time for assetPath() in components/metadata
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 export default nextConfig;
