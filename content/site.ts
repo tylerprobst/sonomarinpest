@@ -13,7 +13,7 @@ export const site = {
   email: "info@sonomarinpest.com",
   emailMailto: "mailto:info@sonomarinpest.com",
   hours: {
-    display: "Monday – Friday: 8:00am – 5:00pm",
+    display: "Monday - Friday: 8:00am - 5:00pm",
     weekdays: "Mo-Fr 08:00-17:00",
   },
   address: {

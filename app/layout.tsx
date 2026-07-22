@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
-        {/* overflow-x on this wrapper only — not body — so fixed MobileCTA isn't clipped */}
+        {/* overflow-x on this wrapper only - not body - so fixed MobileCTA isn't clipped */}
         <div className="flex min-h-full min-w-0 flex-1 flex-col overflow-x-clip">
           <Header />
           <main className="min-w-0 flex-1">{children}</main>

@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 const estimateHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#estimate`;
 
 /**
- * Fixed mobile call bar — stays fully inside the viewport (no clipped buttons).
+ * Fixed mobile call bar - stays fully inside the viewport (no clipped buttons).
  */
 export function MobileCTA() {
   return (

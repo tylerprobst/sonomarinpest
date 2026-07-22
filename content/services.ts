@@ -26,10 +26,10 @@ export const services: Service[] = [
     navLabel: "Rodents",
     metaTitle: "Rodent Control & Exclusion | Sonoma & Marin | Sono-Marin Pest",
     metaDescription:
-      "Expert rodent inspections, exclusion repairs, and long-term protection in Sonoma & Marin Counties. No rodenticides—trap and seal for lasting results.",
+      "Expert rodent inspections, exclusion repairs, and long-term protection in Sonoma & Marin Counties. No rodenticides - trap and seal for lasting results.",
     heroHeadline: "Rodent Inspections, Repairs & Long-Term Protection",
     summary:
-      "Eviction notice served—expert rodent control that seals them out for good.",
+      "Eviction notice served - expert rodent control that seals them out for good.",
     problem:
       "Rodents are clever and relentless. They squeeze through openings as small as a quarter (rats) or a dime (mice), chew through wood, plastic, and soft materials, and can damage insulation, wiring, and stored goods. Traps alone rarely solve the problem if entry points stay open.",
     approach:
@@ -38,7 +38,7 @@ export const services: Service[] = [
       "Detailed structure and property inspection",
       "Identification of species and entry points",
       "Exclusion repairs and sealing recommendations",
-      "Mechanical trapping—no rodenticides",
+      "Mechanical trapping - no rodenticides",
       "Optional ETM maintenance for ongoing protection",
       "Clear reporting and honest repair guidance",
     ],
@@ -56,12 +56,12 @@ export const services: Service[] = [
       {
         question: "Will one visit solve a rodent problem?",
         answer:
-          "Many homes need inspection, exclusion work, and a short trapping period. Severe or reoccurring issues often benefit from our ETM (Exclude–Trap–Manage) maintenance plan.",
+          "Many homes need inspection, exclusion work, and a short trapping period. Severe or reoccurring issues often benefit from our ETM (Exclude-Trap-Manage) maintenance plan.",
       },
       {
         question: "What is ETM rodent service?",
         answer:
-          "ETM means Exclude–Trap–Manage: we seal entry points, use mechanical traps, and monitor on a schedule—without rodenticides. Ideal for properties with recurring rodent pressure.",
+          "ETM means Exclude-Trap-Manage: we seal entry points, use mechanical traps, and monitor on a schedule - without rodenticides. Ideal for properties with recurring rodent pressure.",
       },
       {
         question: "Will exclusion damage my home?",
@@ -88,7 +88,7 @@ export const services: Service[] = [
     problem:
       "Argentine and other common ants form large colonies and follow scent trails into kitchens, bathrooms, and pet areas. Surface sprays alone often scatter colonies without eliminating the nest.",
     approach:
-      "We identify the species, locate trails and nest sites, and apply targeted treatments—including eco-friendlier options when appropriate—so we reduce activity at the source and along entry routes.",
+      "We identify the species, locate trails and nest sites, and apply targeted treatments - including eco-friendlier options when appropriate - so we reduce activity at the source and along entry routes.",
     includes: [
       "Species identification and trail inspection",
       "Interior and exterior treatment as needed",
@@ -130,8 +130,8 @@ export const services: Service[] = [
     metaTitle: "Spider Control | Sonoma & Marin | Sono-Marin Pest",
     metaDescription:
       "Professional spider control for homes in Sonoma and Marin Counties. Reduce webs, harborage, and the insects that attract spiders.",
-    heroHeadline: "Spider Control—Fewer Webs, More Peace of Mind",
-    summary: "We stop creepy crawlies in their tracks—no webs, no worries.",
+    heroHeadline: "Spider Control - Fewer Webs, More Peace of Mind",
+    summary: "We stop creepy crawlies in their tracks - no webs, no worries.",
     problem:
       "Spiders follow prey. Webs around eaves, windows, and garages often mean other insects are present. Some species also concern homeowners for bites or appearance.",
     approach:
@@ -151,7 +151,7 @@ export const services: Service[] = [
       {
         question: "Do you treat the exterior for spiders?",
         answer:
-          "Yes—eaves, window frames, and other harborage areas are common focus points, along with reducing the insects spiders feed on.",
+          "Yes - eaves, window frames, and other harborage areas are common focus points, along with reducing the insects spiders feed on.",
       },
     ],
     icon: "spider",
@@ -165,9 +165,9 @@ export const services: Service[] = [
     metaTitle: "Cockroach Control | Sonoma & Marin | Sono-Marin Pest",
     metaDescription:
       "Targeted cockroach control for kitchens, bathrooms, and commercial spaces in Sonoma and Marin Counties. Fast, discreet, effective treatment.",
-    heroHeadline: "Cockroach Control—Because One Is Too Many",
+    heroHeadline: "Cockroach Control - Because One Is Too Many",
     summary:
-      "Targeted control for roaches of all kinds—fast and thorough.",
+      "Targeted control for roaches of all kinds - fast and thorough.",
     problem:
       "Cockroaches thrive in kitchens, appliances, bathrooms, and basements. They spread quickly, contaminate surfaces, and can trigger allergies. DIY sprays often push them deeper into voids.",
     approach:
@@ -218,7 +218,7 @@ export const services: Service[] = [
       {
         question: "Do I need to treat my pets too?",
         answer:
-          "Yes—effective flea control usually requires treating pets through your veterinarian while we treat the environment. We coordinate so both parts work together.",
+          "Yes - effective flea control usually requires treating pets through your veterinarian while we treat the environment. We coordinate so both parts work together.",
       },
       {
         question: "How long does flea control take?",
@@ -237,9 +237,9 @@ export const services: Service[] = [
     metaTitle: "Carpenter Bee Control | Sonoma & Marin | Sono-Marin Pest",
     metaDescription:
       "Protect decks, eaves, and wood structures from carpenter bee damage in Sonoma and Marin Counties.",
-    heroHeadline: "Carpenter Bee Control—Stop the Buzz and the Damage",
+    heroHeadline: "Carpenter Bee Control - Stop the Buzz and the Damage",
     summary:
-      "We handle the buzz and the damage—protect your wood structures today.",
+      "We handle the buzz and the damage - protect your wood structures today.",
     problem:
       "Carpenter bees bore into untreated or soft wood on decks, fascia, and eaves. Holes expand year after year and can attract woodpeckers, accelerating damage.",
     approach:
@@ -272,11 +272,11 @@ export const services: Service[] = [
     metaTitle: "Wasp & Hornet Removal | Sonoma & Marin | Sono-Marin Pest",
     metaDescription:
       "Safe, swift removal of wasps and hornets around homes and businesses in Sonoma and Marin Counties.",
-    heroHeadline: "Wasp & Hornet Removal—Reclaim Your Yard",
+    heroHeadline: "Wasp & Hornet Removal - Reclaim Your Yard",
     summary:
       "Safe, swift removal of stinging threats so you can enjoy your outdoor space.",
     problem:
-      "Wasps and hornets nest in eaves, trees, wall voids, and ground cavities. They become aggressive near nests—especially in late summer—posing risks to family and guests.",
+      "Wasps and hornets nest in eaves, trees, wall voids, and ground cavities. They become aggressive near nests - especially in late summer - posing risks to family and guests.",
     approach:
       "We locate nests, treat safely with the right equipment, and remove or neutralize activity so you can use patios and play areas again.",
     includes: [
@@ -288,7 +288,7 @@ export const services: Service[] = [
       {
         question: "Can I remove a wasp nest myself?",
         answer:
-          "We don’t recommend DIY on active nests—stings can be severe. Our technicians are equipped for safe treatment.",
+          "We don’t recommend DIY on active nests - stings can be severe. Our technicians are equipped for safe treatment.",
       },
       {
         question: "What if the nest is in a wall void?",
@@ -310,7 +310,7 @@ export const services: Service[] = [
       "Aggressive yellowjacket nest control for Sonoma and Marin properties. Fast response for ground and structure nests.",
     heroHeadline: "Yellowjacket Nest Control",
     summary:
-      "Aggressive stingers need professional handling—especially ground and wall nests.",
+      "Aggressive stingers need professional handling - especially ground and wall nests.",
     problem:
       "Yellowjackets are often mistaken for wasps but can be more aggressive, especially late in the season. Ground nests and wall nests surprise homeowners during mowing or outdoor dining.",
     approach:
@@ -361,7 +361,7 @@ export const services: Service[] = [
       {
         question: "Do you handle bats?",
         answer:
-          "Contact us about your situation—wildlife needs vary. We’ll advise on the right approach for your property and local regulations.",
+          "Contact us about your situation - wildlife needs vary. We’ll advise on the right approach for your property and local regulations.",
       },
       {
         question: "Will animals return after removal?",
@@ -380,13 +380,13 @@ export const services: Service[] = [
     metaTitle: "IPM Pest Maintenance | Eco-Friendly | Sono-Marin Pest",
     metaDescription:
       "Eco-friendly Integrated Pest Management for homes and businesses in Sonoma and Marin. Monthly, bi-monthly, or quarterly protection.",
-    heroHeadline: "IPM Maintenance—Year-Round Protection",
+    heroHeadline: "IPM Maintenance - Year-Round Protection",
     summary:
       "Eco-friendly management for residential and commercial properties.",
     problem:
       "Pests change with the seasons. One-time treatments don’t address new pressures from weather, landscaping, or neighboring properties.",
     approach:
-      "Integrated Pest Management starts with inspection and identification, then uses the least-impact effective tools—including botanical and pet-conscious options when suitable—plus monitoring so problems are caught early.",
+      "Integrated Pest Management starts with inspection and identification, then uses the least-impact effective tools - including botanical and pet-conscious options when suitable - plus monitoring so problems are caught early.",
     includes: [
       "Regular property inspections",
       "Customized treatment plans",
@@ -398,7 +398,7 @@ export const services: Service[] = [
       {
         question: "What is IPM?",
         answer:
-          "Integrated Pest Management combines inspection, identification, exclusion, sanitation advice, and targeted treatments—using pesticides only when needed and in a measured way.",
+          "Integrated Pest Management combines inspection, identification, exclusion, sanitation advice, and targeted treatments - using pesticides only when needed and in a measured way.",
       },
       {
         question: "How often should I schedule service?",
@@ -427,14 +427,14 @@ export const services: Service[] = [
     navLabel: "ETM Rodent Service",
     metaTitle: "ETM Rodent Service | Exclude Trap Manage | Sono-Marin Pest",
     metaDescription:
-      "Exclude–Trap–Manage rodent service without poisons. Monthly or bi-monthly monitoring and exclusion for Sonoma & Marin properties.",
-    heroHeadline: "E.T.M. Rodent Service—Exclude, Trap, Manage",
+      "Exclude-Trap-Manage rodent service without poisons. Monthly or bi-monthly monitoring and exclusion for Sonoma & Marin properties.",
+    heroHeadline: "E.T.M. Rodent Service - Exclude, Trap, Manage",
     summary:
-      "Ongoing rodent protection without rodenticides—inspection, exclusion, and mechanical trapping.",
+      "Ongoing rodent protection without rodenticides - inspection, exclusion, and mechanical trapping.",
     problem:
       "Rodents keep testing buildings. One-time trapping without sealing and monitoring often leads to re-entry and costly surprises in attics or walls.",
     approach:
-      "Our Exclude–Trap–Manage program starts with inspection, coordinates exclusion repairs, places mechanical traps in and around the structure (tamper-resistant exterior stations), and returns on a schedule to check, adjust, and prevent re-infestation—without poison baits.",
+      "Our Exclude-Trap-Manage program starts with inspection, coordinates exclusion repairs, places mechanical traps in and around the structure (tamper-resistant exterior stations), and returns on a schedule to check, adjust, and prevent re-infestation - without poison baits.",
     includes: [
       "Initial inspection and plan",
       "Exclusion repair quotes and work as needed",
@@ -484,7 +484,7 @@ export const services: Service[] = [
     problem:
       "Pest issues in multi-unit and managed properties spread between units, create liability, and generate after-hours complaints. Reactive-only service is expensive and stressful.",
     approach:
-      "We build IPM and rodent programs around your portfolio—regular inspections, clear reporting, and rapid response when new issues appear—so managers stay ahead of problems.",
+      "We build IPM and rodent programs around your portfolio - regular inspections, clear reporting, and rapid response when new issues appear - so managers stay ahead of problems.",
     includes: [
       "Customizable maintenance schedules",
       "Rodent inspection and exclusion expertise",

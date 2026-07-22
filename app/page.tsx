@@ -25,7 +25,7 @@ export const metadata = createMetadata({
 const pillars = [
   {
     title: "Thorough inspections first",
-    body: "We find how pests get in—and what attracts them—before recommending treatment. No cookie-cutter spray routes.",
+    body: "We find how pests get in - and what attracts them - before recommending treatment. No cookie-cutter spray routes.",
     accent: "border-l-brand-blue",
   },
   {
@@ -35,12 +35,12 @@ const pillars = [
   },
   {
     title: "We stand behind the work",
-    body: "Follow-up visits, text updates, and technicians who want it done right—especially on tough rodent jobs.",
+    body: "Follow-up visits, text updates, and technicians who want it done right - especially on tough rodent jobs.",
     accent: "border-l-sky-500",
   },
   {
     title: "Eco-conscious & poison-free rodents",
-    body: "IPM-first approach. For rodents we exclude and trap—never rodenticides that risk pets, wildlife, or wall odors.",
+    body: "IPM-first approach. For rodents we exclude and trap - never rodenticides that risk pets, wildlife, or wall odors.",
     accent: "border-l-emerald-500",
   },
 ];
@@ -91,7 +91,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
               Family-owned and operated. Licensed Branch&nbsp;2 technicians.
-              Eco-friendly IPM and expert rodent exclusion—with the five-star
+              Eco-friendly IPM and expert rodent exclusion - with the five-star
               service our neighbors rave about.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -159,7 +159,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Quality service"
           title="Sonoma County’s specialists in honest pest control"
-          description="A family-owned local business providing quality, professional pest control to Marin County and Sonoma County—built on inspections, education, and results that last."
+          description="A family-owned local business providing quality, professional pest control to Marin County and Sonoma County - built on inspections, education, and results that last."
         />
         <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
           {pillars.map((p) => (
@@ -181,7 +181,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What we treat"
           title="Comprehensive pest management"
-          description="From stubborn ants to full rodent exclusion—customized plans for homes and businesses across the North Bay."
+          description="From stubborn ants to full rodent exclusion - customized plans for homes and businesses across the North Bay."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {gridServices.map((s, i) => {
@@ -226,12 +226,12 @@ export default function HomePage() {
           <div>
             <p className="eyebrow text-brand-green">Our specialty</p>
             <h2 className="heading-section mt-3 text-3xl text-slate-900 sm:text-4xl">
-              Rodent exclusion that lasts—without poison
+              Rodent exclusion that lasts - without poison
             </h2>
             <p className="mt-5 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg sm:leading-relaxed">
               Traps alone don’t work if entry points stay open. We inspect,
-              seal, and trap mechanically. Our ETM (Exclude–Trap–Manage)
-              program keeps rodents out year-round—no rodenticides that risk
+              seal, and trap mechanically. Our ETM (Exclude-Trap-Manage)
+              program keeps rodents out year-round - no rodenticides that risk
               pets, wildlife, or odor in the walls.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -261,7 +261,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Service area"
             title="Proudly serving Sonoma & Marin Counties"
-            description="Local routes across the North Bay—residential and commercial properties welcome."
+            description="Local routes across the North Bay - residential and commercial properties welcome."
             className="mb-0"
           />
           <div className="relative hidden h-44 overflow-hidden rounded-2xl shadow-md lg:block">
@@ -297,7 +297,7 @@ export default function HomePage() {
           <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">
             <SectionHeading
               title="Contact us to schedule a service"
-              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call—we’ll get back to you as soon as possible."
+              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we’ll get back to you as soon as possible."
               light
             />
             <RatingBadge light className="mb-6" />

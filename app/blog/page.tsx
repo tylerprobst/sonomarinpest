@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/Section";
 export const metadata = createMetadata({
   title: "Blog | Pest Control Tips for Sonoma & Marin",
   description:
-    "Tips and guides from Sono-Marin Pest Solutions—IPM, ants, rodents, and home protection for the North Bay.",
+    "Tips and guides from Sono-Marin Pest Solutions - IPM, ants, rodents, and home protection for the North Bay.",
   path: "/blog/",
 });
 

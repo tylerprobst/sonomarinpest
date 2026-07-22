@@ -20,7 +20,7 @@ export const featuredReviews: FeaturedReview[] = [
     author: "Mia Simon",
     rating: 5,
     relativeTime: "Recent",
-    text: "Some of the best customer service I've ever encountered. Called and was able to get an appointment within 48 hours. Tyler came out and handled all subsequent visits—super friendly and educational. Properly diagnosed and solved our issue within the week. Reasonable pricing. Did NOT try to upsell. Highly recommend!!",
+    text: "Some of the best customer service I've ever encountered. Called and was able to get an appointment within 48 hours. Tyler came out and handled all subsequent visits - super friendly and educational. Properly diagnosed and solved our issue within the week. Reasonable pricing. Did NOT try to upsell. Highly recommend!!",
   },
   {
     id: "amy-arden",
@@ -41,7 +41,7 @@ export const featuredReviews: FeaturedReview[] = [
     author: "Jessica Nieto",
     rating: 5,
     relativeTime: "Recent",
-    text: "Sono-Marin Pest Solutions I would call back in a heartbeat. Their team was so easy to work with—friendly, informative, and hard workers. Thank you for taking care of our rat situation!",
+    text: "Sono-Marin Pest Solutions I would call back in a heartbeat. Their team was so easy to work with - friendly, informative, and hard workers. Thank you for taking care of our rat situation!",
   },
   {
     id: "richard-williams",
@@ -62,6 +62,6 @@ export const featuredReviews: FeaturedReview[] = [
     author: "Bonnie Martindale",
     rating: 5,
     relativeTime: "Recent",
-    text: "This company and its employees are absolutely fantastic. From Dylan to Richard and Morgan they are competent, knowledgeable, honest and caring. From their expert advice to the work done—bar none the best service we have ever received. We are switching our pest company to Sono-Marin.",
+    text: "This company and its employees are absolutely fantastic. From Dylan to Richard and Morgan they are competent, knowledgeable, honest and caring. From their expert advice to the work done - bar none the best service we have ever received. We are switching our pest company to Sono-Marin.",
   },
 ];

@@ -42,7 +42,7 @@ export default function ServicesPage() {
             Our services
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">
-            Customized treatments that stop pests—and keep them from coming
+            Customized treatments that stop pests - and keep them from coming
             back. Specializing in rodent inspections, IPM maintenance, and
             quality residential & commercial care.
           </p>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
           <div className="lg:sticky lg:top-36 lg:self-start lg:pt-2 lg:pb-8">
             <SectionHeading
               title="Not sure which service you need?"
-              description="Describe what you’re seeing—we’ll recommend the right inspection and plan."
+              description="Describe what you’re seeing - we’ll recommend the right inspection and plan."
             />
             <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl lg:block">
               <Image

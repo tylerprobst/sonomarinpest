@@ -44,7 +44,7 @@ body {
   background: color-mix(in srgb, #0b5ed7 25%, white);
 }
 
-/* ——— Typography utilities ——— */
+/* Typography utilities */
 
 .text-balance {
   text-wrap: balance;
@@ -124,7 +124,7 @@ body {
   box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
 }
 
-/* GorillaDesk iframe — never wider than viewport */
+/* GorillaDesk iframe: never wider than viewport */
 #gorilladesk-contact-iframe {
   max-width: 100% !important;
   width: 100% !important;

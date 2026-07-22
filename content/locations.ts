@@ -21,9 +21,9 @@ export const locations: Location[] = [
     county: "Sonoma",
     metaTitle: "Pest Control Sonoma County | Family-Owned | Sono-Marin Pest",
     metaDescription:
-      "Professional pest control across Sonoma County—Santa Rosa to the coast. Rodent exclusion without poison, IPM maintenance, 100+ five-star reviews.",
+      "Professional pest control across Sonoma County - Santa Rosa to the coast. Rodent exclusion without poison, IPM maintenance, 100+ five-star reviews.",
     intro: [
-      "Sono-Marin Pest Solutions provides professional pest control throughout Sonoma County for homes, farms, wineries, and businesses. From the Santa Rosa plain to coastal communities and wine-country estates, pest pressure changes with weather, irrigation, and building age—and your plan should too.",
+      "Sono-Marin Pest Solutions provides professional pest control throughout Sonoma County for homes, farms, wineries, and businesses. From the Santa Rosa plain to coastal communities and wine-country estates, pest pressure changes with weather, irrigation, and building age - and your plan should too.",
       "Our licensed Branch 2 technicians specialize in thorough inspections, eco-conscious Integrated Pest Management (IPM), and rodent exclusion that lasts. We focus on how pests get in and what keeps them coming back, not temporary sprays that ignore the structure.",
       "Whether you need a one-time response for ants or yellowjackets, or a year-round maintenance program for a property with recurring rodent activity, we explain options clearly, price honestly, and stand behind the work.",
       "Homeowners, property managers, and commercial operators across Sonoma County choose us for responsiveness, educational technicians, and poison-free rodent methods that protect pets, wildlife, and the building itself.",
@@ -50,7 +50,7 @@ export const locations: Location[] = [
       {
         question: "How quickly can you schedule service?",
         answer:
-          "Many customers are seen within a few days. Urgent stinging-insect and active rodent situations are prioritized—call or text for the next available appointment.",
+          "Many customers are seen within a few days. Urgent stinging-insect and active rodent situations are prioritized - call or text for the next available appointment.",
       },
     ],
     nearby: ["santa-rosa", "petaluma", "sebastopol", "windsor", "healdsburg"],
@@ -63,11 +63,11 @@ export const locations: Location[] = [
     county: "Marin",
     metaTitle: "Pest Control Marin County | IPM & Rodents | Sono-Marin Pest",
     metaDescription:
-      "Trusted pest control in Marin County—Novato, San Rafael, Mill Valley & more. Eco-friendly IPM, rodent exclusion, family-owned service.",
+      "Trusted pest control in Marin County - Novato, San Rafael, Mill Valley & more. Eco-friendly IPM, rodent exclusion, family-owned service.",
     intro: [
       "From Novato to the southern Marin peninsula, Sono-Marin Pest Solutions helps homeowners and businesses stay ahead of rodents, ants, spiders, and wildlife with careful inspections and quality workmanship.",
       "Marin’s mix of older homes, hillside construction, bay-adjacent moisture, and open-space edges creates unique entry points and harborage. Crawl spaces, decks, and utility penetrations are common pathways we inspect thoroughly.",
-      "We design plans that fit your property—not a one-size checklist—and communicate clearly about what we found, what we recommend, and what can wait.",
+      "We design plans that fit your property - not a one-size checklist - and communicate clearly about what we found, what we recommend, and what can wait.",
       "Whether you manage a single-family home in San Rafael or a hillside property near Mill Valley open space, our Branch 2 team brings the same high standards used throughout Sonoma and Marin.",
     ],
     localNotes:
@@ -82,12 +82,12 @@ export const locations: Location[] = [
       {
         question: "Are your methods safe for hillsides and pets?",
         answer:
-          "We prioritize IPM and pet-conscious approaches. For rodents we trap and exclude—we do not use rodenticides that risk non-target animals.",
+          "We prioritize IPM and pet-conscious approaches. For rodents we trap and exclude - we do not use rodenticides that risk non-target animals.",
       },
       {
         question: "Do you handle wildlife in Marin?",
         answer:
-          "Yes—raccoons, skunks, and related small mammal issues are assessed case by case with exclusion and humane strategies appropriate to the structure.",
+          "Yes - raccoons, skunks, and related small mammal issues are assessed case by case with exclusion and humane strategies appropriate to the structure.",
       },
       {
         question: "Can you work with property managers?",
@@ -107,8 +107,8 @@ export const locations: Location[] = [
     metaDescription:
       "Local pest control in Santa Rosa, CA. Family-owned HQ. Rodent inspections, ant control, IPM maintenance. Call 707-604-8188.",
     intro: [
-      "Based in Santa Rosa, Sono-Marin Pest Solutions is your neighborhood partner for residential and commercial pest control. We know local housing styles—from mid-century homes and ranch properties to newer developments—and the pest patterns that come with North Bay seasons.",
-      "Rats in the attic, ant trails in the kitchen, or perimeter spiders after the first rains are everyday calls here. We start with inspection, explain what we find in plain language, and build a plan that fits your home—not a one-size spray ticket.",
+      "Based in Santa Rosa, Sono-Marin Pest Solutions is your neighborhood partner for residential and commercial pest control. We know local housing styles - from mid-century homes and ranch properties to newer developments - and the pest patterns that come with North Bay seasons.",
+      "Rats in the attic, ant trails in the kitchen, or perimeter spiders after the first rains are everyday calls here. We start with inspection, explain what we find in plain language, and build a plan that fits your home - not a one-size spray ticket.",
       "Our team is known for thorough rodent exclusion, honest quotes without pressure, and follow-up that stands behind the work. Many neighbors switched to us after years with national chains and never looked back.",
       "From Bennett Valley to Fountaingrove, Roseland to the Junior College area, we schedule quickly and keep you updated by phone or text. Ask about quarterly IPM plans if you want fewer surprises between seasons.",
     ],
@@ -124,7 +124,7 @@ export const locations: Location[] = [
       {
         question: "Do you offer same-week appointments in Santa Rosa?",
         answer:
-          "Often yes. Availability changes with the season—call or text and we’ll give you the soonest option.",
+          "Often yes. Availability changes with the season - call or text and we’ll give you the soonest option.",
       },
       {
         question: "What is the most common pest issue in Santa Rosa?",
@@ -134,12 +134,12 @@ export const locations: Location[] = [
       {
         question: "Do you service commercial properties in Santa Rosa?",
         answer:
-          "Yes—offices, retail, food service, and multi-unit properties with discreet scheduling when needed.",
+          "Yes - offices, retail, food service, and multi-unit properties with discreet scheduling when needed.",
       },
       {
         question: "Can I get a poison-free rodent plan?",
         answer:
-          "Yes. Our rodent and ETM programs use inspection, exclusion, and mechanical trapping—no rodenticides.",
+          "Yes. Our rodent and ETM programs use inspection, exclusion, and mechanical trapping - no rodenticides.",
       },
     ],
     nearby: ["rohnert-park", "windsor", "sebastopol", "fulton"],
@@ -155,7 +155,7 @@ export const locations: Location[] = [
       "Professional pest control in Petaluma, CA. Historic homes to new builds. Rodent exclusion without poison, eco-friendly IPM.",
     intro: [
       "Petaluma’s historic homes, river-adjacent neighborhoods, and growing business districts deserve pest control that respects both old construction and modern family life. Sono-Marin Pest Solutions delivers careful inspections and lasting fixes.",
-      "We’re especially known for rodent work—finding how animals enter older foundations, soft spots under porches, and utility gaps, then sealing them out without relying on poisons.",
+      "We’re especially known for rodent work - finding how animals enter older foundations, soft spots under porches, and utility gaps, then sealing them out without relying on poisons.",
       "Downtown commercial spaces, east-side neighborhoods, and rural-edge properties each need a slightly different plan. We customize IPM and exclusion so you’re not paying for a generic route stop.",
       "If you’ve tried DIY traps or a one-time spray and the problem returned, schedule an inspection. We’ll map the issue and give you clear options with fair pricing.",
     ],
@@ -176,7 +176,7 @@ export const locations: Location[] = [
       {
         question: "Do you work with Petaluma businesses?",
         answer:
-          "Yes—retail, offices, and food-related businesses can request discreet scheduling and ongoing IPM.",
+          "Yes - retail, offices, and food-related businesses can request discreet scheduling and ongoing IPM.",
       },
       {
         question: "How do I prepare for a rodent inspection?",
@@ -197,9 +197,9 @@ export const locations: Location[] = [
       "Reliable pest control in Rohnert Park, CA for homes, apartments, and businesses. IPM maintenance and rodent services.",
     intro: [
       "Rohnert Park residents and property managers trust Sono-Marin Pest Solutions for clear communication, fair pricing, and thorough work. From apartments to single-family homes, we customize treatment plans to your situation.",
-      "Our IPM maintenance programs help keep ants, spiders, and seasonal pests from becoming recurring headaches—especially helpful for multi-unit buildings where issues can spread between units.",
+      "Our IPM maintenance programs help keep ants, spiders, and seasonal pests from becoming recurring headaches - especially helpful for multi-unit buildings where issues can spread between units.",
       "Students, families, and HOAs all need reliable scheduling and technicians who show up prepared. We text updates when helpful and explain findings without pressure sales tactics.",
-      "If you’re comparing pest companies in Rohnert Park, ask about inspection quality and rodent philosophy. We exclude and trap—we don’t rely on poison shortcuts.",
+      "If you’re comparing pest companies in Rohnert Park, ask about inspection quality and rodent philosophy. We exclude and trap - we don’t rely on poison shortcuts.",
     ],
     localNotes:
       "Multi-unit and HOA communities benefit from scheduled maintenance that catches issues before they spread between units. Landscaping and shared walls can move ants and roaches between residences.",
@@ -218,7 +218,7 @@ export const locations: Location[] = [
       {
         question: "What’s included in a maintenance plan?",
         answer:
-          "Regular inspections, targeted treatments as needed, and recommendations on conditions that attract pests—monthly, bi-monthly, or quarterly.",
+          "Regular inspections, targeted treatments as needed, and recommendations on conditions that attract pests - monthly, bi-monthly, or quarterly.",
       },
       {
         question: "How fast can you respond to a tenant complaint?",
@@ -238,8 +238,8 @@ export const locations: Location[] = [
     metaDescription:
       "Eco-conscious pest control in Sebastopol, CA. Rodent exclusion without poison, IPM for west county homes and rural lots.",
     intro: [
-      "Sebastopol and west county properties often sit among orchards, oaks, and rural edges—beautiful settings that also invite rodents, ants, and wildlife. Sono-Marin Pest Solutions brings eco-minded IPM and careful exclusion work to match local values.",
-      "We take time to explain what we find and use methods that protect families, pets, and the environment whenever possible. For rodents, that means trapping and sealing—not rodenticides.",
+      "Sebastopol and west county properties often sit among orchards, oaks, and rural edges - beautiful settings that also invite rodents, ants, and wildlife. Sono-Marin Pest Solutions brings eco-minded IPM and careful exclusion work to match local values.",
+      "We take time to explain what we find and use methods that protect families, pets, and the environment whenever possible. For rodents, that means trapping and sealing - not rodenticides.",
       "From in-town bungalows to larger parcels with sheds and barns, we inspect structures and surrounding conditions that drive pest activity seasonally.",
       "If you want professional results without a heavy-handed spray-only approach, we’re a strong fit for Sebastopol homeowners and small farms.",
     ],
@@ -265,7 +265,7 @@ export const locations: Location[] = [
       {
         question: "Do you offer ongoing maintenance?",
         answer:
-          "Yes—custom IPM schedules help west county properties stay ahead of seasonal pressure.",
+          "Yes - custom IPM schedules help west county properties stay ahead of seasonal pressure.",
       },
     ],
     nearby: ["forestville", "santa-rosa", "bodega-bay"],
@@ -281,7 +281,7 @@ export const locations: Location[] = [
       "Pest control in Novato, CA. Family-owned service for rodents, ants, spiders, and wildlife across northern Marin.",
     intro: [
       "Novato is one of our core Marin service areas. From hillside homes to family neighborhoods, Sono-Marin Pest Solutions delivers thorough rodent inspections, ant control, and ongoing IPM maintenance.",
-      "Customers value our responsiveness—phone answered during office hours, clear quotes, and technicians who explain what they see. No high-pressure sales, just solid plans.",
+      "Customers value our responsiveness - phone answered during office hours, clear quotes, and technicians who explain what they see. No high-pressure sales, just solid plans.",
       "Open space edges, creeks, and hillside crawl spaces make exclusion especially important here. We find entry points and fix the pathway instead of only treating symptoms.",
       "Whether you’re near downtown, Hamilton, or the hills, we schedule with your calendar in mind and keep communication simple by call or text.",
     ],
@@ -292,7 +292,7 @@ export const locations: Location[] = [
       {
         question: "Are you available for emergency stinging insects in Novato?",
         answer:
-          "Call us for yellowjackets and wasps—we prioritize active nests that threaten people and pets.",
+          "Call us for yellowjackets and wasps - we prioritize active nests that threaten people and pets.",
       },
       {
         question: "Do you handle rodents in hillside homes?",
@@ -307,7 +307,7 @@ export const locations: Location[] = [
       {
         question: "Do you serve commercial properties in Novato?",
         answer:
-          "Yes—offices, retail, and other businesses can request tailored plans and scheduling.",
+          "Yes - offices, retail, and other businesses can request tailored plans and scheduling.",
       },
     ],
     nearby: ["san-rafael", "petaluma", "san-anselmo"],
@@ -323,7 +323,7 @@ export const locations: Location[] = [
       "Professional pest control in San Rafael, CA. Rodent exclusion, IPM, residential and commercial. Family-owned North Bay team.",
     intro: [
       "San Rafael homeowners and businesses choose Sono-Marin Pest Solutions for dependable, high-quality pest control. We take time to inspect multi-level homes, older foundations, and commercial kitchens with equal care.",
-      "Our goal is long-term relief—especially for rodents and recurring ant issues—through exclusion and smart IPM, not endless spray visits alone.",
+      "Our goal is long-term relief - especially for rodents and recurring ant issues - through exclusion and smart IPM, not endless spray visits alone.",
       "Dense neighborhoods and mixed-use corridors can share pest pressure between properties. Perimeter conditions and sanitation often matter as much as interior treatment.",
       "From Gerstle Park to Terra Linda and downtown commercial spaces, we provide clear reporting and technicians who treat your property with respect.",
     ],
@@ -344,12 +344,12 @@ export const locations: Location[] = [
       {
         question: "Is rodent exclusion available in San Rafael?",
         answer:
-          "Yes—inspection, sealing recommendations, mechanical trapping, and optional ETM maintenance.",
+          "Yes - inspection, sealing recommendations, mechanical trapping, and optional ETM maintenance.",
       },
       {
         question: "What are your hours for scheduling?",
         answer:
-          "Office hours are Monday–Friday, 8:00am–5:00pm. Call 707-604-8188 or text 707-708-4167.",
+          "Office hours are Monday-Friday, 8:00am-5:00pm. Call 707-604-8188 or text 707-708-4167.",
       },
     ],
     nearby: ["novato", "larkspur", "san-anselmo", "greenbrae"],
@@ -362,24 +362,24 @@ export const locations: Location[] = [
     county: "Sonoma",
     metaTitle: "Pest Control Windsor | Sono-Marin Pest Solutions",
     metaDescription:
-      "Pest control in Windsor, CA—ants, rodents, spiders, and more. Local, licensed technicians.",
+      "Pest control in Windsor, CA - ants, rodents, spiders, and more. Local, licensed technicians.",
     intro: [
       "Windsor families choose Sono-Marin Pest Solutions for responsive service and results that last. Whether you’re in a newer subdivision or an established neighborhood, we inspect for the entry points and conditions driving your pest issues.",
       "Ask about quarterly IPM plans to stay ahead of seasonal ants, spiders, and perimeter pests.",
     ],
     localNotes:
-      "Newer construction still faces utility penetrations and landscaping that guide ants and rodents to the structure—inspection still matters.",
+      "Newer construction still faces utility penetrations and landscaping that guide ants and rodents to the structure - inspection still matters.",
     commonPests: ["Ants", "Spiders", "Rodents", "Wasps"],
     faqs: [
       {
         question: "How soon can you come to Windsor?",
         answer:
-          "We often schedule quickly—many customers are seen within a few days. Call or text for the next available appointment.",
+          "We often schedule quickly - many customers are seen within a few days. Call or text for the next available appointment.",
       },
       {
         question: "Do you offer maintenance plans in Windsor?",
         answer:
-          "Yes—monthly, bi-monthly, or quarterly IPM schedules tailored to your property.",
+          "Yes - monthly, bi-monthly, or quarterly IPM schedules tailored to your property.",
       },
     ],
     nearby: ["santa-rosa", "healdsburg", "fulton"],
@@ -395,7 +395,7 @@ export const locations: Location[] = [
       "Professional pest control in Healdsburg for homes, rentals, and hospitality. Rodent & IPM specialists.",
     intro: [
       "Healdsburg’s hospitality and residential mix needs discreet, reliable pest control. We provide thorough inspections and effective plans for homes, guest properties, and small businesses.",
-      "Rodent pressure near creeks and agricultural edges is common—we focus on exclusion and monitoring, not temporary bait shortcuts.",
+      "Rodent pressure near creeks and agricultural edges is common - we focus on exclusion and monitoring, not temporary bait shortcuts.",
     ],
     localNotes:
       "Vacation rentals and wine-country properties benefit from proactive maintenance before peak guest seasons.",
@@ -409,7 +409,7 @@ export const locations: Location[] = [
       {
         question: "Can you work discreetly for hospitality properties?",
         answer:
-          "Yes—we plan visits and communication to minimize guest disruption.",
+          "Yes - we plan visits and communication to minimize guest disruption.",
       },
     ],
     nearby: ["windsor", "cloverdale", "santa-rosa"],
@@ -434,12 +434,12 @@ export const locations: Location[] = [
       {
         question: "Do you cover the Sonoma Valley?",
         answer:
-          "Yes—Sonoma and nearby valley communities. Contact us to confirm service for your address.",
+          "Yes - Sonoma and nearby valley communities. Contact us to confirm service for your address.",
       },
       {
         question: "Do you treat commercial spaces near the plaza?",
         answer:
-          "Yes—we service retail and hospitality with flexible scheduling.",
+          "Yes - we service retail and hospitality with flexible scheduling.",
       },
     ],
     nearby: ["kenwood", "petaluma", "santa-rosa"],
@@ -452,10 +452,10 @@ export const locations: Location[] = [
     county: "Marin",
     metaTitle: "Pest Control Mill Valley | Sono-Marin Pest Solutions",
     metaDescription:
-      "Pest control in Mill Valley for hillside homes—rodents, ants, spiders, and wildlife.",
+      "Pest control in Mill Valley for hillside homes - rodents, ants, spiders, and wildlife.",
     intro: [
       "Mill Valley’s wooded hillsides and classic homes need pest control that understands moisture, crawl spaces, and wildlife corridors. We bring patient inspections and durable exclusion work.",
-      "We’re known for treating your home with respect—clear communication and thorough cleanup.",
+      "We’re known for treating your home with respect - clear communication and thorough cleanup.",
     ],
     localNotes:
       "Tree cover and hillside construction increase spider, ant, and rodent harborage. Wildlife exclusion is a frequent need near open space.",
@@ -464,7 +464,7 @@ export const locations: Location[] = [
       {
         question: "Can you help with attic wildlife in Mill Valley?",
         answer:
-          "Yes—contact us about raccoons, squirrels, and related activity. We’ll assess and recommend a plan that secures the structure.",
+          "Yes - contact us about raccoons, squirrels, and related activity. We’ll assess and recommend a plan that secures the structure.",
       },
       {
         question: "Are treatments suitable for wooded lots?",
@@ -498,7 +498,7 @@ export const locations: Location[] = [
       {
         question: "Can you inspect barns or outbuildings?",
         answer:
-          "Yes—tell us about additional structures when you schedule.",
+          "Yes - tell us about additional structures when you schedule.",
       },
     ],
     nearby: ["santa-rosa", "windsor"],
@@ -512,7 +512,7 @@ export const locations: Location[] = [
     metaDescription:
       "Coastal pest control for Bodega Bay. Moisture-aware IPM and rodent service for homes and rentals.",
     intro: [
-      "Coastal conditions in Bodega Bay bring salt air, moisture, and seasonal tourism—all of which influence pest activity. We help homeowners and rental managers keep properties protected with practical IPM and rodent solutions.",
+      "Coastal conditions in Bodega Bay bring salt air, moisture, and seasonal tourism - all of which influence pest activity. We help homeowners and rental managers keep properties protected with practical IPM and rodent solutions.",
     ],
     localNotes:
       "Moisture and second homes/rentals benefit from scheduled maintenance between guest stays.",
@@ -526,7 +526,7 @@ export const locations: Location[] = [
       {
         question: "How does coastal moisture affect pests?",
         answer:
-          "Moisture can support certain insects and building conditions that attract pests—we inspect with that in mind.",
+          "Moisture can support certain insects and building conditions that attract pests - we inspect with that in mind.",
       },
     ],
     nearby: ["jenner", "sebastopol", "forestville"],
@@ -538,9 +538,9 @@ export const locations: Location[] = [
     county: "Sonoma",
     metaTitle: "Pest Control Jenner | Sono-Marin Pest Solutions",
     metaDescription:
-      "Pest control for Jenner coastal homes—rodents, insects, and wildlife concerns.",
+      "Pest control for Jenner coastal homes - rodents, insects, and wildlife concerns.",
     intro: [
-      "Jenner’s coastal and river setting is stunning—and challenging for pest management. We provide careful service for homes that face moisture, wildlife, and seasonal insect pressure.",
+      "Jenner’s coastal and river setting is stunning - and challenging for pest management. We provide careful service for homes that face moisture, wildlife, and seasonal insect pressure.",
     ],
     localNotes:
       "Remote coastal properties may need flexible scheduling; call to plan a visit.",
@@ -554,7 +554,7 @@ export const locations: Location[] = [
       {
         question: "Do you handle wildlife near coastal properties?",
         answer:
-          "Yes—we assess small mammal activity and recommend exclusion strategies.",
+          "Yes - we assess small mammal activity and recommend exclusion strategies.",
       },
     ],
     nearby: ["bodega-bay", "forestville"],
@@ -582,7 +582,7 @@ export const locations: Location[] = [
       {
         question: "Can you service larger rural parcels?",
         answer:
-          "Yes—we’ll prioritize living structures and advise on outbuildings.",
+          "Yes - we’ll prioritize living structures and advise on outbuildings.",
       },
     ],
     nearby: ["sebastopol", "santa-rosa"],
@@ -610,7 +610,7 @@ export const locations: Location[] = [
       {
         question: "Do you offer seasonal maintenance?",
         answer:
-          "Yes—IPM schedules can be aligned with peak pest seasons.",
+          "Yes - IPM schedules can be aligned with peak pest seasons.",
       },
     ],
     nearby: ["sonoma", "santa-rosa"],
@@ -650,7 +650,7 @@ export const locations: Location[] = [
     county: "Marin",
     metaTitle: "Pest Control Greenbrae | Sono-Marin Pest Solutions",
     metaDescription:
-      "Pest control in Greenbrae. Trusted Marin service for homes—rodents, ants, spiders, IPM.",
+      "Pest control in Greenbrae. Trusted Marin service for homes - rodents, ants, spiders, IPM.",
     intro: [
       "Greenbrae homeowners count on Sono-Marin Pest Solutions for careful, professional pest control. We address rodents, ants, and seasonal insects with clear plans and quality follow-through.",
     ],
@@ -661,12 +661,12 @@ export const locations: Location[] = [
       {
         question: "Do you serve Greenbrae and Kentfield?",
         answer:
-          "Yes—Greenbrae and nearby central Marin communities.",
+          "Yes - Greenbrae and nearby central Marin communities.",
       },
       {
         question: "Do you offer quarterly service?",
         answer:
-          "Yes—IPM maintenance plans are available on flexible schedules.",
+          "Yes - IPM maintenance plans are available on flexible schedules.",
       },
     ],
     nearby: ["san-rafael", "larkspur", "san-anselmo"],
@@ -694,7 +694,7 @@ export const locations: Location[] = [
       {
         question: "Do you handle wildlife under decks?",
         answer:
-          "Contact us—we assess small mammal activity and recommend exclusion.",
+          "Contact us - we assess small mammal activity and recommend exclusion.",
       },
     ],
     nearby: ["fairfax", "san-rafael", "larkspur"],
@@ -722,7 +722,7 @@ export const locations: Location[] = [
       {
         question: "Can businesses request service?",
         answer:
-          "Yes—commercial plans are available with flexible scheduling.",
+          "Yes - commercial plans are available with flexible scheduling.",
       },
     ],
     nearby: ["corte-madera", "greenbrae", "mill-valley"],
@@ -745,12 +745,12 @@ export const locations: Location[] = [
       {
         question: "Do you offer commercial pest control in Corte Madera?",
         answer:
-          "Yes—offices, retail, and food service with tailored plans.",
+          "Yes - offices, retail, and food service with tailored plans.",
       },
       {
         question: "Do you offer ongoing maintenance?",
         answer:
-          "Yes—IPM programs on monthly, bi-monthly, or quarterly schedules.",
+          "Yes - IPM programs on monthly, bi-monthly, or quarterly schedules.",
       },
     ],
     nearby: ["larkspur", "mill-valley", "san-rafael"],
@@ -764,7 +764,7 @@ export const locations: Location[] = [
     metaDescription:
       "Pest control in Fairfax. Eco-minded IPM and rodent control for wooded Marin homes.",
     intro: [
-      "Fairfax’s wooded setting is part of its charm—and a reason rodents, ants, and wildlife stay active. We provide thoughtful IPM and exclusion that fits the community’s outdoor lifestyle.",
+      "Fairfax’s wooded setting is part of its charm - and a reason rodents, ants, and wildlife stay active. We provide thoughtful IPM and exclusion that fits the community’s outdoor lifestyle.",
     ],
     localNotes:
       "Tree cover and open space edges increase wildlife and spider pressure.",
@@ -778,7 +778,7 @@ export const locations: Location[] = [
       {
         question: "Can you help with rodents near open space?",
         answer:
-          "Yes—exclusion and trapping are core strengths for edge properties.",
+          "Yes - exclusion and trapping are core strengths for edge properties.",
       },
     ],
     nearby: ["san-anselmo", "woodacre", "san-rafael"],
@@ -790,7 +790,7 @@ export const locations: Location[] = [
     county: "Marin",
     metaTitle: "Pest Control Woodacre | Sono-Marin Pest Solutions",
     metaDescription:
-      "Pest control in Woodacre for San Geronimo Valley homes—rodents, insects, wildlife.",
+      "Pest control in Woodacre for San Geronimo Valley homes - rodents, insects, wildlife.",
     intro: [
       "Woodacre and the San Geronimo Valley’s rural homes often face higher wildlife and rodent pressure. We provide thorough inspections and practical exclusion strategies.",
     ],
@@ -806,7 +806,7 @@ export const locations: Location[] = [
       {
         question: "Do you treat yellowjackets on rural lots?",
         answer:
-          "Yes—call for active nests, especially late summer.",
+          "Yes - call for active nests, especially late summer.",
       },
     ],
     nearby: ["fairfax", "san-anselmo"],
@@ -829,12 +829,12 @@ export const locations: Location[] = [
       {
         question: "Do you service houseboats or only on-land homes?",
         answer:
-          "Contact us about your situation—we primarily service standard residential and commercial structures.",
+          "Contact us about your situation - we primarily service standard residential and commercial structures.",
       },
       {
         question: "Can you schedule around HOA rules?",
         answer:
-          "Yes—we’ll work with your access and timing requirements.",
+          "Yes - we’ll work with your access and timing requirements.",
       },
     ],
     nearby: ["mill-valley", "tiburon"],
@@ -846,7 +846,7 @@ export const locations: Location[] = [
     county: "Marin",
     metaTitle: "Pest Control Tiburon | Sono-Marin Pest Solutions",
     metaDescription:
-      "Pest control in Tiburon for peninsula homes—rodents, ants, IPM maintenance.",
+      "Pest control in Tiburon for peninsula homes - rodents, ants, IPM maintenance.",
     intro: [
       "Tiburon peninsula properties deserve pest control that matches high standards of care. We offer meticulous inspections and effective treatment for homes facing bay weather and hillside wildlife.",
     ],
@@ -857,12 +857,12 @@ export const locations: Location[] = [
       {
         question: "Do you serve Belvedere as well?",
         answer:
-          "Yes—Tiburon, Belvedere, and nearby peninsula communities.",
+          "Yes - Tiburon, Belvedere, and nearby peninsula communities.",
       },
       {
         question: "Do you offer maintenance plans?",
         answer:
-          "Yes—custom IPM schedules are available.",
+          "Yes - custom IPM schedules are available.",
       },
     ],
     nearby: ["belvedere", "mill-valley", "sausalito"],
@@ -876,7 +876,7 @@ export const locations: Location[] = [
     metaDescription:
       "Pest control in Belvedere. Professional, discreet service for peninsula residences.",
     intro: [
-      "Belvedere homes receive careful, professional attention—thorough inspections, honest recommendations, and quality workmanship from licensed technicians.",
+      "Belvedere homes receive careful, professional attention - thorough inspections, honest recommendations, and quality workmanship from licensed technicians.",
     ],
     localNotes:
       "Premium properties benefit from proactive IPM and clear communication with owners or managers.",
@@ -904,7 +904,7 @@ export const locations: Location[] = [
     metaDescription:
       "Pest control near Tomales. Rural and coastal Marin service for rodents, insects, and wildlife.",
     intro: [
-      "Tomales and west Marin’s rural character means farms, open space, and coastal weather—all factors in pest pressure. We provide practical rodent and insect solutions for country properties.",
+      "Tomales and west Marin’s rural character means farms, open space, and coastal weather - all factors in pest pressure. We provide practical rodent and insect solutions for country properties.",
     ],
     localNotes:
       "Agricultural and rural structures need customized exclusion plans.",
@@ -918,7 +918,7 @@ export const locations: Location[] = [
       {
         question: "Can you service ranch buildings?",
         answer:
-          "Tell us about the structures involved—we’ll scope what makes sense.",
+          "Tell us about the structures involved - we’ll scope what makes sense.",
       },
     ],
     nearby: ["point-reyes", "petaluma"],
@@ -941,7 +941,7 @@ export const locations: Location[] = [
       {
         question: "Can you service short-term rentals?",
         answer:
-          "Yes—coordinate with us for timing that fits your calendar.",
+          "Yes - coordinate with us for timing that fits your calendar.",
       },
       {
         question: "Do coastal conditions change treatment plans?",
@@ -963,7 +963,7 @@ export const locations: Location[] = [
       "Point Reyes area properties sit among ranchland, fog, and open space. We provide practical pest control focused on rodents, wildlife pressure, and durable exclusion for coastal Marin living.",
     ],
     localNotes:
-      "Rural construction and outbuildings are frequent rodent harborage—inspection is essential.",
+      "Rural construction and outbuildings are frequent rodent harborage - inspection is essential.",
     commonPests: ["Rodents", "Wildlife", "Ants", "Spiders"],
     faqs: [
       {
@@ -974,7 +974,7 @@ export const locations: Location[] = [
       {
         question: "Can you help with rodents in older ranch homes?",
         answer:
-          "Yes—exclusion and trapping are core services for rural structures.",
+          "Yes - exclusion and trapping are core services for rural structures.",
       },
     ],
     nearby: ["tomales", "stinson-beach"],

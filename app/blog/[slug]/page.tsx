@@ -109,7 +109,7 @@ export default async function BlogPostPage({
             </h2>
             <p className="mt-3 text-pretty text-slate-600">
               Sono-Marin Pest Solutions serves Sonoma and Marin Counties with
-              quality, honest service—rodent exclusion, IPM maintenance, and
+              quality, honest service - rodent exclusion, IPM maintenance, and
               more.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">

@@ -29,7 +29,7 @@ export default function ContactPage() {
             Contact us
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">
-            Call or text today—or request an estimate. We serve homes and
+            Call or text today - or request an estimate. We serve homes and
             businesses across Sonoma and Marin Counties.
           </p>
           <div className="mt-6">

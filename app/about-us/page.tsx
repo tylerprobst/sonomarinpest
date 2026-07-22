@@ -49,7 +49,7 @@ export default function AboutPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">
             Locally operated residential and commercial pest control for the
-            North Bay—dedicated to quality service and safe, effective solutions.
+            North Bay - dedicated to quality service and safe, effective solutions.
           </p>
           <div className="mt-6">
             <RatingBadge light />
@@ -64,7 +64,7 @@ export default function AboutPage() {
               Sono-Marin Pest Solutions is a locally operated residential and
               commercial Branch 2 pest control business serving Sonoma County,
               Marin County, and the greater North Bay. Branch 2 licensing covers
-              general pests—including ground-crawling insects, flying insects, and
+              general pests - including ground-crawling insects, flying insects, and
               rodents.
             </p>
             <p>
@@ -119,7 +119,7 @@ export default function AboutPage() {
             },
             {
               t: "Plan",
-              d: "Custom plan of action—honest options, no pressure upsells.",
+              d: "Custom plan of action - honest options, no pressure upsells.",
             },
             {
               t: "Protect",
@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               title="Ask about our ETM rodent service"
-              description="Stop using poisonous rodenticides. Our Exclude–Trap–Manage program provides efficient, eco-friendly rodent solutions tailored to your property."
+              description="Stop using poisonous rodenticides. Our Exclude-Trap-Manage program provides efficient, eco-friendly rodent solutions tailored to your property."
             />
             <div className="flex flex-wrap gap-3">
               <Button href="/maintenance/">Learn about ETM</Button>

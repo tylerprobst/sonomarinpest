@@ -51,7 +51,7 @@ export default function CareersPage() {
             </h2>
             <ul className="mt-3 list-disc space-y-2 pl-5">
               <li>Family-owned, supportive team culture</li>
-              <li>Quality-focused service—not high-pressure sales</li>
+              <li>Quality-focused service - not high-pressure sales</li>
               <li>Company tools and vehicle support as discussed in hiring</li>
               <li>Opportunity to grow with a respected local brand</li>
             </ul>
@@ -84,7 +84,7 @@ export default function CareersPage() {
             >
               {site.email}
             </a>{" "}
-            with your resume and a short note about your experience—or call{" "}
+            with your resume and a short note about your experience - or call{" "}
             <a href={site.phoneTel} className="font-semibold text-brand-blue">
               {site.phone}
             </a>

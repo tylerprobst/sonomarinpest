@@ -55,7 +55,7 @@ export function ReviewsSection({
       <SectionHeading
         eyebrow="Client testimonials"
         title="See why neighbors choose Sono-Marin"
-        description="Don’t just take our word for it—homeowners and businesses across Sonoma and Marin trust us to keep their properties pest-free."
+        description="Don’t just take our word for it - homeowners and businesses across Sonoma and Marin trust us to keep their properties pest-free."
         align="center"
       />
 

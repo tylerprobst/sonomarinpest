@@ -204,7 +204,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile drawer — scrollable, collapsible sections */}
+      {/* Mobile drawer - scrollable, collapsible sections */}
       {open && (
         <div className="lg:hidden">
           <button
