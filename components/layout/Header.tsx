@@ -34,7 +34,6 @@ export function Header() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
 
-  // Lock body scroll while mobile menu is open
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -73,7 +72,11 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-2" onClick={closeMobile}>
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-2"
+          onClick={closeMobile}
+        >
           <Image
             src={assetPath("/images/logo.png")}
             alt={site.name}
@@ -184,13 +187,13 @@ export function Header() {
           </Button>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? (
-              <span className="text-xl leading-none text-slate-800" aria-hidden>
+              <span className="text-2xl leading-none text-slate-800" aria-hidden>
                 ×
               </span>
             ) : (
@@ -204,137 +207,166 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile drawer - scrollable, collapsible sections */}
+      {/* Full-screen solid mobile menu (no page bleed-through) */}
       {open && (
-        <div className="lg:hidden">
-          <button
-            type="button"
-            className="fixed inset-0 z-40 bg-slate-900/40"
-            aria-label="Close menu"
-            onClick={closeMobile}
-          />
+        <div
+          className="fixed inset-0 z-[100] flex flex-col bg-white lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site menu"
+        >
+          {/* Solid top bar */}
+          <div className="shrink-0 border-b border-slate-200 bg-white">
+            <div className="border-b border-slate-100 bg-slate-900 px-4 py-1.5 text-xs text-white">
+              <a href={site.phoneTel} className="font-semibold">
+                Call {site.phone}
+              </a>
+              <span className="mx-2 text-slate-500">|</span>
+              <a href={site.textTel}>Text {site.text}</a>
+            </div>
+            <div className="flex items-center justify-between gap-3 px-4 py-3">
+              <Link href="/" onClick={closeMobile} className="shrink-0">
+                <Image
+                  src={assetPath("/images/logo.png")}
+                  alt={site.name}
+                  width={160}
+                  height={52}
+                  className="h-9 w-auto"
+                />
+              </Link>
+              <button
+                type="button"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-2xl leading-none text-slate-800"
+                aria-label="Close menu"
+                onClick={closeMobile}
+              >
+                ×
+              </button>
+            </div>
+          </div>
+
+          {/* Scrollable solid white body */}
           <nav
-            className="fixed inset-x-0 bottom-0 top-[7.5rem] z-50 flex flex-col border-t border-slate-200 bg-white shadow-xl sm:top-[8rem]"
-            aria-label="Mobile"
+            className="min-h-0 flex-1 overflow-y-auto overscroll-contain bg-white px-4 py-2"
+            style={{
+              paddingBottom:
+                "calc(1.5rem + env(safe-area-inset-bottom, 0px))",
+            }}
           >
-            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3 pb-28">
-              {/* Services accordion */}
-              <button
-                type="button"
-                className="flex w-full items-center justify-between rounded-lg px-2 py-3 text-left text-base font-semibold text-slate-900"
-                onClick={() => setMobileServicesOpen((v) => !v)}
-                aria-expanded={mobileServicesOpen}
+            <button
+              type="button"
+              className="flex w-full items-center justify-between rounded-lg px-2 py-3.5 text-left text-base font-semibold text-slate-900"
+              onClick={() => setMobileServicesOpen((v) => !v)}
+              aria-expanded={mobileServicesOpen}
+            >
+              Services
+              <span
+                className={`text-slate-400 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                aria-hidden
               >
-                Services
-                <span
-                  className={`text-slate-400 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
-                  aria-hidden
+                ▾
+              </span>
+            </button>
+            {mobileServicesOpen && (
+              <div className="mb-2 ml-1 border-l-2 border-slate-200 bg-slate-50 pl-3">
+                <Link
+                  href="/services/"
+                  className="block rounded-lg px-2 py-2.5 text-sm font-semibold text-brand-blue"
+                  onClick={closeMobile}
                 >
-                  ▾
-                </span>
-              </button>
-              {mobileServicesOpen && (
-                <div className="mb-2 ml-1 border-l-2 border-slate-100 pl-3">
+                  All services
+                </Link>
+                {serviceLinks.map((s) => (
                   <Link
-                    href="/services/"
-                    className="block rounded-lg px-2 py-2.5 text-sm font-semibold text-brand-blue"
+                    key={s.slug}
+                    href={s.path}
+                    className="block rounded-lg px-2 py-2.5 text-sm text-slate-700"
                     onClick={closeMobile}
                   >
-                    All services
+                    {s.navLabel}
                   </Link>
-                  {serviceLinks.map((s) => (
-                    <Link
-                      key={s.slug}
-                      href={s.path}
-                      className="block rounded-lg px-2 py-2.5 text-sm text-slate-700"
-                      onClick={closeMobile}
-                    >
-                      {s.navLabel}
-                    </Link>
-                  ))}
-                </div>
-              )}
-
-              {/* Areas accordion */}
-              <button
-                type="button"
-                className="flex w-full items-center justify-between rounded-lg px-2 py-3 text-left text-base font-semibold text-slate-900"
-                onClick={() => setMobileAreasOpen((v) => !v)}
-                aria-expanded={mobileAreasOpen}
-              >
-                Service areas
-                <span
-                  className={`text-slate-400 transition-transform ${mobileAreasOpen ? "rotate-180" : ""}`}
-                  aria-hidden
-                >
-                  ▾
-                </span>
-              </button>
-              {mobileAreasOpen && (
-                <div className="mb-2 ml-1 border-l-2 border-slate-100 pl-3">
-                  {priorityLocations.slice(0, 8).map((l) => (
-                    <Link
-                      key={l.slug}
-                      href={l.path}
-                      className="block rounded-lg px-2 py-2.5 text-sm text-slate-700"
-                      onClick={closeMobile}
-                    >
-                      {l.name}
-                    </Link>
-                  ))}
-                  <Link
-                    href={areasHref}
-                    className="block rounded-lg px-2 py-2.5 text-sm font-semibold text-brand-blue"
-                    onClick={closeMobile}
-                  >
-                    All service areas
-                  </Link>
-                </div>
-              )}
-
-              <div className="my-2 border-t border-slate-100" />
-
-              <Link
-                href="/about-us/"
-                className="block rounded-lg px-2 py-3 text-base font-semibold text-slate-900"
-                onClick={closeMobile}
-              >
-                About
-              </Link>
-              <Link
-                href="/blog/"
-                className="block rounded-lg px-2 py-3 text-base font-semibold text-slate-900"
-                onClick={closeMobile}
-              >
-                Blog
-              </Link>
-              <Link
-                href="/contact/"
-                className="block rounded-lg px-2 py-3 text-base font-semibold text-slate-900"
-                onClick={closeMobile}
-              >
-                Contact
-              </Link>
-              <Link
-                href="/careers/"
-                className="block rounded-lg px-2 py-3 text-base font-semibold text-slate-900"
-                onClick={closeMobile}
-              >
-                Careers
-              </Link>
-
-              <div className="mt-4 space-y-2">
-                <Button href={estimateHref} className="w-full" onClick={closeMobile}>
-                  Schedule service
-                </Button>
-                <Button
-                  href={site.phoneTel}
-                  variant="outline"
-                  className="w-full"
-                >
-                  Call {site.phone}
-                </Button>
+                ))}
               </div>
+            )}
+
+            <button
+              type="button"
+              className="flex w-full items-center justify-between rounded-lg px-2 py-3.5 text-left text-base font-semibold text-slate-900"
+              onClick={() => setMobileAreasOpen((v) => !v)}
+              aria-expanded={mobileAreasOpen}
+            >
+              Service areas
+              <span
+                className={`text-slate-400 transition-transform ${mobileAreasOpen ? "rotate-180" : ""}`}
+                aria-hidden
+              >
+                ▾
+              </span>
+            </button>
+            {mobileAreasOpen && (
+              <div className="mb-2 ml-1 border-l-2 border-slate-200 bg-slate-50 pl-3">
+                {priorityLocations.slice(0, 8).map((l) => (
+                  <Link
+                    key={l.slug}
+                    href={l.path}
+                    className="block rounded-lg px-2 py-2.5 text-sm text-slate-700"
+                    onClick={closeMobile}
+                  >
+                    {l.name}
+                  </Link>
+                ))}
+                <Link
+                  href={areasHref}
+                  className="block rounded-lg px-2 py-2.5 text-sm font-semibold text-brand-blue"
+                  onClick={closeMobile}
+                >
+                  All service areas
+                </Link>
+              </div>
+            )}
+
+            <div className="my-2 border-t border-slate-200" />
+
+            <Link
+              href="/about-us/"
+              className="block rounded-lg px-2 py-3.5 text-base font-semibold text-slate-900"
+              onClick={closeMobile}
+            >
+              About
+            </Link>
+            <Link
+              href="/blog/"
+              className="block rounded-lg px-2 py-3.5 text-base font-semibold text-slate-900"
+              onClick={closeMobile}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact/"
+              className="block rounded-lg px-2 py-3.5 text-base font-semibold text-slate-900"
+              onClick={closeMobile}
+            >
+              Contact
+            </Link>
+            <Link
+              href="/careers/"
+              className="block rounded-lg px-2 py-3.5 text-base font-semibold text-slate-900"
+              onClick={closeMobile}
+            >
+              Careers
+            </Link>
+
+            <div className="mt-6 space-y-2 border-t border-slate-200 pt-6">
+              <Button
+                href={estimateHref}
+                className="w-full"
+                onClick={closeMobile}
+              >
+                Schedule service
+              </Button>
+              <Button href={site.phoneTel} variant="outline" className="w-full">
+                Call {site.phone}
+              </Button>
             </div>
           </nav>
         </div>
