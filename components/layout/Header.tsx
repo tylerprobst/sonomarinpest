@@ -5,33 +5,24 @@ import Image from "next/image";
 import { assetPath } from "@/lib/paths";
 import { useState } from "react";
 import { site } from "@/content/site";
-import { services } from "@/content/services";
+import { services, primaryServiceSlugs } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
+import {
+  scrollToEstimate,
+  useEstimateHref,
+} from "@/lib/scroll-to-estimate";
 
 const serviceLinks = services.filter((s) =>
-  [
-    "rodents",
-    "ants",
-    "spiders",
-    "cockroaches",
-    "fleas",
-    "carpenter-bees",
-    "wasps-hornets",
-    "wildlife",
-    "ipm-services",
-    "maintenance",
-  ].includes(s.slug),
+  (primaryServiceSlugs as readonly string[]).includes(s.slug),
 );
-
-const estimateHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#estimate`;
-const areasHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#service-areas`;
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
+  const estimateHref = useEstimateHref();
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
@@ -127,7 +118,7 @@ export function Header() {
                   </Link>
                 ))}
                 <Link
-                  href={areasHref}
+                  href="/#service-areas"
                   className="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-blue hover:bg-slate-50"
                 >
                   All service areas
@@ -157,10 +148,17 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={site.phoneTel}
+            className="hidden font-semibold text-brand-blue sm:inline-flex sm:items-center sm:px-2 sm:text-sm"
+          >
+            {site.phone}
+          </a>
           <Button
             href={estimateHref}
             size="sm"
             className="hidden sm:inline-flex"
+            onClick={() => scrollToEstimate()}
           >
             Schedule service
           </Button>
