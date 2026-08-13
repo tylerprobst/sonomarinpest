@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/content/site";
 
 const defaultOgImage = `${site.url}/images/truck-hero.jpg`;
-
-/** GitHub Pages preview must stay noindex. Do not flip GITHUB_PAGES to false here. */
-export const isGithubPagesPreview = process.env.GITHUB_PAGES === "true";
+const isGithubPagesPreview = process.env.GITHUB_PAGES === "true";
 
 export function createMetadata({
   title,

@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
-import { isGithubPagesPreview } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  if (isGithubPagesPreview) {
+  if (process.env.GITHUB_PAGES === "true") {
     return {
       rules: {
         userAgent: "*",

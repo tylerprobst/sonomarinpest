@@ -2,18 +2,34 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { assetPath, ESTIMATE_FALLBACK_HREF } from "@/lib/paths";
+import { assetPath } from "@/lib/paths";
 import { useState } from "react";
 import { site } from "@/content/site";
-import { services, primaryServiceSlugs } from "@/content/services";
+import { services } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
-import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
-const serviceLinks = primaryServiceSlugs
-  .map((slug) => services.find((s) => s.slug === slug))
-  .filter((s): s is (typeof services)[number] => Boolean(s));
+const serviceLinks = services.filter((s) =>
+  [
+    "rodents",
+    "ants",
+    "spiders",
+    "cockroaches",
+    "fleas",
+    "carpenter-bees",
+    "wasps-hornets",
+    "yellowjackets",
+    "wildlife",
+    "ipm-services",
+    "maintenance",
+    "hoa",
+  ].includes(s.slug),
+);
+
+/** Hash-only / rooted paths so next/link applies basePath once. */
+const estimateHref = "/#estimate";
+const areasHref = "/#service-areas";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -114,7 +130,7 @@ export function Header() {
                   </Link>
                 ))}
                 <Link
-                  href="/#service-areas"
+                  href={areasHref}
                   className="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-blue hover:bg-slate-50"
                 >
                   All service areas
@@ -144,17 +160,10 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={site.phoneTel}
-            className="inline-flex items-center rounded-xl px-2 py-2 text-sm font-bold text-brand-blue hover:text-brand-blue-dark sm:px-3 sm:text-base"
-          >
-            {site.phone}
-          </a>
           <Button
-            href={ESTIMATE_FALLBACK_HREF}
+            href={estimateHref}
             size="sm"
             className="hidden sm:inline-flex"
-            onClick={scrollToEstimate}
           >
             Schedule service
           </Button>
