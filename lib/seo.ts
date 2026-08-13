@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/content/site";
 
 const defaultOgImage = `${site.url}/images/truck-hero.jpg`;
-const isGithubPagesPreview = process.env.GITHUB_PAGES === "true";
+export const isGithubPagesPreview = process.env.GITHUB_PAGES === "true";
 
 export function createMetadata({
   title,
