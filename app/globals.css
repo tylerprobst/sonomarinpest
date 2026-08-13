@@ -33,7 +33,6 @@ body {
   line-height: 1.6;
 }
 
-/* Extra bottom padding on mobile for sticky CTA + home indicator */
 @media (max-width: 639px) {
   body {
     padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
@@ -44,7 +43,23 @@ body {
   background: color-mix(in srgb, #0b5ed7 25%, white);
 }
 
-/* Typography utilities */
+.skip-to-content {
+  position: absolute;
+  left: 0.75rem;
+  top: -100%;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: #0b5ed7;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-to-content:focus {
+  top: 0.75rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
 
 .text-balance {
   text-wrap: balance;
@@ -84,7 +99,6 @@ body {
   margin-top: 1rem;
 }
 
-/* Section title rhythm */
 .heading-display {
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -105,7 +119,6 @@ body {
   line-height: 1.3;
 }
 
-/* Links in body copy */
 .link-inline {
   font-weight: 600;
   color: var(--color-brand-blue);
@@ -116,7 +129,6 @@ body {
   text-decoration: underline;
 }
 
-/* Soft card surface */
 .card-surface {
   border-radius: 1rem;
   border: 1px solid rgb(226 232 240);
@@ -124,7 +136,6 @@ body {
   box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
 }
 
-/* GorillaDesk iframe: never wider than viewport */
 #gorilladesk-contact-iframe {
   max-width: 100% !important;
   width: 100% !important;
@@ -132,10 +143,8 @@ body {
   display: block;
 }
 
-/* Full-bleed estimate form on small screens */
 @media (max-width: 639px) {
   #estimate {
-    /* Sit clear of sticky header when scrolled into view */
     scroll-margin-top: 7.25rem;
   }
 }
