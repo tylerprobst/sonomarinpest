@@ -2,29 +2,23 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { assetPath } from "@/lib/paths";
+import { assetPath, ESTIMATE_FALLBACK_HREF } from "@/lib/paths";
 import { useState } from "react";
 import { site } from "@/content/site";
 import { services, primaryServiceSlugs } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
-import {
-  scrollToEstimate,
-  useEstimateHref,
-} from "@/lib/scroll-to-estimate";
+import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
-const navServiceSlugs = [...primaryServiceSlugs, "hoa"] as const;
-
-const serviceLinks = services.filter((s) =>
-  (navServiceSlugs as readonly string[]).includes(s.slug),
-);
+const serviceLinks = primaryServiceSlugs
+  .map((slug) => services.find((s) => s.slug === slug))
+  .filter((s): s is (typeof services)[number] => Boolean(s));
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
-  const estimateHref = useEstimateHref();
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
@@ -152,15 +146,15 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.phoneTel}
-            className="hidden font-semibold text-brand-blue sm:inline-flex sm:items-center sm:px-2 sm:text-sm"
+            className="inline-flex items-center rounded-xl px-2 py-2 text-sm font-bold text-brand-blue hover:text-brand-blue-dark sm:px-3 sm:text-base"
           >
             {site.phone}
           </a>
           <Button
-            href={estimateHref}
+            href={ESTIMATE_FALLBACK_HREF}
             size="sm"
             className="hidden sm:inline-flex"
-            onClick={() => scrollToEstimate()}
+            onClick={scrollToEstimate}
           >
             Schedule service
           </Button>
