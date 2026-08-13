@@ -58,6 +58,16 @@ export const redirects: RedirectRule[] = [
     to: "/about-us/",
     label: "About Us",
   },
+  {
+    from: "/about/",
+    to: "/about-us/",
+    label: "About Us",
+  },
+  {
+    from: "/blog/sonoma-county-homeless-pest-problems/",
+    to: "/blog/community-pest-challenges-in-sonoma-county/",
+    label: "Community Pest Challenges in Sonoma County",
+  },
 ];
 
 export function getRedirect(fromPath: string): RedirectRule | undefined {
