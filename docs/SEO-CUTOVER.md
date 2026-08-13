@@ -6,6 +6,8 @@ Use this when you point **sonomarinpest.com** at the new static site. Until then
 
 Canonical tags, schema, and sitemap already use **`https://sonomarinpest.com`** so they are production-ready.
 
+GitHub Pages preview is **noindex** while `GITHUB_PAGES=true`.
+
 ---
 
 ## Before cutover
@@ -56,6 +58,8 @@ Verify these paths 301 (or soft-redirect) to primaries:
 - `/carpenter-bee-control-services/` → `/carpenter-bees/`
 - `/pest-control-in-santa-rosa/` → `/pest-control-santa-rosa/`
 - `/pest-control-in-petaluma/` → `/pest-control-petaluma/`
+- `/about/` → `/about-us/`
+- `/blog/sonoma-county-homeless-pest-problems/` → `/blog/community-pest-challenges-in-sonoma-county/`
 - `/sono-marin-pest/` → `/`
 - `/sono-marin-pest-solutions/` → `/about-us/`
 
@@ -76,6 +80,7 @@ Also map any other high-traffic WP URLs from Search Console / old sitemap.
 - Change primary service/city URLs again soon after launch.
 - Leave both old WP and new site indexable on the same domain without 301s.
 - Inflate review counts in schema.
+- Flip `GITHUB_PAGES` to false until the custom domain is live.
 
 ## Optional: live Google reviews on build
 
