@@ -14,8 +14,10 @@ import {
   useEstimateHref,
 } from "@/lib/scroll-to-estimate";
 
+const navServiceSlugs = [...primaryServiceSlugs, "hoa"] as const;
+
 const serviceLinks = services.filter((s) =>
-  (primaryServiceSlugs as readonly string[]).includes(s.slug),
+  (navServiceSlugs as readonly string[]).includes(s.slug),
 );
 
 export function Header() {
