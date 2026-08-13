@@ -1,26 +1,114 @@
 {
   "redirects": [
-    {"source": "/ant-control-services", "destination": "/ants/", "permanent": true},
-    {"source": "/ant-control-services/", "destination": "/ants/", "permanent": true},
-    {"source": "/spider-control-services", "destination": "/spiders/", "permanent": true},
-    {"source": "/spider-control-services/", "destination": "/spiders/", "permanent": true},
-    {"source": "/cockroach-control-services", "destination": "/cockroaches/", "permanent": true},
-    {"source": "/cockroach-control-services/", "destination": "/cockroaches/", "permanent": true},
-    {"source": "/flea-control-services", "destination": "/fleas/", "permanent": true},
-    {"source": "/flea-control-services/", "destination": "/fleas/", "permanent": true},
-    {"source": "/carpenter-bee-control-services", "destination": "/carpenter-bees/", "permanent": true},
-    {"source": "/carpenter-bee-control-services/", "destination": "/carpenter-bees/", "permanent": true},
-    {"source": "/pest-control-in-santa-rosa", "destination": "/pest-control-santa-rosa/", "permanent": true},
-    {"source": "/pest-control-in-santa-rosa/", "destination": "/pest-control-santa-rosa/", "permanent": true},
-    {"source": "/pest-control-in-petaluma", "destination": "/pest-control-petaluma/", "permanent": true},
-    {"source": "/pest-control-in-petaluma/", "destination": "/pest-control-petaluma/", "permanent": true},
-    {"source": "/sono-marin-pest", "destination": "/", "permanent": true},
-    {"source": "/sono-marin-pest/", "destination": "/", "permanent": true},
-    {"source": "/sono-marin-pest-solutions", "destination": "/about-us/", "permanent": true},
-    {"source": "/sono-marin-pest-solutions/", "destination": "/about-us/", "permanent": true},
-    {"source": "/about", "destination": "/about-us/", "permanent": true},
-    {"source": "/about/", "destination": "/about-us/", "permanent": true},
-    {"source": "/blog/sonoma-county-homeless-pest-problems", "destination": "/blog/community-pest-challenges-in-sonoma-county/", "permanent": true},
-    {"source": "/blog/sonoma-county-homeless-pest-problems/", "destination": "/blog/community-pest-challenges-in-sonoma-county/", "permanent": true}
+    {
+      "source": "/ant-control-services",
+      "destination": "/ants/",
+      "permanent": true
+    },
+    {
+      "source": "/ant-control-services/",
+      "destination": "/ants/",
+      "permanent": true
+    },
+    {
+      "source": "/spider-control-services",
+      "destination": "/spiders/",
+      "permanent": true
+    },
+    {
+      "source": "/spider-control-services/",
+      "destination": "/spiders/",
+      "permanent": true
+    },
+    {
+      "source": "/cockroach-control-services",
+      "destination": "/cockroaches/",
+      "permanent": true
+    },
+    {
+      "source": "/cockroach-control-services/",
+      "destination": "/cockroaches/",
+      "permanent": true
+    },
+    {
+      "source": "/flea-control-services",
+      "destination": "/fleas/",
+      "permanent": true
+    },
+    {
+      "source": "/flea-control-services/",
+      "destination": "/fleas/",
+      "permanent": true
+    },
+    {
+      "source": "/carpenter-bee-control-services",
+      "destination": "/carpenter-bees/",
+      "permanent": true
+    },
+    {
+      "source": "/carpenter-bee-control-services/",
+      "destination": "/carpenter-bees/",
+      "permanent": true
+    },
+    {
+      "source": "/pest-control-in-santa-rosa",
+      "destination": "/pest-control-santa-rosa/",
+      "permanent": true
+    },
+    {
+      "source": "/pest-control-in-santa-rosa/",
+      "destination": "/pest-control-santa-rosa/",
+      "permanent": true
+    },
+    {
+      "source": "/pest-control-in-petaluma",
+      "destination": "/pest-control-petaluma/",
+      "permanent": true
+    },
+    {
+      "source": "/pest-control-in-petaluma/",
+      "destination": "/pest-control-petaluma/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest-solutions",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/sono-marin-pest-solutions/",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sonoma-county-homeless-pest-problems",
+      "destination": "/blog/community-pest-challenges-in-sonoma-county/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sonoma-county-homeless-pest-problems/",
+      "destination": "/blog/community-pest-challenges-in-sonoma-county/",
+      "permanent": true
+    }
   ]
 }
