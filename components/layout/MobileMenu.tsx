@@ -6,41 +6,28 @@ import Link from "next/link";
 import Image from "next/image";
 import { assetPath } from "@/lib/paths";
 import { site } from "@/content/site";
-import { services } from "@/content/services";
+import { services, primaryServiceSlugs } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
-import { scrollToEstimate } from "@/lib/scroll-to-estimate";
+import {
+  scrollToEstimate,
+  useEstimateHref,
+} from "@/lib/scroll-to-estimate";
 
 const serviceLinks = services.filter((s) =>
-  [
-    "rodents",
-    "ants",
-    "spiders",
-    "cockroaches",
-    "fleas",
-    "carpenter-bees",
-    "wasps-hornets",
-    "wildlife",
-    "ipm-services",
-    "maintenance",
-  ].includes(s.slug),
+  (primaryServiceSlugs as readonly string[]).includes(s.slug),
 );
-
-const areasHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#service-areas`;
 
 type Props = {
   open: boolean;
   onClose: () => void;
 };
 
-/**
- * Full-screen mobile menu rendered via portal to document.body
- * so parent overflow/transform cannot clip or shrink it.
- */
 export function MobileMenu({ open, onClose }: Props) {
   const [mounted, setMounted] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [areasOpen, setAreasOpen] = useState(false);
+  const estimateHref = useEstimateHref();
 
   useEffect(() => {
     setMounted(true);
@@ -72,7 +59,6 @@ export function MobileMenu({ open, onClose }: Props) {
       aria-modal="true"
       aria-label="Site menu"
     >
-      {/* Top bar */}
       <div
         className="shrink-0 border-b border-slate-200"
         style={{ backgroundColor: "#ffffff" }}
@@ -115,7 +101,6 @@ export function MobileMenu({ open, onClose }: Props) {
         </div>
       </div>
 
-      {/* Scrollable links */}
       <nav
         className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3"
         style={{
@@ -192,7 +177,7 @@ export function MobileMenu({ open, onClose }: Props) {
               </Link>
             ))}
             <Link
-              href={areasHref}
+              href="/#service-areas"
               className="block rounded-lg px-2 py-2.5 text-sm font-semibold text-brand-blue"
               onClick={onClose}
             >
@@ -234,11 +219,10 @@ export function MobileMenu({ open, onClose }: Props) {
 
         <div className="mt-6 space-y-2 border-t border-slate-200 pt-6">
           <Button
-            href="#estimate"
+            href={estimateHref}
             className="w-full"
             onClick={() => {
               onClose();
-              // Wait for menu to close before scrolling
               window.setTimeout(() => scrollToEstimate(), 50);
             }}
           >
