@@ -2,7 +2,6 @@ import Image from "next/image";
 import { assetPath } from "@/lib/paths";
 import Link from "next/link";
 import { site } from "@/content/site";
-import { services } from "@/content/services";
 import { homeFaqs } from "@/content/faq";
 import { getBuiltReviews } from "@/lib/reviews-data";
 import { createMetadata } from "@/lib/seo";
@@ -17,7 +16,7 @@ import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { AllLocationsLinks } from "@/components/pages/LocationPageView";
 
 export const metadata = createMetadata({
-  title: "Professional Pest Control in Sonoma County | 100+ 5-Star Reviews",
+  title: "Rodent Exclusion and Pest Control in Sonoma and Marin",
   description: site.description,
   path: "/",
 });
@@ -30,7 +29,7 @@ const pillars = [
   },
   {
     title: "Honest, no-pressure quotes",
-    body: "Customers rave that we don’t upsell. Clear options, fair pricing, and recommendations you’d give your own family.",
+    body: "Customers rave that we don't upsell. Clear options, fair pricing, and recommendations you'd give your own family.",
     accent: "border-l-brand-green",
   },
   {
@@ -45,26 +44,34 @@ const pillars = [
   },
 ];
 
+const homeServiceCards = [
+  {
+    title: "Rodents",
+    body: "Exclusion and trapping. No poison.",
+    href: "/rodents/",
+    featured: true,
+  },
+  {
+    title: "Ants",
+    body: "Colony treatment or a maintenance plan.",
+    href: "/ants/",
+    featured: false,
+  },
+  {
+    title: "Wasps",
+    body: "Nest treatment around eaves, yards, and play areas.",
+    href: "/wasp-hornet/",
+    featured: false,
+  },
+];
+
 export default function HomePage() {
   const reviews = getBuiltReviews();
-  const gridServices = services.filter((s) =>
-    [
-      "rodents",
-      "ants",
-      "spiders",
-      "cockroaches",
-      "wasps-hornets",
-      "wildlife",
-      "ipm-services",
-      "maintenance",
-    ].includes(s.slug),
-  );
 
   return (
     <>
       <JsonLd data={[localBusinessSchema(reviews), faqSchema(homeFaqs)]} />
 
-      {/* Hero */}
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0">
           <Image
@@ -80,35 +87,31 @@ export default function HomePage() {
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <RatingBadge light className="mb-5" />
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.15]">
-              <span className="block">Professional</span>
-              <span className="block">
-                <span className="text-brand-green-light">pest control</span>
-                {" "}
-                in
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
+              <span className="block text-brand-green-light">
+                Rodent exclusion
               </span>
-              <span className="block">Sonoma &amp; Marin</span>
+              <span className="block">and pest control in</span>
+              <span className="block">Sonoma and Marin</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
-              Family-owned and operated. Licensed Branch&nbsp;2 technicians.
-              Eco-friendly IPM and expert rodent exclusion - with the five-star
-              service our neighbors rave about.
+              Family-owned out of Santa Rosa. We inspect first, explain the
+              options, and don't upsell. Especially strong on rats and mice:
+              find the entry, seal it, no rodenticides.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={site.phoneTel} size="lg">
                 Call {site.phone}
               </Button>
-              <Button href="#estimate" variant="outlineLight" size="lg">
-                Schedule a service
+              <Button href={site.textTel} variant="outlineLight" size="lg">
+                Text {site.text}
+              </Button>
+              <Button href="#estimate" variant="green" size="lg">
+                Request a service
               </Button>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-slate-300">
-              Or text{" "}
-              <a href={site.textTel} className="font-medium text-white underline-offset-2 hover:underline">
-                {site.text}
-              </a>
-              <span className="mx-2 text-slate-500">·</span>
-              <span>{site.hours.display}</span>
+              {site.hours.display}
             </p>
           </div>
           <div className="hidden lg:block">
@@ -121,9 +124,9 @@ export default function HomePage() {
                   <span className="mt-0.5 text-brand-green-light" aria-hidden>✓</span>
                   <span>
                     <strong className="font-semibold text-white">
-                      {reviews.rating}★ average
-                    </strong>{" "}
-                    · {reviews.userRatingCount}+ Google reviews
+                      {reviews.rating.toFixed(1)} from {reviews.userRatingCount}{" "}
+                      Google reviews
+                    </strong>
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -144,7 +147,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust bar */}
       <div className="border-b border-emerald-800/20 bg-gradient-to-r from-brand-green to-emerald-600 text-white">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-4 py-4 text-center text-xs font-semibold tracking-wide sm:grid-cols-4 sm:gap-4 sm:px-6 sm:py-5 sm:text-sm lg:px-8">
           <p className="leading-snug">Licensed Branch&nbsp;2</p>
@@ -154,12 +156,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Why us */}
       <Section tone="soft-blue">
         <SectionHeading
           eyebrow="Quality service"
-          title="Sonoma County’s specialists in honest pest control"
-          description="A family-owned local business providing quality, professional pest control to Marin County and Sonoma County - built on inspections, education, and results that last."
+          title="Honest pest control for Sonoma and Marin"
+          description="A family-owned local business providing quality, professional pest control - built on inspections, education, and results that last."
         />
         <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
           {pillars.map((p) => (
@@ -176,26 +177,24 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Services */}
       <Section tone="white">
         <SectionHeading
           eyebrow="What we treat"
-          title="Comprehensive pest management"
-          description="From stubborn ants to full rodent exclusion - customized plans for homes and businesses across the North Bay."
+          title="Start with the problem you have"
+          description="Most calls are rodents, ants, or stinging insects. We inspect first, then recommend a plan."
         />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {gridServices.map((s, i) => {
+        <div className="grid gap-4 sm:grid-cols-3">
+          {homeServiceCards.map((s, i) => {
             const cardTones = [
               "bg-blue-50/80 border-blue-100 hover:border-brand-blue",
               "bg-emerald-50/80 border-emerald-100 hover:border-brand-green",
-              "bg-sky-50/80 border-sky-100 hover:border-sky-400",
               "bg-amber-50/80 border-amber-100 hover:border-amber-400",
             ];
             const tone = cardTones[i % cardTones.length];
             return (
               <Link
-                key={s.slug}
-                href={s.path}
+                key={s.href}
+                href={s.href}
                 className={`group rounded-2xl border p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md ${tone}`}
               >
                 {s.featured && (
@@ -204,23 +203,26 @@ export default function HomePage() {
                   </span>
                 )}
                 <h3 className="heading-card text-base text-slate-900 group-hover:text-brand-blue">
-                  {s.shortTitle}
+                  {s.title}
                 </h3>
                 <p className="mt-2 text-pretty text-sm leading-relaxed text-slate-600">
-                  {s.summary}
+                  {s.body}
                 </p>
               </Link>
             );
           })}
         </div>
-        <div className="mt-10 text-center">
+        <p className="mx-auto mt-8 max-w-3xl text-pretty text-center text-sm leading-relaxed text-slate-600 sm:text-base">
+          Also spiders, cockroaches, fleas, carpenter bees, and wildlife
+          (raccoon, skunk, opossum). Licensed Branch 2. We don't do termites.
+        </p>
+        <div className="mt-8 text-center">
           <Button href="/services/" variant="outline">
             View all services
           </Button>
         </div>
       </Section>
 
-      {/* Rodent / ETM spotlight */}
       <Section tone="soft-green">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
@@ -229,7 +231,7 @@ export default function HomePage() {
               Rodent exclusion that lasts - without poison
             </h2>
             <p className="mt-5 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg sm:leading-relaxed">
-              Traps alone don’t work if entry points stay open. We inspect,
+              Traps alone don't work if entry points stay open. We inspect,
               seal, and trap mechanically. Our ETM (Exclude-Trap-Manage)
               program keeps rodents out year-round - no rodenticides that risk
               pets, wildlife, or odor in the walls.
@@ -255,7 +257,6 @@ export default function HomePage() {
 
       <ReviewsSection tone="soft-sky" />
 
-      {/* Service areas */}
       <Section id="service-areas" tone="soft-blue">
         <div className="mb-10 grid items-end gap-8 lg:grid-cols-2">
           <SectionHeading
@@ -277,7 +278,6 @@ export default function HomePage() {
         <AllLocationsLinks />
       </Section>
 
-      {/* FAQ */}
       <Section tone="white">
         <SectionHeading
           title="Frequently asked questions"
@@ -289,13 +289,12 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA - blue section; form full-bleed white on mobile */}
       <EstimateCtaSection
         aside={
           <>
             <SectionHeading
               title="Contact us to schedule a service"
-              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we’ll get back to you as soon as possible."
+              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we'll get back to you as soon as possible."
               light
             />
             <RatingBadge light className="mb-6" />
