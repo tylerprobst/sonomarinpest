@@ -89,6 +89,26 @@
       "source": "/sono-marin-pest-solutions/",
       "destination": "/about-us/",
       "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sonoma-county-homeless-pest-problems",
+      "destination": "/blog/community-pest-challenges-in-sonoma-county/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sonoma-county-homeless-pest-problems/",
+      "destination": "/blog/community-pest-challenges-in-sonoma-county/",
+      "permanent": true
     }
   ]
 }

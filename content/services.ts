@@ -33,7 +33,7 @@ export const services: Service[] = [
     problem:
       "Rodents are clever and relentless. They squeeze through openings as small as a quarter (rats) or a dime (mice), chew through wood, plastic, and soft materials, and can damage insulation, wiring, and stored goods. Traps alone rarely solve the problem if entry points stay open.",
     approach:
-      "We start with a thorough inspection to find active and potential entry points, nesting signs, and conditions attracting rodents. Then we exclude them with commercial-grade sealing, use mechanical trapping (never rodenticides), and recommend ongoing monitoring so new gaps don’t become new infestations.",
+      "We start with a thorough inspection to find active and potential entry points, nesting signs, and conditions attracting rodents. Then we exclude them with commercial-grade sealing, use mechanical trapping (never rodenticides), and recommend ongoing monitoring so new gaps don't become new infestations.",
     includes: [
       "Detailed structure and property inspection",
       "Identification of species and entry points",
@@ -100,7 +100,7 @@ export const services: Service[] = [
       {
         question: "Why do ants keep coming back?",
         answer:
-          "If the colony and outdoor food/water sources aren’t addressed, foragers return. We treat strategically and help you reduce attractants.",
+          "If the colony and outdoor food/water sources aren't addressed, foragers return. We treat strategically and help you reduce attractants.",
       },
       {
         question: "Are treatments safe for pets?",
@@ -110,7 +110,7 @@ export const services: Service[] = [
       {
         question: "How long until ant trails stop?",
         answer:
-          "Activity often drops quickly after treatment, but full control depends on species and colony size. We’ll advise if a follow-up is expected.",
+          "Activity often drops quickly after treatment, but full control depends on species and colony size. We'll advise if a follow-up is expected.",
       },
       {
         question: "Should I spray store-bought ant killer first?",
@@ -133,7 +133,7 @@ export const services: Service[] = [
     heroHeadline: "Spider Control - Fewer Webs, More Peace of Mind",
     summary: "We stop creepy crawlies in their tracks - no webs, no worries.",
     problem:
-      "Spiders follow prey. Webs around eaves, windows, and garages often mean other insects are present. Some species also concern homeowners for bites or appearance.",
+      "Spiders follow prey. Webs around eaves, windows, and garages often mean other insects are present. Black widows are the local venomous concern; brown recluses are not established in California.",
     approach:
       "We reduce spider populations and the insects they feed on, treat harborage areas, and recommend exclusion and lighting/landscape tweaks that make your property less inviting.",
     includes: [
@@ -152,6 +152,11 @@ export const services: Service[] = [
         question: "Do you treat the exterior for spiders?",
         answer:
           "Yes - eaves, window frames, and other harborage areas are common focus points, along with reducing the insects spiders feed on.",
+      },
+      {
+        question: "Are brown recluses a problem in California?",
+        answer:
+          "Brown recluses are not established in California. The local venomous spider of concern is the black widow. Most spiders around North Bay homes are nuisance species that follow insect prey.",
       },
     ],
     icon: "spider",
@@ -187,7 +192,7 @@ export const services: Service[] = [
       {
         question: "What attracts cockroaches to kitchens?",
         answer:
-          "Food crumbs, grease, moisture, and cluttered storage create ideal conditions. We’ll treat harborage and share practical sanitation tips.",
+          "Food crumbs, grease, moisture, and cluttered storage create ideal conditions. We'll treat harborage and share practical sanitation tips.",
       },
     ],
     icon: "roach",
@@ -200,7 +205,7 @@ export const services: Service[] = [
     navLabel: "Fleas",
     metaTitle: "Flea Control | Sonoma & Marin | Sono-Marin Pest",
     metaDescription:
-      "Thorough flea elimination for homes and pets’ environments in Sonoma and Marin Counties. Break the life cycle for lasting relief.",
+      "Thorough flea elimination for homes and pets' environments in Sonoma and Marin Counties. Break the life cycle for lasting relief.",
     heroHeadline: "Flea Control That Protects Home and Pets",
     summary:
       "Protect your home and pets with thorough flea elimination that lasts.",
@@ -223,7 +228,7 @@ export const services: Service[] = [
       {
         question: "How long does flea control take?",
         answer:
-          "Because fleas have a multi-stage life cycle, full relief may take more than one visit. We’ll set expectations based on what we find.",
+          "Because fleas have a multi-stage life cycle, full relief may take more than one visit. We'll set expectations based on what we find.",
       },
     ],
     icon: "flea",
@@ -288,12 +293,12 @@ export const services: Service[] = [
       {
         question: "Can I remove a wasp nest myself?",
         answer:
-          "We don’t recommend DIY on active nests - stings can be severe. Our technicians are equipped for safe treatment.",
+          "We don't recommend DIY on active nests - stings can be severe. Our technicians are equipped for safe treatment.",
       },
       {
         question: "What if the nest is in a wall void?",
         answer:
-          "Wall and eave nests need professional treatment. We’ll assess access and the safest approach for your structure.",
+          "Wall and eave nests need professional treatment. We'll assess access and the safest approach for your structure.",
       },
     ],
     icon: "wasp",
@@ -350,7 +355,7 @@ export const services: Service[] = [
     problem:
       "Raccoons, skunks, opossums, and squirrels damage attics, decks, and gardens. They leave droppings, odors, and entry holes that invite more pests.",
     approach:
-      "We assess activity, use appropriate exclusion and removal methods, and help secure structures so animals don’t return. Night-active species need careful timing and follow-through.",
+      "We assess activity, use appropriate exclusion and removal methods, and help secure structures so animals don't return. Night-active species need careful timing and follow-through.",
     includes: [
       "Activity and entry assessment",
       "Humane removal strategies",
@@ -361,7 +366,7 @@ export const services: Service[] = [
       {
         question: "Do you handle bats?",
         answer:
-          "Contact us about your situation - wildlife needs vary. We’ll advise on the right approach for your property and local regulations.",
+          "Contact us about your situation - wildlife needs vary. We'll advise on the right approach for your property and local regulations.",
       },
       {
         question: "Will animals return after removal?",
@@ -384,7 +389,7 @@ export const services: Service[] = [
     summary:
       "Eco-friendly management for residential and commercial properties.",
     problem:
-      "Pests change with the seasons. One-time treatments don’t address new pressures from weather, landscaping, or neighboring properties.",
+      "Pests change with the seasons. One-time treatments don't address new pressures from weather, landscaping, or neighboring properties.",
     approach:
       "Integrated Pest Management starts with inspection and identification, then uses the least-impact effective tools - including botanical and pet-conscious options when suitable - plus monitoring so problems are caught early.",
     includes: [
@@ -403,7 +408,7 @@ export const services: Service[] = [
       {
         question: "How often should I schedule service?",
         answer:
-          "Many homes do well quarterly; high-pressure properties may need monthly or bi-monthly. We’ll recommend a schedule based on your history and environment.",
+          "Many homes do well quarterly; high-pressure properties may need monthly or bi-monthly. We'll recommend a schedule based on your history and environment.",
       },
       {
         question: "What pests does IPM cover?",
@@ -413,7 +418,7 @@ export const services: Service[] = [
       {
         question: "Is IPM safe for kids and pets?",
         answer:
-          "IPM emphasizes inspection and targeted methods. We’ll explain any precautions and prefer lower-impact options when they work for your situation.",
+          "IPM emphasizes inspection and targeted methods. We'll explain any precautions and prefer lower-impact options when they work for your situation.",
       },
     ],
     featured: true,
@@ -447,7 +452,7 @@ export const services: Service[] = [
       {
         question: "Why avoid rodenticides?",
         answer:
-          "Poisons can kill rodents in unreachable voids (odor, insects, costly removal), risk non-target animals, and don’t fix entry points. California has also restricted many second-generation rodenticides. We trap and exclude instead.",
+          "Poisons can kill rodents in unreachable voids (odor, insects, costly removal), risk non-target animals, and don't fix entry points. California has also restricted many second-generation rodenticides. We trap and exclude instead.",
       },
       {
         question: "Who is ETM for?",
@@ -457,7 +462,7 @@ export const services: Service[] = [
       {
         question: "How often are ETM visits?",
         answer:
-          "Typically monthly or bi-monthly after the initial inspection and exclusion plan. We’ll recommend a cadence based on activity.",
+          "Typically monthly or bi-monthly after the initial inspection and exclusion plan. We'll recommend a cadence based on activity.",
       },
       {
         question: "Is exclusion work guaranteed?",
@@ -495,7 +500,7 @@ export const services: Service[] = [
       {
         question: "Can you service multiple buildings?",
         answer:
-          "Yes. We’ll design routes and schedules that fit your association or portfolio and keep reporting consistent for your team.",
+          "Yes. We'll design routes and schedules that fit your association or portfolio and keep reporting consistent for your team.",
       },
       {
         question: "How do you report findings to boards?",
@@ -529,4 +534,5 @@ export const primaryServiceSlugs = [
   "wildlife",
   "ipm-services",
   "maintenance",
+  "hoa",
 ] as const;

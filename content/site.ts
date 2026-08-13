@@ -4,7 +4,7 @@ export const site = {
   legalName: "Sono-Marin Pest Solutions",
   tagline: "Professional pest control for Sonoma & Marin Counties",
   description:
-    "Family-owned pest control in Sonoma and Marin Counties. 100+ five-star reviews. Eco-friendly IPM, expert rodent exclusion, and honest service for homes and businesses.",
+    "Family-owned pest control in Sonoma and Marin Counties. 4.9 from 139 Google reviews. Eco-friendly IPM, expert rodent exclusion, and honest service for homes and businesses.",
   url: "https://sonomarinpest.com",
   phone: "707-604-8188",
   phoneTel: "tel:+17076048188",

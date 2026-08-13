@@ -4,29 +4,16 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { assetPath } from "@/lib/paths";
+import { assetPath, ESTIMATE_FALLBACK_HREF } from "@/lib/paths";
 import { site } from "@/content/site";
-import { services } from "@/content/services";
+import { services, primaryServiceSlugs } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
 import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
-const serviceLinks = services.filter((s) =>
-  [
-    "rodents",
-    "ants",
-    "spiders",
-    "cockroaches",
-    "fleas",
-    "carpenter-bees",
-    "wasps-hornets",
-    "wildlife",
-    "ipm-services",
-    "maintenance",
-  ].includes(s.slug),
-);
-
-const areasHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#service-areas`;
+const serviceLinks = primaryServiceSlugs
+  .map((slug) => services.find((s) => s.slug === slug))
+  .filter((s): s is (typeof services)[number] => Boolean(s));
 
 type Props = {
   open: boolean;
@@ -192,7 +179,7 @@ export function MobileMenu({ open, onClose }: Props) {
               </Link>
             ))}
             <Link
-              href={areasHref}
+              href="/#service-areas"
               className="block rounded-lg px-2 py-2.5 text-sm font-semibold text-brand-blue"
               onClick={onClose}
             >
@@ -234,12 +221,16 @@ export function MobileMenu({ open, onClose }: Props) {
 
         <div className="mt-6 space-y-2 border-t border-slate-200 pt-6">
           <Button
-            href="#estimate"
+            href={ESTIMATE_FALLBACK_HREF}
             className="w-full"
-            onClick={() => {
+            onClick={(e) => {
+              if (document.getElementById("estimate")) {
+                e.preventDefault();
+                onClose();
+                window.setTimeout(() => scrollToEstimate(), 50);
+                return;
+              }
               onClose();
-              // Wait for menu to close before scrolling
-              window.setTimeout(() => scrollToEstimate(), 50);
             }}
           >
             Schedule service

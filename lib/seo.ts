@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/content/site";
 
 const defaultOgImage = `${site.url}/images/truck-hero.jpg`;
+const isGithubPagesPreview = process.env.GITHUB_PAGES === "true";
 
 export function createMetadata({
   title,
@@ -19,6 +20,8 @@ export function createMetadata({
   const url = path.startsWith("http")
     ? path
     : `${site.url}${path.startsWith("/") ? path : `/${path}`}`;
+
+  const hideFromIndex = noIndex || isGithubPagesPreview;
 
   return {
     title,
@@ -39,7 +42,9 @@ export function createMetadata({
       description,
       images: [image || defaultOgImage],
     },
-    robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    robots: hideFromIndex
+      ? { index: false, follow: false }
+      : { index: true, follow: true },
   };
 }
 

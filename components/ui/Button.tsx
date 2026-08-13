@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ComponentProps, ReactNode } from "react";
+import type { ComponentProps, MouseEvent, ReactNode } from "react";
 
 type Variant =
   | "primary"
@@ -48,7 +48,7 @@ type ButtonAsLink = Common & {
   href: string;
   target?: string;
   rel?: string;
-  onClick?: () => void;
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 };
 
 export function Button(props: ButtonAsButton | ButtonAsLink) {

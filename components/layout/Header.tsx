@@ -19,14 +19,17 @@ const serviceLinks = services.filter((s) =>
     "fleas",
     "carpenter-bees",
     "wasps-hornets",
+    "yellowjackets",
     "wildlife",
     "ipm-services",
     "maintenance",
+    "hoa",
   ].includes(s.slug),
 );
 
-const estimateHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#estimate`;
-const areasHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/#service-areas`;
+/** Hash-only / rooted paths so next/link applies basePath once. */
+const estimateHref = "/#estimate";
+const areasHref = "/#service-areas";
 
 export function Header() {
   const [open, setOpen] = useState(false);

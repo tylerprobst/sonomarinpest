@@ -103,8 +103,8 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "sonoma-county-homeless-pest-problems",
-    path: "/blog/sonoma-county-homeless-pest-problems/",
+    slug: "community-pest-challenges-in-sonoma-county",
+    path: "/blog/community-pest-challenges-in-sonoma-county/",
     title: "Community Pest Challenges in Sonoma County",
     metaDescription:
       "How surrounding environmental pressures can increase pest activity for Sonoma County properties - and how professional IPM helps.",

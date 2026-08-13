@@ -12,10 +12,7 @@ export function RatingBadge({
   showLink?: boolean;
 }) {
   const data = getBuiltReviews();
-  const countLabel =
-    data.userRatingCount >= 100
-      ? `${data.userRatingCount}+ Google reviews`
-      : `${data.userRatingCount} Google reviews`;
+  const countLabel = `${data.userRatingCount} Google reviews`;
 
   return (
     <div

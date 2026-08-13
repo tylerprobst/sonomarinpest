@@ -17,10 +17,31 @@ import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { AllLocationsLinks } from "@/components/pages/LocationPageView";
 
 export const metadata = createMetadata({
-  title: "Professional Pest Control in Sonoma County | 100+ 5-Star Reviews",
+  title: "Rodent Exclusion and Pest Control in Sonoma and Marin",
   description: site.description,
   path: "/",
 });
+
+const heroCards = [
+  {
+    title: "Rodents",
+    body: "Exclusion, then a maintenance plan so they don't return. No poison.",
+    href: "/rodents/",
+    tone: "bg-emerald-50/80 border-emerald-100 hover:border-brand-green",
+  },
+  {
+    title: "Ants",
+    body: "Colony treatment or a maintenance plan.",
+    href: "/ants/",
+    tone: "bg-amber-50/80 border-amber-100 hover:border-amber-400",
+  },
+  {
+    title: "Wasps",
+    body: "Nest treatment around eaves, yards, and play areas.",
+    href: "/wasp-hornet/",
+    tone: "bg-sky-50/80 border-sky-100 hover:border-sky-400",
+  },
+];
 
 const pillars = [
   {
@@ -30,7 +51,7 @@ const pillars = [
   },
   {
     title: "Honest, no-pressure quotes",
-    body: "Customers rave that we don’t upsell. Clear options, fair pricing, and recommendations you’d give your own family.",
+    body: "Customers rave that we don't upsell. Clear options, fair pricing, and recommendations you'd give your own family.",
     accent: "border-l-brand-green",
   },
   {
@@ -64,7 +85,6 @@ export default function HomePage() {
     <>
       <JsonLd data={[localBusinessSchema(reviews), faqSchema(homeFaqs)]} />
 
-      {/* Hero */}
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0">
           <Image
@@ -80,35 +100,34 @@ export default function HomePage() {
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <RatingBadge light className="mb-5" />
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.15]">
-              <span className="block">Professional</span>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
               <span className="block">
-                <span className="text-brand-green-light">pest control</span>
-                {" "}
-                in
+                <span className="text-brand-green-light">Rodent exclusion</span>
               </span>
-              <span className="block">Sonoma &amp; Marin</span>
+              <span className="block">and pest control in</span>
+              <span className="block">Sonoma and Marin</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
-              Family-owned and operated. Licensed Branch&nbsp;2 technicians.
-              Eco-friendly IPM and expert rodent exclusion - with the five-star
-              service our neighbors rave about.
+              Family-owned out of Santa Rosa. We inspect first, explain the
+              options, and don't upsell. Especially strong on rats and mice:
+              find the entry, seal it, no rodenticides.
+            </p>
+            <p className="mt-4 max-w-xl text-pretty text-base font-medium leading-relaxed text-brand-green-light sm:text-lg">
+              Ask about a monthly or bi-monthly plan so it doesn't come back.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={site.phoneTel} size="lg">
                 Call {site.phone}
               </Button>
-              <Button href="#estimate" variant="outlineLight" size="lg">
-                Schedule a service
+              <Button href={site.textTel} variant="outlineLight" size="lg">
+                Text {site.text}
+              </Button>
+              <Button href="#estimate" variant="green" size="lg">
+                Request a service
               </Button>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-slate-300">
-              Or text{" "}
-              <a href={site.textTel} className="font-medium text-white underline-offset-2 hover:underline">
-                {site.text}
-              </a>
-              <span className="mx-2 text-slate-500">·</span>
-              <span>{site.hours.display}</span>
+              {site.hours.display}
             </p>
           </div>
           <div className="hidden lg:block">
@@ -118,24 +137,32 @@ export default function HomePage() {
               </p>
               <ul className="mt-5 space-y-3.5 text-[0.975rem] leading-snug text-slate-100">
                 <li className="flex gap-3">
-                  <span className="mt-0.5 text-brand-green-light" aria-hidden>✓</span>
+                  <span className="mt-0.5 text-brand-green-light" aria-hidden>
+                    ✓
+                  </span>
                   <span>
                     <strong className="font-semibold text-white">
-                      {reviews.rating}★ average
+                      {reviews.rating.toFixed(1)}★ average
                     </strong>{" "}
-                    · {reviews.userRatingCount}+ Google reviews
+                    · {reviews.userRatingCount} Google reviews
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="mt-0.5 text-brand-green-light" aria-hidden>✓</span>
+                  <span className="mt-0.5 text-brand-green-light" aria-hidden>
+                    ✓
+                  </span>
                   <span>Poison-free rodent programs (ETM)</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="mt-0.5 text-brand-green-light" aria-hidden>✓</span>
+                  <span className="mt-0.5 text-brand-green-light" aria-hidden>
+                    ✓
+                  </span>
                   <span>Same-week appointments often available</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="mt-0.5 text-brand-green-light" aria-hidden>✓</span>
+                  <span className="mt-0.5 text-brand-green-light" aria-hidden>
+                    ✓
+                  </span>
                   <span>Residential &amp; commercial service</span>
                 </li>
               </ul>
@@ -144,7 +171,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust bar */}
+      <Section tone="white">
+        <div className="grid gap-4 sm:grid-cols-3">
+          {heroCards.map((card) => (
+            <Link
+              key={card.title}
+              href={card.href}
+              className={`group rounded-2xl border p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md ${card.tone}`}
+            >
+              <h2 className="heading-card text-lg text-slate-900 group-hover:text-brand-blue">
+                {card.title}
+              </h2>
+              <p className="mt-2 text-pretty text-sm leading-relaxed text-slate-600">
+                {card.body}
+              </p>
+            </Link>
+          ))}
+        </div>
+        <p className="mt-6 text-center text-pretty text-sm leading-relaxed text-slate-600 sm:text-base">
+          Also spiders, cockroaches, fleas, carpenter bees, and wildlife
+          (raccoon, skunk, opossum). Licensed Branch 2. We don't do termites.
+        </p>
+      </Section>
+
       <div className="border-b border-emerald-800/20 bg-gradient-to-r from-brand-green to-emerald-600 text-white">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-4 py-4 text-center text-xs font-semibold tracking-wide sm:grid-cols-4 sm:gap-4 sm:px-6 sm:py-5 sm:text-sm lg:px-8">
           <p className="leading-snug">Licensed Branch&nbsp;2</p>
@@ -154,11 +203,10 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Why us */}
       <Section tone="soft-blue">
         <SectionHeading
           eyebrow="Quality service"
-          title="Sonoma County’s specialists in honest pest control"
+          title="Specialists in honest pest control"
           description="A family-owned local business providing quality, professional pest control to Marin County and Sonoma County - built on inspections, education, and results that last."
         />
         <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
@@ -176,7 +224,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Services */}
       <Section tone="white">
         <SectionHeading
           eyebrow="What we treat"
@@ -220,7 +267,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Rodent / ETM spotlight */}
       <Section tone="soft-green">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
@@ -229,7 +275,7 @@ export default function HomePage() {
               Rodent exclusion that lasts - without poison
             </h2>
             <p className="mt-5 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg sm:leading-relaxed">
-              Traps alone don’t work if entry points stay open. We inspect,
+              Traps alone don't work if entry points stay open. We inspect,
               seal, and trap mechanically. Our ETM (Exclude-Trap-Manage)
               program keeps rodents out year-round - no rodenticides that risk
               pets, wildlife, or odor in the walls.
@@ -255,7 +301,6 @@ export default function HomePage() {
 
       <ReviewsSection tone="soft-sky" />
 
-      {/* Service areas */}
       <Section id="service-areas" tone="soft-blue">
         <div className="mb-10 grid items-end gap-8 lg:grid-cols-2">
           <SectionHeading
@@ -277,7 +322,6 @@ export default function HomePage() {
         <AllLocationsLinks />
       </Section>
 
-      {/* FAQ */}
       <Section tone="white">
         <SectionHeading
           title="Frequently asked questions"
@@ -289,13 +333,12 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA - blue section; form full-bleed white on mobile */}
       <EstimateCtaSection
         aside={
           <>
             <SectionHeading
               title="Contact us to schedule a service"
-              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we’ll get back to you as soon as possible."
+              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we'll get back to you as soon as possible."
               light
             />
             <RatingBadge light className="mb-6" />

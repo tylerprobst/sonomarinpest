@@ -8,6 +8,7 @@ import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { GorillaDeskScript } from "@/components/forms/GorillaDeskScript";
 import "./globals.css";
 import { assetPath } from "@/lib/paths";
+import { isGithubPagesPreview } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,10 +20,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Professional Pest Control in Sonoma & Marin`,
+    default: `${site.name} | Rodent Exclusion & Pest Control in Sonoma & Marin`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  robots: isGithubPagesPreview
+    ? { index: false, follow: false }
+    : { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_US",

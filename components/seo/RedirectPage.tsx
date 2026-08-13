@@ -1,10 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { withBasePath } from "@/lib/paths";
 import { absoluteUrl } from "@/lib/seo";
 
 /**
  * Static soft-redirect for hosts without server 301s (e.g. GitHub Pages).
  * Pair with redirectMetadata() for noindex + canonical.
+ * JS location.replace uses withBasePath once; next/link also applies basePath once — do not prefix both.
  */
 export function RedirectPage({
   to,
@@ -13,15 +15,16 @@ export function RedirectPage({
   to: string;
   label: string;
 }) {
+  const jsTo = withBasePath(to);
   return (
     <div className="mx-auto flex min-h-[50vh] max-w-lg flex-col items-center justify-center px-4 py-20 text-center">
       <script
         dangerouslySetInnerHTML={{
-          __html: `try{window.location.replace(${JSON.stringify(to)});}catch(e){}`,
+          __html: `try{window.location.replace(${JSON.stringify(jsTo)});}catch(e){}`,
         }}
       />
       <noscript>
-        <meta httpEquiv="refresh" content={`0;url=${to}`} />
+        <meta httpEquiv="refresh" content={`0;url=${jsTo}`} />
       </noscript>
       <p className="eyebrow text-brand-green">Redirecting</p>
       <h1 className="heading-section mt-3 text-2xl text-slate-900 sm:text-3xl">

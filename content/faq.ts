@@ -2,17 +2,17 @@ export const homeFaqs = [
   {
     question: "Which pests do you cover?",
     answer:
-      "We handle a wide range of general pests under our Branch 2 license, including rodents, ants, spiders, cockroaches, fleas, carpenter bees, wasps, hornets, yellowjackets, and small mammals such as raccoons and skunks. We follow all state guidelines and tailor plans to your property.",
+      "We handle a wide range of general pests under our Branch 2 license, including rodents, ants, spiders, cockroaches, fleas, carpenter bees, wasps, hornets, yellowjackets, and small mammals such as raccoons, skunks, and opossums. We don’t do termites. We follow all state guidelines and tailor plans to your property.",
   },
   {
-    question: "Are your methods safe for people and pets?",
+    question: "Are your methods safe?",
     answer:
       "Yes. We prioritize Integrated Pest Management and eco-conscious options when appropriate, and we always explain any precautions. For rodents, we do not use rodenticides - we trap and exclude instead.",
   },
   {
     question: "How can I book a service?",
     answer:
-      "Call 707-604-8188, text 707-708-4167, or use the estimate form on our website. We typically respond quickly during business hours (Monday-Friday, 8am-5pm).",
+      "Call 707-604-8188, text 707-708-4167, or use the request form on our website. We typically respond quickly during business hours (Monday-Friday, 8am-5pm).",
   },
   {
     question: "Where do you operate?",
@@ -22,11 +22,11 @@ export const homeFaqs = [
   {
     question: "What makes Sono-Marin different?",
     answer:
-      "We’re a family-owned local company known for thorough inspections, honest no-pressure quotes, poison-free rodent programs, educational technicians, and follow-up that stands behind the work. Hundreds of five-star Google reviews reflect that commitment.",
+      "We’re a family-owned local company known for thorough inspections, honest no-pressure quotes, poison-free rodent programs, educational technicians, and follow-up that stands behind the work. A 4.9 average from 139 Google reviews reflects that commitment.",
   },
   {
     question: "Do you offer ongoing maintenance?",
     answer:
-      "Yes. Our IPM maintenance plans run monthly, bi-monthly, or quarterly. For rodents, our ETM (Exclude-Trap-Manage) program provides ongoing monitoring without rodenticides.",
+      "Yes. Ask about a monthly or bi-monthly plan so pests don’t come back. For rodents, we exclude first, then maintain without rodenticides.",
   },
 ];

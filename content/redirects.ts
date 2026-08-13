@@ -47,6 +47,18 @@ export const redirects: RedirectRule[] = [
     to: "/pest-control-petaluma/",
     label: "Pest Control Petaluma",
   },
+  // About alias
+  {
+    from: "/about/",
+    to: "/about-us/",
+    label: "About Us",
+  },
+  // Blog slug rename (keep old URL as alias)
+  {
+    from: "/blog/sonoma-county-homeless-pest-problems/",
+    to: "/blog/community-pest-challenges-in-sonoma-county/",
+    label: "Community Pest Challenges in Sonoma County",
+  },
   // Legacy WordPress brand URLs
   {
     from: "/sono-marin-pest/",

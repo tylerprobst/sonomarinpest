@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
   // Available at build time for assetPath() in components/metadata
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
+    GITHUB_PAGES: isGithubPages ? "true" : "",
   },
 };
 

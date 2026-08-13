@@ -13,13 +13,17 @@ export function Accordion({
     <div className="divide-y divide-slate-200/80 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       {items.map((item, i) => {
         const isOpen = open === i;
+        const panelId = `faq-panel-${i}`;
+        const buttonId = `faq-button-${i}`;
         return (
           <div key={item.question} className={isOpen ? "bg-slate-50/60" : ""}>
             <button
               type="button"
+              id={buttonId}
               className="flex w-full items-start justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
               onClick={() => setOpen(isOpen ? null : i)}
               aria-expanded={isOpen}
+              aria-controls={panelId}
             >
               <span className="heading-card text-[0.975rem] text-slate-900 sm:text-base">
                 {item.question}
@@ -35,11 +39,15 @@ export function Accordion({
                 +
               </span>
             </button>
-            {isOpen && (
-              <div className="px-5 pb-5 text-pretty text-[0.975rem] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                {item.answer}
-              </div>
-            )}
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={buttonId}
+              hidden={!isOpen}
+              className="px-5 pb-5 text-pretty text-[0.975rem] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base"
+            >
+              {item.answer}
+            </div>
           </div>
         );
       })}
