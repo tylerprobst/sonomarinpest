@@ -16,13 +16,18 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Professional Pest Control in Sonoma & Marin`,
+    default: `${site.name} | Rodent Exclusion and Pest Control in Sonoma & Marin`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  robots: isGithubPages
+    ? { index: false, follow: false }
+    : { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -45,11 +50,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
+        <a href="#main-content" className="skip-to-content">
+          Skip to content
+        </a>
         <ScrollToTop />
-        {/* Header outside overflow clip so menus aren't constrained */}
         <Header />
         <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-x-clip">
-          <main className="min-w-0 flex-1">{children}</main>
+          <main id="main-content" className="min-w-0 flex-1" tabIndex={-1}>
+            {children}
+          </main>
           <Footer />
         </div>
         <MobileCTA />
