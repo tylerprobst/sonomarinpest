@@ -1,50 +1,48 @@
-"use client";
+import { ESTIMATE_FALLBACK_HREF, withBasePath } from "@/lib/paths";
 
-import { useEffect, useState } from "react";
+type EstimateClickEvent = {
+  preventDefault?: () => void;
+  currentTarget?: { getAttribute?: (name: string) => string | null };
+};
 
 /**
- * Scroll so #estimate (top of the form block) is in view under the sticky header.
- * If this page has no form, go to the homepage estimate section.
- * window.location needs basePath; Next.js Link hrefs must NOT prepend it.
+ * Scroll so #estimate is in view under the sticky header.
+ * If this page has no form (careers, blog), go to the contact form.
+ * Never leave a dead #estimate hash. Apply GitHub Pages basePath once.
  */
-export function scrollToEstimate(e?: { preventDefault?: () => void }) {
-  e?.preventDefault?.();
-
+export function scrollToEstimate(e?: EstimateClickEvent) {
   const el = document.getElementById("estimate");
-  if (!el) {
-    const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-    window.location.href = `${base}/#estimate`;
+  if (el) {
+    e?.preventDefault?.();
+
+    const headerOffset = window.matchMedia("(min-width: 640px)").matches
+      ? 112
+      : 116;
+
+    const top =
+      el.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      left: 0,
+      behavior: "smooth",
+    });
+
+    try {
+      history.replaceState(null, "", `${window.location.pathname}#estimate`);
+    } catch {
+      /* ignore */
+    }
     return;
   }
 
-  const headerOffset = window.matchMedia("(min-width: 640px)").matches
-    ? 112
-    : 116;
-
-  const top =
-    el.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-  window.scrollTo({
-    top: Math.max(0, top),
-    left: 0,
-    behavior: "smooth",
-  });
-
-  try {
-    history.replaceState(null, "", `${window.location.pathname}#estimate`);
-  } catch {
-    /* ignore */
+  const href = e?.currentTarget?.getAttribute?.("href") || "";
+  // Let next/link (or an in-app href) navigate when it already points at the form.
+  // Link applies basePath once — do not prefix again.
+  if (href && href !== "#" && href !== "#estimate") {
+    return;
   }
-}
 
-/**
- * href for Next.js Link / Button: same-page hash when #estimate exists,
- * otherwise home /#estimate (Link applies basePath once — never prefix it here).
- */
-export function useEstimateHref(): string {
-  const [href, setHref] = useState("/#estimate");
-  useEffect(() => {
-    setHref(document.getElementById("estimate") ? "#estimate" : "/#estimate");
-  }, []);
-  return href;
+  e?.preventDefault?.();
+  window.location.href = withBasePath(ESTIMATE_FALLBACK_HREF);
 }
