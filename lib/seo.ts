@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/content/site";
 
 const defaultOgImage = `${site.url}/images/truck-hero.jpg`;
+const isGithubPages = process.env.GITHUB_PAGES === "true";
 
 export function createMetadata({
   title,
@@ -39,7 +40,10 @@ export function createMetadata({
       description,
       images: [image || defaultOgImage],
     },
-    robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    robots:
+      noIndex || isGithubPages
+        ? { index: false, follow: false }
+        : { index: true, follow: true },
   };
 }
 
