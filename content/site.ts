@@ -2,9 +2,9 @@ export const site = {
   name: "Sono-Marin Pest Solutions",
   shortName: "Sono-Marin Pest",
   legalName: "Sono-Marin Pest Solutions",
-  tagline: "Professional pest control for Sonoma & Marin Counties",
+  tagline: "Rodent exclusion and pest control for Sonoma & Marin Counties",
   description:
-    "Family-owned pest control in Sonoma and Marin Counties. 4.9 from 139 Google reviews. Eco-friendly IPM, expert rodent exclusion, and honest service for homes and businesses.",
+    "Family-owned pest control in Sonoma and Marin Counties. 4.9 from 139 Google reviews. We inspect first, explain the options, and don’t upsell. Especially strong on rodent exclusion — find the entry, seal it, no rodenticides.",
   url: "https://sonomarinpest.com",
   phone: "707-604-8188",
   phoneTel: "tel:+17076048188",
@@ -36,7 +36,7 @@ export const site = {
   license: {
     type: "Branch 2",
     board: "California Structural Pest Control Board",
-    note: "Licensed, bonded, and insured for general pest control (insects and rodents).",
+    note: "Licensed, bonded, and insured for general pest control (insects and rodents). We don’t do termites.",
   },
   social: {
     // Add when available

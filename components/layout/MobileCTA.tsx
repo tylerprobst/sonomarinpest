@@ -1,17 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { site } from "@/content/site";
-import {
-  scrollToEstimate,
-  useEstimateHref,
-} from "@/lib/scroll-to-estimate";
+import { ESTIMATE_FALLBACK_HREF } from "@/lib/paths";
+import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
 /**
  * Fixed mobile call bar - stays fully inside the viewport.
+ * Estimate never uses a dead #estimate on pages without a form.
  */
 export function MobileCTA() {
-  const estimateHref = useEstimateHref();
-
   return (
     <nav
       aria-label="Quick contact"
@@ -38,13 +36,13 @@ export function MobileCTA() {
           >
             Text
           </a>
-          <a
-            href={estimateHref}
+          <Link
+            href={ESTIMATE_FALLBACK_HREF}
             onClick={scrollToEstimate}
             className="flex items-center justify-center rounded-lg bg-brand-green py-2.5 text-center text-xs font-semibold text-white"
           >
             Estimate
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
