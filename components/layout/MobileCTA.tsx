@@ -1,12 +1,17 @@
 "use client";
 
 import { site } from "@/content/site";
-import { scrollToEstimate } from "@/lib/scroll-to-estimate";
+import {
+  scrollToEstimate,
+  useEstimateHref,
+} from "@/lib/scroll-to-estimate";
 
 /**
  * Fixed mobile call bar - stays fully inside the viewport.
  */
 export function MobileCTA() {
+  const estimateHref = useEstimateHref();
+
   return (
     <nav
       aria-label="Quick contact"
@@ -34,7 +39,7 @@ export function MobileCTA() {
             Text
           </a>
           <a
-            href="#estimate"
+            href={estimateHref}
             onClick={scrollToEstimate}
             className="flex items-center justify-center rounded-lg bg-brand-green py-2.5 text-center text-xs font-semibold text-white"
           >

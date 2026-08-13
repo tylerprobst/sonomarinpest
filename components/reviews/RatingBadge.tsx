@@ -12,10 +12,6 @@ export function RatingBadge({
   showLink?: boolean;
 }) {
   const data = getBuiltReviews();
-  const countLabel =
-    data.userRatingCount >= 100
-      ? `${data.userRatingCount}+ Google reviews`
-      : `${data.userRatingCount} Google reviews`;
 
   return (
     <div
@@ -25,10 +21,7 @@ export function RatingBadge({
       <span
         className={`font-semibold ${light ? "text-white" : "text-slate-900"}`}
       >
-        {data.rating.toFixed(1)}
-      </span>
-      <span className={light ? "text-slate-200" : "text-slate-600"}>
-        · {countLabel}
+        {data.rating.toFixed(1)} from {data.userRatingCount} Google reviews
       </span>
       {showLink && (
         <a
