@@ -4,32 +4,30 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { assetPath } from "@/lib/paths";
+import { assetPath, ESTIMATE_FALLBACK_HREF } from "@/lib/paths";
 import { site } from "@/content/site";
 import { services, primaryServiceSlugs } from "@/content/services";
 import { priorityLocations } from "@/content/locations";
 import { Button } from "@/components/ui/Button";
-import {
-  scrollToEstimate,
-  useEstimateHref,
-} from "@/lib/scroll-to-estimate";
+import { scrollToEstimate } from "@/lib/scroll-to-estimate";
 
-const navServiceSlugs = [...primaryServiceSlugs, "hoa"] as const;
-
-const serviceLinks = services.filter((s) =>
-  (navServiceSlugs as readonly string[]).includes(s.slug),
-);
+const serviceLinks = primaryServiceSlugs
+  .map((slug) => services.find((s) => s.slug === slug))
+  .filter((s): s is (typeof services)[number] => Boolean(s));
 
 type Props = {
   open: boolean;
   onClose: () => void;
 };
 
+/**
+ * Full-screen mobile menu rendered via portal to document.body
+ * so parent overflow/transform cannot clip or shrink it.
+ */
 export function MobileMenu({ open, onClose }: Props) {
   const [mounted, setMounted] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [areasOpen, setAreasOpen] = useState(false);
-  const estimateHref = useEstimateHref();
 
   useEffect(() => {
     setMounted(true);
@@ -61,6 +59,7 @@ export function MobileMenu({ open, onClose }: Props) {
       aria-modal="true"
       aria-label="Site menu"
     >
+      {/* Top bar */}
       <div
         className="shrink-0 border-b border-slate-200"
         style={{ backgroundColor: "#ffffff" }}
@@ -103,6 +102,7 @@ export function MobileMenu({ open, onClose }: Props) {
         </div>
       </div>
 
+      {/* Scrollable links */}
       <nav
         className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3"
         style={{
@@ -221,11 +221,16 @@ export function MobileMenu({ open, onClose }: Props) {
 
         <div className="mt-6 space-y-2 border-t border-slate-200 pt-6">
           <Button
-            href={estimateHref}
+            href={ESTIMATE_FALLBACK_HREF}
             className="w-full"
-            onClick={() => {
+            onClick={(e) => {
+              if (document.getElementById("estimate")) {
+                e.preventDefault();
+                onClose();
+                window.setTimeout(() => scrollToEstimate(), 50);
+                return;
+              }
               onClose();
-              window.setTimeout(() => scrollToEstimate(), 50);
             }}
           >
             Schedule service
