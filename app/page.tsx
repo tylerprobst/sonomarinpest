@@ -17,7 +17,7 @@ import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { AllLocationsLinks } from "@/components/pages/LocationPageView";
 
 export const metadata = createMetadata({
-  title: "Rodent Exclusion and Pest Control in Sonoma and Marin",
+  title: "Rats in the attic. Ants in the kitchen. We actually fix it.",
   description: site.description,
   path: "/",
 });
@@ -100,20 +100,16 @@ export default function HomePage() {
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <RatingBadge light className="mb-5" />
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-              <span className="block">
-                <span className="text-brand-green-light">Rodent exclusion</span>
-              </span>
-              <span className="block">and pest control in</span>
-              <span className="block">Sonoma and Marin</span>
+            <p className="eyebrow text-brand-green-light">Rodent exclusion</p>
+            <h1 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
+              <span className="block">Rats in the attic.</span>
+              <span className="block">Ants in the kitchen.</span>
+              <span className="block">We actually fix it.</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
-              Family-owned out of Santa Rosa. We inspect first, explain the
-              options, and don't upsell. Especially strong on rats and mice:
-              find the entry, seal it, no rodenticides.
-            </p>
-            <p className="mt-4 max-w-xl text-pretty text-base font-medium leading-relaxed text-brand-green-light sm:text-lg">
-              Ask about a monthly or bi-monthly plan so it doesn't come back.
+              Free inspection in Sonoma and Marin. A licensed tech walks the
+              property, explains the options, and gives you a plan. No
+              pressure.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={site.phoneTel} size="lg">
