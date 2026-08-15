@@ -6,62 +6,62 @@ export type FeaturedReview = {
   relativeTime?: string;
 };
 
-/** Curated long-form highlights from real Google reviews (fallback + featured). */
+/** Newest Google reviews first. Hitmen-switcher and no-upsell still earn a slot. */
 export const featuredReviews: FeaturedReview[] = [
+  {
+    id: "linda-strout",
+    author: "Linda Strout",
+    rating: 5,
+    relativeTime: "22 hours ago",
+    text: "So nice to have such respectful, dedicated technicians. The tech got our job done very professionally and it took care of our problem.",
+  },
+  {
+    id: "ross-townsend",
+    author: "Ross Townsend",
+    rating: 5,
+    relativeTime: "2 weeks ago",
+    text: "Fantastic service. I've had positive experiences with both Richard and Morgan. Morgan in particular is extremely knowledgable, helpful, and personable. The type of guy that a lot of home service companies are missing: Someone who's passion for the work leads to great results for the customer.",
+  },
+  {
+    id: "kathy-hotchkiss",
+    author: "Kathy Hotchkiss",
+    rating: 5,
+    relativeTime: "3 weeks ago",
+    text: "Dillon and trainee came out today for an inspection and were very friendly and helpful. They explained my situation and gave me good advice and attention. After going though inspections with several companies I would definitely recommend Sono-Marin over the others. Both the office staff, Kitty, and the technicians were knowledgeable and helpful.",
+  },
+  {
+    id: "avery-mcginn",
+    author: "Avery McGinn",
+    rating: 5,
+    relativeTime: "2 months ago",
+    text: "I got 3 quotes from different pest control companies for rodent exclusion and clean up in the crawl space under my house and in the attic. Sono-Marin was the third company to come and do an inspection. Dylan, one of the owners, immediately impressed me with his knowledge, his professionalism, his communication skills, his proposed solutions, his pricing, and his meticulously clean service truck. I had confidence that he would take care of the problem and stand behind his work. My confidence was rewarded. The office staff have also been great; their email and text updates make everything clear and keep things on track. Sono-Marin's work was thorough, timely, and fairly priced. I have highly recommended the company to friends and neighbors, as well as to my general contractor. Call them first!!",
+  },
   {
     id: "candace-key",
     author: "Candace Key",
     rating: 5,
-    relativeTime: "Recent",
-    text: "We love Sono-Marin Pest! We switched over from another company several years ago and couldn't be happier. Morgan is so thoughtful and helpful. We always learn something from him about how to keep the pests at bay between services. Everyone we deal with is kind and considerate of our time. We would give them 10 stars if we could.",
+    relativeTime: "11 months ago",
+    text: "We love Sono-Marin Pest! We switched over from Hitmen several years ago and couldn't be happier with the service we now receive. Morgan is so thoughtful and helpful. We always learn something from him about how to keep the pests at bay between services. Everyone we deal with at Sono-Marin is kind and considerate of our time. We would give them 10 stars if we could.",
   },
   {
     id: "mia-simon",
-    author: "Mia Simon",
+    author: "mia simon",
     rating: 5,
-    relativeTime: "Recent",
-    text: "Some of the best customer service I've ever encountered. Called and was able to get an appointment within 48 hours. Tyler came out and handled all subsequent visits - super friendly and educational. Properly diagnosed and solved our issue within the week. Reasonable pricing. Did NOT try to upsell. Highly recommend!!",
-  },
-  {
-    id: "amy-arden",
-    author: "Amy Arden",
-    rating: 5,
-    relativeTime: "Recent",
-    text: "Sono-Marin Pest Services has been such an excellent company to work with! Tyler, Dylan, and Morgan have all been warm, professional, reliable, and extremely helpful. They offer reasonable rates with detailed quotes, lots of follow-up support after work is done, and keep us updated via text. We feel totally safe with them in our home. I can't recommend them highly enough.",
-  },
-  {
-    id: "daniel-harris",
-    author: "Daniel Harris",
-    rating: 5,
-    relativeTime: "Recent",
-    text: "These guys have been so responsive. We had a challenging intrusion problem, they came up with a plan, executed it without any surprises. When we had a recurrence a few months later, they were out quickly with a revised fix. They want to get it right and will stand behind their work. Workers always pleasant and knew exactly what they were doing.",
+    relativeTime: "a year ago",
+    text: "Some of the best customer service I've ever encountered. Called and was able to get an appointment within 48 hours. Tyler came out and handled all subsequent visits. Super friendly and educational. Properly diagnosed and solved our issue within the week. Scheduling/rescheduling platform is a breeze. Front office always answered the phone during office hours - a rare occurrence nowadays. Reasonable pricing. Did NOT try to upsell/oversell. Highly recommend!!",
   },
   {
     id: "jessica-nieto",
     author: "Jessica Nieto",
     rating: 5,
-    relativeTime: "Recent",
-    text: "Sono-Marin Pest Solutions I would call back in a heartbeat. Their team was so easy to work with - friendly, informative, and hard workers. Thank you for taking care of our rat situation!",
+    relativeTime: "2 weeks ago",
+    text: "Sono-Marin Pest Solutions I would call back in a heartbeat. There team was so easy to work with. Friendly informative and hard workers. Thank you for taking care of our rat situation!",
   },
   {
-    id: "richard-williams",
-    author: "Richard Williams",
+    id: "christina-de-zafra",
+    author: "Christina de Zafra",
     rating: 5,
-    relativeTime: "Recent",
-    text: "These guys are the best! They're a small personable company that always responds to every phone call or email. My house is rat proof!! Five stars highly recommended!",
-  },
-  {
-    id: "dustin-machado",
-    author: "Dustin Machado",
-    rating: 5,
-    relativeTime: "Recent",
-    text: "We have had a very positive experience with Sono-Marin Pest. Thorough in both inspections and options of service. Quality and price that is hard to beat. If you are considering service, make the call. You won't regret it.",
-  },
-  {
-    id: "bonnie-martindale",
-    author: "Bonnie Martindale",
-    rating: 5,
-    relativeTime: "Recent",
-    text: "This company and its employees are absolutely fantastic. From Dylan to Richard and Morgan they are competent, knowledgeable, honest and caring. From their expert advice to the work done - bar none the best service we have ever received. We are switching our pest company to Sono-Marin.",
+    relativeTime: "4 months ago",
+    text: "5-star customer service all around! Communication was fantastic, from the booking call through the reminder emails and the text confirming the time of the tech's arrival. Morgan provided service and he couldn't have been more professional, knowledgeable, or personable. I highly recommend Sono-Marin Pest!",
   },
 ];

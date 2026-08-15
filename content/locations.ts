@@ -21,7 +21,7 @@ export const locations: Location[] = [
     county: "Sonoma",
     metaTitle: "Pest Control Sonoma County | Family-Owned | Sono-Marin Pest",
     metaDescription:
-      "Professional pest control across Sonoma County - Santa Rosa to the coast. Rodent exclusion without poison, IPM maintenance, 100+ five-star reviews.",
+      "Professional pest control across Sonoma County - Santa Rosa to the coast. Rodent exclusion without poison, IPM maintenance, 4.9 from 143 Google reviews.",
     intro: [
       "Sono-Marin Pest Solutions provides professional pest control throughout Sonoma County for homes, farms, wineries, and businesses. From the Santa Rosa plain to coastal communities and wine-country estates, pest pressure changes with weather, irrigation, and building age - and your plan should too.",
       "Our licensed Branch 2 technicians specialize in thorough inspections, eco-conscious Integrated Pest Management (IPM), and rodent exclusion that lasts. We focus on how pests get in and what keeps them coming back, not temporary sprays that ignore the structure.",
@@ -103,7 +103,7 @@ export const locations: Location[] = [
     path: "/pest-control-santa-rosa/",
     name: "Santa Rosa",
     county: "Sonoma",
-    metaTitle: "Pest Control Santa Rosa CA | 100+ 5-Star Reviews | Sono-Marin",
+    metaTitle: "Pest Control Santa Rosa CA | 4.9 from 143 Reviews | Sono-Marin",
     metaDescription:
       "Local pest control in Santa Rosa, CA. Family-owned HQ. Rodent inspections, ant control, IPM maintenance. Call 707-604-8188.",
     intro: [

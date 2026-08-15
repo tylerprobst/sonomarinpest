@@ -22,7 +22,7 @@ export const homeFaqs = [
   {
     question: "What makes Sono-Marin different?",
     answer:
-      "We’re a family-owned local company known for thorough inspections, honest no-pressure quotes, poison-free rodent programs, educational technicians, and follow-up that stands behind the work. A 4.9 average from 139 Google reviews reflects that commitment.",
+      "We’re a family-owned local company known for thorough inspections, honest no-pressure quotes, poison-free rodent programs, educational technicians, and follow-up that stands behind the work. A 4.9 average from 143 Google reviews reflects that commitment.",
   },
   {
     question: "Do you offer ongoing maintenance?",
