@@ -197,7 +197,7 @@ export function ServicePageView({ service }: { service: Service }) {
           <>
             <SectionHeading
               title={`Get help with ${service.shortTitle}`}
-              description="Talk to a licensed technician about your property. We’ll inspect, explain options, and give you a clear plan - no pressure."
+              description="Some questions we can answer on the phone. To talk with a licensed technician about your property, schedule a free consultation. They'll inspect, explain options, and give you a clear plan. No pressure."
               light
             />
             <Button href={site.phoneTel} size="lg" variant="green">
