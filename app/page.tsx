@@ -107,9 +107,9 @@ export default function HomePage() {
               <span className="block">We actually fix it.</span>
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
-              Free inspection in Sonoma and Marin. A licensed tech walks the
-              property, explains the options, and gives you a plan. No
-              pressure.
+              Call for a free consultation visit. We'll come out, talk through
+              what's going on, and explain options. No pressure. A full rodent
+              inspection is a paid visit.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={site.phoneTel} size="lg">
