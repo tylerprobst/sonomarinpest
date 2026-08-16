@@ -109,6 +109,11 @@
       "source": "/blog/sonoma-county-homeless-pest-problems/",
       "destination": "/blog/community-pest-challenges-in-sonoma-county/",
       "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/",
+      "permanent": true
     }
   ]
 }
