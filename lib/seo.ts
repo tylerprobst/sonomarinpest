@@ -23,8 +23,13 @@ export function createMetadata({
 
   const hideFromIndex = noIndex || isGithubPagesPreview;
 
+  // Root layout uses `title.template = "%s | Sono-Marin Pest Solutions"`.
+  // If the page title already has a pipe (CMO/SEO strings include the brand),
+  // use it as-is so we don't stack "| Sono-Marin Pest | Sono-Marin Pest Solutions".
+  const pageTitle = title.includes("|") ? { absolute: title } : title;
+
   return {
-    title,
+    title: pageTitle,
     description,
     alternates: { canonical: url },
     openGraph: {
