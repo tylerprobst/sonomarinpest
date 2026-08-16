@@ -333,8 +333,8 @@ export default function HomePage() {
         aside={
           <>
             <SectionHeading
-              title="Contact us to schedule a service"
-              description="Have questions or need pest control? Reach our team for fast, reliable solutions. Fill out the form or give us a call - we'll get back to you as soon as possible."
+              title="Call for a free consultation visit"
+              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options. A full rodent inspection is paid."
               light
             />
             <RatingBadge light className="mb-6" />
