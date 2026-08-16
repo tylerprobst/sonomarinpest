@@ -44,6 +44,11 @@ export const services: Service[] = [
     ],
     faqs: [
       {
+        question: "Is a rodent inspection free?",
+        answer:
+          "No. A full rodent inspection is a paid visit. Call for a free consultation visit. We'll come out, talk through what's going on, and explain options. No pressure.",
+      },
+      {
         question: "Do you use rat poison?",
         answer:
           "No. We do not use rodenticides. Poison can cause rodents to die in walls, create secondary wildlife risks, and fails to fix how they got in. We trap and exclude.",
@@ -449,6 +454,11 @@ export const services: Service[] = [
       "Guarantee on company repair work when on plan",
     ],
     faqs: [
+      {
+        question: "Is the first rodent inspection free?",
+        answer:
+          "No. A full rodent inspection is paid. What we offer free is a consultation visit: we come out, talk it through, and explain options. Call to book one.",
+      },
       {
         question: "Why avoid rodenticides?",
         answer:
