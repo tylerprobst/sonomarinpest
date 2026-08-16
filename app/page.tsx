@@ -108,8 +108,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-[1.7]">
               Call for a free consultation visit. We'll come out, talk through
-              what's going on, and explain options. No pressure. A full rodent
-              inspection is a paid visit.
+              what's going on, and explain options. No pressure.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={site.phoneTel} size="lg">
@@ -334,7 +333,7 @@ export default function HomePage() {
           <>
             <SectionHeading
               title="Call for a free consultation visit"
-              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options. A full rodent inspection is paid."
+              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options."
               light
             />
             <RatingBadge light className="mb-6" />

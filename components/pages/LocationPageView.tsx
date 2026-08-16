@@ -230,7 +230,7 @@ export function LocationPageView({ location }: { location: Location }) {
           <>
             <SectionHeading
               title="Call for a free consultation visit"
-              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options. A full rodent inspection is paid."
+              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options."
               light
             />
             <Button href={site.phoneTel} size="lg" variant="green">

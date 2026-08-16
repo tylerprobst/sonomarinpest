@@ -86,7 +86,7 @@ export default function ServicesPage() {
           <>
             <SectionHeading
               title="Call for a free consultation visit"
-              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options. A full rodent inspection is paid."
+              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options."
               light
             />
             <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl ring-2 ring-white/20 lg:block">
