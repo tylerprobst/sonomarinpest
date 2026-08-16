@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
       "Integrated Pest Management (IPM) starts with inspection and correct identification. Once we know what we’re dealing with - and why pests are present - we can choose the least-impact methods that still solve the problem. That may include sealing entry points, changing conditions that attract pests, mechanical trapping, and targeted product use only where needed.",
       "For rodents, we take this philosophy even further: we do not use rodenticides. Poison baits can create secondary risks to wildlife, leave carcasses in walls, and fail to fix how rodents entered. Our Exclude-Trap-Manage approach seals structures and uses mechanical trapping instead.",
       "Many of our maintenance programs can incorporate botanical and reduced-risk options suited to family homes. We’ll always discuss what’s appropriate for your situation before we treat.",
-      "If you want professional results with an eco-conscious approach in Sonoma or Marin County, contact Sono-Marin Pest Solutions to schedule an inspection.",
+      "If you want professional results with an eco-conscious approach in Sonoma or Marin County, call Sono-Marin Pest Solutions for a free consultation visit. A full rodent inspection is a paid visit.",
     ],
   },
   {
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
       "Living in Sonoma and Marin Counties means sharing the landscape with wildlife and insects that sometimes move indoors. Here’s a quick guide to pests we see often - and how professional service helps.",
       "Rodents (rats and mice) damage insulation and wiring and need exclusion, not just traps. Ants trail into kitchens in large numbers. Spiders follow insect prey around eaves and garages. Cockroaches prefer warm kitchens and can spread quickly. Fleas hitchhike on pets into carpets.",
       "Carpenter bees drill into decks and fascia. Wasps, hornets, and yellowjackets threaten outdoor living spaces. Raccoons and skunks invade attics and under decks. Each requires a different approach - identification first, then a plan.",
-      "Sono-Marin Pest Solutions is licensed for general pest work (Branch 2) and builds custom plans for residential and commercial properties. If you’re not sure what you’re seeing, send a photo or schedule an inspection - we’ll identify it and recommend next steps.",
+      "Sono-Marin Pest Solutions is licensed for general pest work (Branch 2) and builds custom plans for residential and commercial properties. If you’re not sure what you’re seeing, send a photo or call for a free consultation visit - we’ll talk through next steps. A full rodent inspection is paid.",
     ],
   },
   {
@@ -116,7 +116,7 @@ export const blogPosts: BlogPost[] = [
       "Pest pressure around homes doesn’t only come from inside your four walls. Broader community and environmental conditions - dense vegetation, food waste, abandoned structures, and seasonal weather - can increase rodent and insect activity for nearby properties.",
       "Property owners can’t control every external factor, but they can harden their own buildings: seal entry points, manage trash and pet food, reduce harborage, and schedule professional inspections when activity appears.",
       "Sono-Marin Pest Solutions focuses on what works at the structure - inspection, exclusion, mechanical rodent control, and IPM maintenance - so your home or business stays protected even when surrounding pressure is high.",
-      "If you’re seeing new activity, don’t wait for it to escalate. Contact our team for an inspection and a clear plan.",
+      "If you’re seeing new activity, don’t wait for it to escalate. Call for a free consultation visit. A full rodent inspection is a paid visit.",
     ],
   },
 ];

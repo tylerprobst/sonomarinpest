@@ -85,8 +85,8 @@ export default function ServicesPage() {
         aside={
           <>
             <SectionHeading
-              title="Not sure which service you need?"
-              description="Describe what you’re seeing - we’ll recommend the right inspection and plan."
+              title="Call for a free consultation visit"
+              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options. A full rodent inspection is paid."
               light
             />
             <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-2xl ring-2 ring-white/20 lg:block">
