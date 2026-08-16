@@ -12,7 +12,12 @@ export const homeFaqs = [
   {
     question: "How can I book a service?",
     answer:
-      "Call 707-604-8188, text 707-708-4167, or use the request form on our website. We typically respond quickly during business hours (Monday-Friday, 8am-5pm).",
+      "Call 707-604-8188 for a free consultation visit. Phone is fine for simple questions. If someone needs to come to the property, that's the free consult: we talk it through and explain options. A full rodent inspection is a paid visit. You can also text 707-708-4167 or use the request form. We typically respond during business hours (Monday-Friday, 8am-5pm).",
+  },
+  {
+    question: "Is a rodent inspection free?",
+    answer:
+      "No. A full rodent inspection is a paid visit. The free offer is a consultation visit. Call to book one.",
   },
   {
     question: "Where do you operate?",
