@@ -24,12 +24,12 @@ export const services: Service[] = [
     title: "Rodent Inspections, Exclusion & Control",
     shortTitle: "Rodents",
     navLabel: "Rodents",
-    metaTitle: "Rodent Control & Exclusion | Sonoma & Marin | Sono-Marin Pest",
+    metaTitle: "Rodent Control & Exclusion in Santa Rosa | Sono-Marin Pest",
     metaDescription:
-      "Expert rodent inspections, exclusion repairs, and long-term protection in Sonoma & Marin Counties. No rodenticides - trap and seal for lasting results.",
-    heroHeadline: "Rodent Inspections, Repairs & Long-Term Protection",
+      "Santa Rosa rodent exclusion without poison. We seal entry points, trap what’s inside, then keep them out with a plan. Call for a free consultation visit.",
+    heroHeadline: "Rodent exclusion in Santa Rosa",
     summary:
-      "Eviction notice served - expert rodent control that seals them out for good.",
+      "We’re based in Santa Rosa. Roof rats and mice get into attics and crawl spaces around here. We find how they got in, seal it, and trap what’s inside. No poison. A monthly or bi-monthly plan is how it stays that way.",
     problem:
       "Rodents are clever and relentless. They squeeze through openings as small as a quarter (rats) or a dime (mice), chew through wood, plastic, and soft materials, and can damage insulation, wiring, and stored goods. Traps alone rarely solve the problem if entry points stay open.",
     approach:
