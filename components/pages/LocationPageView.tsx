@@ -99,6 +99,18 @@ export function LocationPageView({ location }: { location: Location }) {
             {location.intro.map((p) => (
               <p key={p.slice(0, 40)}>{p}</p>
             ))}
+            {location.slug === "santa-rosa" && (
+              <p>
+                See{" "}
+                <Link
+                  href="/rodents/"
+                  className="font-semibold text-brand-blue underline underline-offset-2"
+                >
+                  rodent exclusion in Santa Rosa
+                </Link>
+                .
+              </p>
+            )}
             <p className="rounded-xl border border-brand-green/25 bg-emerald-50 p-5 text-[0.975rem] leading-relaxed text-slate-700">
               <strong className="font-semibold text-slate-900">Local note:</strong>{" "}
               {location.localNotes}
@@ -120,14 +132,21 @@ export function LocationPageView({ location }: { location: Location }) {
             Common pests in {location.name}
           </h2>
           <div className="mt-5 flex flex-wrap gap-2">
-            {location.commonPests.map((pest) => (
-              <span
-                key={pest}
-                className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium tracking-tight text-brand-blue ring-1 ring-blue-100"
-              >
-                {pest}
-              </span>
-            ))}
+            {location.commonPests.map((pest) => {
+              const rodentPrimary =
+                location.slug === "santa-rosa" && pest === "Rodents";
+              const chip =
+                "rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium tracking-tight text-brand-blue ring-1 ring-blue-100";
+              return rodentPrimary ? (
+                <Link key={pest} href="/rodents/" className={chip}>
+                  {pest}
+                </Link>
+              ) : (
+                <span key={pest} className={chip}>
+                  {pest}
+                </span>
+              );
+            })}
           </div>
         </div>
       </Section>

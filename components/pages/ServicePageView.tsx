@@ -100,6 +100,23 @@ export function ServicePageView({ service }: { service: Service }) {
           <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-slate-200 sm:text-lg sm:leading-relaxed">
             {service.summary}
           </p>
+          {service.slug === "rodents" && (
+            <p className="mt-4 text-sm text-slate-300">
+              <Link
+                href="/pest-control-santa-rosa/"
+                className="underline underline-offset-2 hover:text-white"
+              >
+                Pest control in Santa Rosa
+              </Link>
+              <span className="mx-2 text-white/40">·</span>
+              <Link
+                href="/maintenance/"
+                className="underline underline-offset-2 hover:text-white"
+              >
+                ETM rodent service
+              </Link>
+            </p>
+          )}
           <div className="mt-6">
             <RatingBadge light />
           </div>
