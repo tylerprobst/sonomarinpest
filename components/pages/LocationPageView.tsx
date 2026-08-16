@@ -227,11 +227,16 @@ export function LocationPageView({ location }: { location: Location }) {
 
       <EstimateCtaSection
         aside={
-          <SectionHeading
-            title={`Schedule pest control in ${location.name}`}
-            description={`Call ${site.phone} or request an estimate. We serve residential and commercial properties across ${location.county === "Both" ? "the region" : `${location.county} County`}.`}
-            light
-          />
+          <>
+            <SectionHeading
+              title="Call for a free consultation visit"
+              description="Phone is fine for simple questions. If it needs someone on the property, that's a free consultation visit. A licensed tech will talk it through and explain options. A full rodent inspection is paid."
+              light
+            />
+            <Button href={site.phoneTel} size="lg" variant="green">
+              Call {site.phone}
+            </Button>
+          </>
         }
       />
     </>
