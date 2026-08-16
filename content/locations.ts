@@ -157,7 +157,7 @@ export const locations: Location[] = [
       "Petaluma’s historic homes, river-adjacent neighborhoods, and growing business districts deserve pest control that respects both old construction and modern family life. Sono-Marin Pest Solutions delivers careful inspections and lasting fixes.",
       "We’re especially known for rodent work - finding how animals enter older foundations, soft spots under porches, and utility gaps, then sealing them out without relying on poisons.",
       "Downtown commercial spaces, east-side neighborhoods, and rural-edge properties each need a slightly different plan. We customize IPM and exclusion so you’re not paying for a generic route stop.",
-      "If you’ve tried DIY traps or a one-time spray and the problem returned, schedule an inspection. We’ll map the issue and give you clear options with fair pricing.",
+      "If you’ve tried DIY traps or a one-time spray and the problem returned, call for a free consultation visit. We’ll talk through what’s going on and explain options. A full rodent inspection is a paid visit.",
     ],
     localNotes:
       "Victorian and craftsman homes often have more potential entry points. River and agricultural edges can increase rodent and insect pressure seasonally. Moisture near the Petaluma River corridor can also support certain insect populations.",
@@ -166,7 +166,7 @@ export const locations: Location[] = [
       {
         question: "Do you service downtown and east Petaluma?",
         answer:
-          "Yes. We serve Petaluma citywide and nearby communities. Contact us to schedule an inspection.",
+          "Yes. We serve Petaluma citywide and nearby communities. Call for a free consultation visit.",
       },
       {
         question: "Are older Petaluma homes harder to rodent-proof?",
